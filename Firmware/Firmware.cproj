@@ -21,6 +21,19 @@
     <OverrideVtorValue />
     <eraseonlaunchrule>0</eraseonlaunchrule>
     <AsfVersion>3.1.3</AsfVersion>
+    <AsfFrameworkConfig>
+      <framework-data>
+  <options />
+  <configurations>
+    <configuration key="config.avr32.utils.trampoline" value="yes" default="yes" content-id="Atmel.ASF" />
+    <configuration key="config.avr32.utils.gccstartup" value="yes" default="yes" content-id="Atmel.ASF" />
+    <configuration key="config.utils.interrupt.intc" value="yes" default="yes" content-id="Atmel.ASF" />
+    <configuration key="config.avr32.drivers.intc.exception" value="yes" default="yes" content-id="Atmel.ASF" />
+  </configurations>
+  <files />
+  <documentation help="" />
+</framework-data>
+    </AsfFrameworkConfig>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <ToolchainSettings>
@@ -28,6 +41,11 @@
   <avr32gcc.common.outputfiles.hex>True</avr32gcc.common.outputfiles.hex>
   <avr32gcc.common.outputfiles.lss>True</avr32gcc.common.outputfiles.lss>
   <avr32gcc.common.outputfiles.eep>True</avr32gcc.common.outputfiles.eep>
+  <avr32gcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>../src/config</Value>
+    </ListValues>
+  </avr32gcc.compiler.directories.IncludePaths>
   <avr32gcc.compiler.optimization.level>Optimize for size (-Os)</avr32gcc.compiler.optimization.level>
   <avr32gcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</avr32gcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
   <avr32gcc.compiler.optimization.UseAssemblerForPseudoInstructions>True</avr32gcc.compiler.optimization.UseAssemblerForPseudoInstructions>
@@ -40,6 +58,16 @@
   <avr32gcc.linker.optimization.GarbageCollectUnusedSections>True</avr32gcc.linker.optimization.GarbageCollectUnusedSections>
   <avr32gcc.linker.optimization.PutReadOnlyDataInWritableDataSection>True</avr32gcc.linker.optimization.PutReadOnlyDataInWritableDataSection>
   <avr32gcc.linker.optimization.AllowDirectReferencesToDataSection>True</avr32gcc.linker.optimization.AllowDirectReferencesToDataSection>
+  <avr32gcc.assembler.general.IncludePaths>
+    <ListValues>
+      <Value>../src/config</Value>
+    </ListValues>
+  </avr32gcc.assembler.general.IncludePaths>
+  <avr32gcc.preprocessingassembler.general.IncludePaths>
+    <ListValues>
+      <Value>../src/config</Value>
+    </ListValues>
+  </avr32gcc.preprocessingassembler.general.IncludePaths>
 </Avr32Gcc>
     </ToolchainSettings>
   </PropertyGroup>
@@ -49,6 +77,11 @@
   <avr32gcc.common.outputfiles.hex>True</avr32gcc.common.outputfiles.hex>
   <avr32gcc.common.outputfiles.lss>True</avr32gcc.common.outputfiles.lss>
   <avr32gcc.common.outputfiles.eep>True</avr32gcc.common.outputfiles.eep>
+  <avr32gcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>../src/config</Value>
+    </ListValues>
+  </avr32gcc.compiler.directories.IncludePaths>
   <avr32gcc.compiler.optimization.level>Optimize (-O1)</avr32gcc.compiler.optimization.level>
   <avr32gcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</avr32gcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
   <avr32gcc.compiler.optimization.UseAssemblerForPseudoInstructions>True</avr32gcc.compiler.optimization.UseAssemblerForPseudoInstructions>
@@ -62,7 +95,17 @@
   <avr32gcc.linker.optimization.GarbageCollectUnusedSections>True</avr32gcc.linker.optimization.GarbageCollectUnusedSections>
   <avr32gcc.linker.optimization.PutReadOnlyDataInWritableDataSection>True</avr32gcc.linker.optimization.PutReadOnlyDataInWritableDataSection>
   <avr32gcc.linker.optimization.AllowDirectReferencesToDataSection>True</avr32gcc.linker.optimization.AllowDirectReferencesToDataSection>
+  <avr32gcc.assembler.general.IncludePaths>
+    <ListValues>
+      <Value>../src/config</Value>
+    </ListValues>
+  </avr32gcc.assembler.general.IncludePaths>
   <avr32gcc.assembler.debugging.DebugLevel>Default (-g)</avr32gcc.assembler.debugging.DebugLevel>
+  <avr32gcc.preprocessingassembler.general.IncludePaths>
+    <ListValues>
+      <Value>../src/config</Value>
+    </ListValues>
+  </avr32gcc.preprocessingassembler.general.IncludePaths>
   <avr32gcc.preprocessingassembler.debugging.DebugLevel>Default (-Wa,-g)</avr32gcc.preprocessingassembler.debugging.DebugLevel>
 </Avr32Gcc>
     </ToolchainSettings>
@@ -71,6 +114,99 @@
     <Compile Include="Firmware.c">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="scr\app\init_mcu\init_mcu.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scr\app\init_mcu\init_mcu.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scr\lib\print\print.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scr\lib\print\public\print.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scr\lib\print\test\test_print.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scr\lib\read\config\read_config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scr\lib\read\print\print.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scr\lib\read\print\public\print.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scr\lib\read\print\test\test_print.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scr\lib\read\public\read.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scr\lib\read\read.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scr\lib\read\test\test_read.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scr\lib\statusc\public\statusc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scr\lib\statusc\statusc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scr\lib\str\public\str.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scr\lib\str\str.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scr\lib\str\test\test_str.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scr\lib\utest\private\utest_asserts.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scr\lib\utest\private\utest_template.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scr\lib\utest\public\utest.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scr\lib\utest\test\test_utest.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scr\lib\utest\utest.c">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="scr\" />
+    <Folder Include="scr\app\init_mcu" />
+    <Folder Include="scr\lib\" />
+    <Folder Include="scr\lib\print\" />
+    <Folder Include="scr\lib\print\public\" />
+    <Folder Include="scr\lib\print\test\" />
+    <Folder Include="scr\lib\read\" />
+    <Folder Include="scr\lib\read\config\" />
+    <Folder Include="scr\lib\read\print\" />
+    <Folder Include="scr\lib\read\print\public\" />
+    <Folder Include="scr\lib\read\print\test\" />
+    <Folder Include="scr\lib\read\public\" />
+    <Folder Include="scr\lib\read\test\" />
+    <Folder Include="scr\lib\statusc\" />
+    <Folder Include="scr\lib\statusc\public\" />
+    <Folder Include="scr\lib\str\" />
+    <Folder Include="scr\lib\str\public\" />
+    <Folder Include="scr\lib\str\test\" />
+    <Folder Include="scr\lib\utest\" />
+    <Folder Include="scr\lib\utest\private\" />
+    <Folder Include="scr\lib\utest\public\" />
+    <Folder Include="scr\lib\utest\test\" />
+    <Folder Include="scr\lib\utest\utest_str\" />
+    <Folder Include="scr\app" />
+    <Folder Include="scr\config" />
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
 </Project>

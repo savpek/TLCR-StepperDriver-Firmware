@@ -12,6 +12,6 @@ int main(void)
 {
     while(1)
     {
-        //TODO:: Please write your application code 
+		static inline bool usart_serial_init(volatile avr32_usart_t *usart, usart_serial_options_t *opt)
     }
 }
