@@ -1,6 +1,6 @@
 #include "framework.h"
 
-#include "str/public/str.h"
+#include "str/str.h"
 
 static void get_hex_string(uint32_t int_value, uint8_t *ret_char)
 	{

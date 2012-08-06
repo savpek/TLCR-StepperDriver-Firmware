@@ -1,11 +1,3 @@
-/*! @brief Unit test redirect header.
- *
- *	@file utest.h
- *  @author: savpek
- *
- *	This file redirects to Unity (with Unity_fixture additions.
- */
-
 #ifndef UTEST_H_
 #define UTEST_H_
 

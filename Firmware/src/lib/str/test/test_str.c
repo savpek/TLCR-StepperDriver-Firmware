@@ -1,6 +1,6 @@
-#include "./utest/public/utest.h"
+#include "./utest/utest.h"
 
-#include "./str/public/str.h"
+#include "./str/str.h"
 
 TEST_GROUP(str);
 

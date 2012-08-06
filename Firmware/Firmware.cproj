@@ -23,14 +23,35 @@
     <AsfVersion>3.1.3</AsfVersion>
     <AsfFrameworkConfig>
       <framework-data>
-  <options />
+  <options>
+    <option id="avr32.drivers.usart" value="Add" config="" content-id="Atmel.ASF" />
+  </options>
   <configurations>
     <configuration key="config.avr32.utils.trampoline" value="yes" default="yes" content-id="Atmel.ASF" />
     <configuration key="config.avr32.utils.gccstartup" value="yes" default="yes" content-id="Atmel.ASF" />
     <configuration key="config.utils.interrupt.intc" value="yes" default="yes" content-id="Atmel.ASF" />
     <configuration key="config.avr32.drivers.intc.exception" value="yes" default="yes" content-id="Atmel.ASF" />
   </configurations>
-  <files />
+  <files>
+    <file path="src/asf/avr32/drivers/usart/usart.c" framework="" version="" source="avr32\drivers\usart\usart.c" changed="False" content-id="Atmel.ASF" />
+    <file path="src/asf/avr32/drivers/usart/usart.h" framework="" version="" source="avr32\drivers\usart\usart.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/asf/avr32/utils/startup/startup_uc3.S" framework="" version="" source="avr32\utils\startup\startup_uc3.S" changed="False" content-id="Atmel.ASF" />
+    <file path="src/asf/avr32/utils/startup/trampoline_uc3.S" framework="" version="" source="avr32\utils\startup\trampoline_uc3.S" changed="False" content-id="Atmel.ASF" />
+    <file path="src/asf/avr32/utils/startup/trampoline_uc3.h" framework="" version="" source="avr32\utils\startup\trampoline_uc3.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/asf/avr32/utils/parts.h" framework="" version="" source="avr32\utils\parts.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/asf/avr32/utils/preprocessor/preprocessor.h" framework="" version="" source="avr32\utils\preprocessor\preprocessor.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/asf/avr32/utils/preprocessor/mrepeat.h" framework="" version="" source="avr32\utils\preprocessor\mrepeat.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/asf/avr32/utils/preprocessor/stringz.h" framework="" version="" source="avr32\utils\preprocessor\stringz.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/asf/avr32/utils/status_codes.h" framework="" version="" source="avr32\utils\status_codes.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/asf/avr32/utils/compiler.h" framework="" version="" source="avr32\utils\compiler.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/asf/avr32/utils/header_files/uc3d_defines_fix.h" framework="" version="" source="avr32\utils\header_files\uc3d_defines_fix.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/asf/avr32/utils/preprocessor/tpaste.h" framework="" version="" source="avr32\utils\preprocessor\tpaste.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/asf/common/utils/interrupt/interrupt_avr32.h" framework="" version="" source="common\utils\interrupt\interrupt_avr32.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/asf/common/utils/interrupt.h" framework="" version="" source="common\utils\interrupt.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/asf/avr32/drivers/intc/exception.S" framework="" version="" source="avr32\drivers\intc\exception.S" changed="False" content-id="Atmel.ASF" />
+    <file path="src/asf/avr32/drivers/intc/intc.c" framework="" version="" source="avr32\drivers\intc\intc.c" changed="False" content-id="Atmel.ASF" />
+    <file path="src/asf/avr32/drivers/intc/intc.h" framework="" version="" source="avr32\drivers\intc\intc.h" changed="False" content-id="Atmel.ASF" />
+  </files>
   <documentation help="" />
 </framework-data>
     </AsfFrameworkConfig>
@@ -44,6 +65,11 @@
   <avr32gcc.compiler.directories.IncludePaths>
     <ListValues>
       <Value>../src/config</Value>
+      <Value>../src/asf/avr32/drivers/usart</Value>
+      <Value>../src/asf/avr32/utils</Value>
+      <Value>../src/asf/avr32/utils/preprocessor</Value>
+      <Value>../src/asf/common/utils</Value>
+      <Value>../src/asf/avr32/drivers/intc</Value>
     </ListValues>
   </avr32gcc.compiler.directories.IncludePaths>
   <avr32gcc.compiler.optimization.level>Optimize for size (-Os)</avr32gcc.compiler.optimization.level>
@@ -61,11 +87,21 @@
   <avr32gcc.assembler.general.IncludePaths>
     <ListValues>
       <Value>../src/config</Value>
+      <Value>../src/asf/avr32/drivers/usart</Value>
+      <Value>../src/asf/avr32/utils</Value>
+      <Value>../src/asf/avr32/utils/preprocessor</Value>
+      <Value>../src/asf/common/utils</Value>
+      <Value>../src/asf/avr32/drivers/intc</Value>
     </ListValues>
   </avr32gcc.assembler.general.IncludePaths>
   <avr32gcc.preprocessingassembler.general.IncludePaths>
     <ListValues>
       <Value>../src/config</Value>
+      <Value>../src/asf/avr32/drivers/usart</Value>
+      <Value>../src/asf/avr32/utils</Value>
+      <Value>../src/asf/avr32/utils/preprocessor</Value>
+      <Value>../src/asf/common/utils</Value>
+      <Value>../src/asf/avr32/drivers/intc</Value>
     </ListValues>
   </avr32gcc.preprocessingassembler.general.IncludePaths>
 </Avr32Gcc>
@@ -80,6 +116,14 @@
   <avr32gcc.compiler.directories.IncludePaths>
     <ListValues>
       <Value>../src/config</Value>
+      <Value>../src/app</Value>
+      <Value>../src/lib</Value>
+      <Value>../src</Value>
+      <Value>../src/asf/avr32/drivers/usart</Value>
+      <Value>../src/asf/avr32/utils</Value>
+      <Value>../src/asf/avr32/utils/preprocessor</Value>
+      <Value>../src/asf/common/utils</Value>
+      <Value>../src/asf/avr32/drivers/intc</Value>
     </ListValues>
   </avr32gcc.compiler.directories.IncludePaths>
   <avr32gcc.compiler.optimization.level>Optimize (-O1)</avr32gcc.compiler.optimization.level>
@@ -98,12 +142,22 @@
   <avr32gcc.assembler.general.IncludePaths>
     <ListValues>
       <Value>../src/config</Value>
+      <Value>../src/asf/avr32/drivers/usart</Value>
+      <Value>../src/asf/avr32/utils</Value>
+      <Value>../src/asf/avr32/utils/preprocessor</Value>
+      <Value>../src/asf/common/utils</Value>
+      <Value>../src/asf/avr32/drivers/intc</Value>
     </ListValues>
   </avr32gcc.assembler.general.IncludePaths>
   <avr32gcc.assembler.debugging.DebugLevel>Default (-g)</avr32gcc.assembler.debugging.DebugLevel>
   <avr32gcc.preprocessingassembler.general.IncludePaths>
     <ListValues>
       <Value>../src/config</Value>
+      <Value>../src/asf/avr32/drivers/usart</Value>
+      <Value>../src/asf/avr32/utils</Value>
+      <Value>../src/asf/avr32/utils/preprocessor</Value>
+      <Value>../src/asf/common/utils</Value>
+      <Value>../src/asf/avr32/drivers/intc</Value>
     </ListValues>
   </avr32gcc.preprocessingassembler.general.IncludePaths>
   <avr32gcc.preprocessingassembler.debugging.DebugLevel>Default (-Wa,-g)</avr32gcc.preprocessingassembler.debugging.DebugLevel>
@@ -111,102 +165,126 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Firmware.c">
+    <Compile Include="src\app\init_mcu\init_mcu.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="scr\app\init_mcu\init_mcu.c">
+    <Compile Include="src\app\init_mcu\init_mcu.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="scr\app\init_mcu\init_mcu.h">
+    <None Include="src\asf.h">
+      <SubType>compile</SubType>
+    </None>
+    <Compile Include="src\asf\avr32\drivers\intc\exception.S">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="scr\lib\print\print.c">
+    <Compile Include="src\asf\avr32\drivers\intc\intc.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="scr\lib\print\public\print.h">
+    <None Include="src\asf\avr32\drivers\intc\intc.h">
+      <SubType>compile</SubType>
+    </None>
+    <Compile Include="src\asf\avr32\drivers\usart\usart.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="scr\lib\print\test\test_print.c">
+    <None Include="src\asf\avr32\drivers\usart\usart.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\asf\avr32\utils\parts.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\asf\avr32\utils\preprocessor\preprocessor.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\asf\avr32\utils\preprocessor\mrepeat.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\asf\avr32\utils\preprocessor\stringz.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\asf\avr32\utils\compiler.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\asf\avr32\utils\header_files\uc3d_defines_fix.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\asf\avr32\utils\preprocessor\tpaste.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\asf\avr32\utils\startup\trampoline_uc3.h">
+      <SubType>compile</SubType>
+    </None>
+    <Compile Include="src\asf\avr32\utils\startup\trampoline_uc3.S">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="scr\lib\read\config\read_config.h">
+    <None Include="src\asf\avr32\utils\status_codes.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\asf\common\utils\interrupt\interrupt_avr32.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\asf\common\utils\interrupt.h">
+      <SubType>compile</SubType>
+    </None>
+    <Compile Include="src\framework.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="scr\lib\read\print\print.c">
+    <Compile Include="src\lib\statusc\statusc.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="scr\lib\read\print\public\print.h">
+    <Compile Include="src\lib\statusc\statusc.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="scr\lib\read\print\test\test_print.c">
+    <Compile Include="src\lib\str\str.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="scr\lib\read\public\read.h">
+    <Compile Include="src\lib\str\str.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="scr\lib\read\read.c">
+    <Compile Include="src\lib\str\test\test_str.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="scr\lib\read\test\test_read.c">
+    <Compile Include="src\lib\utest\private\utest_asserts.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="scr\lib\statusc\public\statusc.h">
+    <Compile Include="src\lib\utest\private\utest_template.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="scr\lib\statusc\statusc.c">
+    <Compile Include="src\lib\utest\test\test_utest.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="scr\lib\str\public\str.h">
+    <Compile Include="src\lib\utest\utest.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="scr\lib\str\str.c">
+    <Compile Include="src\lib\utest\utest.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="scr\lib\str\test\test_str.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="scr\lib\utest\private\utest_asserts.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="scr\lib\utest\private\utest_template.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="scr\lib\utest\public\utest.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="scr\lib\utest\test\test_utest.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="scr\lib\utest\utest.c">
+    <Compile Include="src\main.c">
       <SubType>compile</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="scr\" />
-    <Folder Include="scr\app\init_mcu" />
-    <Folder Include="scr\lib\" />
-    <Folder Include="scr\lib\print\" />
-    <Folder Include="scr\lib\print\public\" />
-    <Folder Include="scr\lib\print\test\" />
-    <Folder Include="scr\lib\read\" />
-    <Folder Include="scr\lib\read\config\" />
-    <Folder Include="scr\lib\read\print\" />
-    <Folder Include="scr\lib\read\print\public\" />
-    <Folder Include="scr\lib\read\print\test\" />
-    <Folder Include="scr\lib\read\public\" />
-    <Folder Include="scr\lib\read\test\" />
-    <Folder Include="scr\lib\statusc\" />
-    <Folder Include="scr\lib\statusc\public\" />
-    <Folder Include="scr\lib\str\" />
-    <Folder Include="scr\lib\str\public\" />
-    <Folder Include="scr\lib\str\test\" />
-    <Folder Include="scr\lib\utest\" />
-    <Folder Include="scr\lib\utest\private\" />
-    <Folder Include="scr\lib\utest\public\" />
-    <Folder Include="scr\lib\utest\test\" />
-    <Folder Include="scr\lib\utest\utest_str\" />
-    <Folder Include="scr\app" />
-    <Folder Include="scr\config" />
+    <Folder Include="src\" />
+    <Folder Include="src\app\" />
+    <Folder Include="src\app\init_mcu\" />
+    <Folder Include="src\asf\" />
+    <Folder Include="src\asf\avr32\" />
+    <Folder Include="src\asf\avr32\drivers\" />
+    <Folder Include="src\asf\avr32\drivers\intc\" />
+    <Folder Include="src\asf\avr32\drivers\usart\" />
+    <Folder Include="src\asf\avr32\utils\" />
+    <Folder Include="src\asf\avr32\utils\header_files\" />
+    <Folder Include="src\asf\avr32\utils\preprocessor\" />
+    <Folder Include="src\asf\avr32\utils\startup\" />
+    <Folder Include="src\asf\common\" />
+    <Folder Include="src\asf\common\utils\" />
+    <Folder Include="src\asf\common\utils\interrupt\" />
+    <Folder Include="src\lib\" />
+    <Folder Include="src\lib\statusc\" />
+    <Folder Include="src\lib\str\" />
+    <Folder Include="src\lib\str\test\" />
+    <Folder Include="src\lib\utest\" />
+    <Folder Include="src\lib\utest\private\" />
+    <Folder Include="src\lib\utest\test\" />
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
 </Project>

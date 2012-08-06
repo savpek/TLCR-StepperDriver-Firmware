@@ -35,23 +35,23 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING
  15 .debug_pubnames 00000552  00000000  00000000  00001878  2**0
                   CONTENTS, READONLY, DEBUGGING
- 16 .debug_info   00007f35  00000000  00000000  00001dca  2**0
+ 16 .debug_info   00007f81  00000000  00000000  00001dca  2**0
                   CONTENTS, READONLY, DEBUGGING
- 17 .debug_abbrev 0000168b  00000000  00000000  00009cff  2**0
+ 17 .debug_abbrev 00001689  00000000  00000000  00009d4b  2**0
                   CONTENTS, READONLY, DEBUGGING
- 18 .debug_line   00002800  00000000  00000000  0000b38a  2**0
+ 18 .debug_line   00002c58  00000000  00000000  0000b3d4  2**0
                   CONTENTS, READONLY, DEBUGGING
- 19 .debug_frame  000006b0  00000000  00000000  0000db8c  2**2
+ 19 .debug_frame  000006b0  00000000  00000000  0000e02c  2**2
                   CONTENTS, READONLY, DEBUGGING
- 20 .debug_str    00000f80  00000000  00000000  0000e23c  2**0
+ 20 .debug_str    00000f91  00000000  00000000  0000e6dc  2**0
                   CONTENTS, READONLY, DEBUGGING
- 21 .debug_loc    000011ac  00000000  00000000  0000f1bc  2**0
+ 21 .debug_loc    000011ac  00000000  00000000  0000f66d  2**0
                   CONTENTS, READONLY, DEBUGGING
- 22 .debug_macinfo 000a0514  00000000  00000000  00010368  2**0
+ 22 .debug_macinfo 000aa630  00000000  00000000  00010819  2**0
                   CONTENTS, READONLY, DEBUGGING
  23 .stack        00001000  00003000  00003000  00000400  2**0
                   ALLOC
- 24 .debug_ranges 000002e8  00000000  00000000  000b087c  2**0
+ 24 .debug_ranges 000002e8  00000000  00000000  000bae49  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .reset:
@@ -190,12 +190,11 @@ Disassembly of section .text:
 	...
 
 8000010c <main>:
+#include "framework.h"
 
+#include "./init_mcu/init_mcu.h"
 
-#include <avr32/io.h>
-
-int main(void)
-{
+int main() {
 8000010c:	c0 08       	rjmp	8000010c <main>
 8000010e:	d7 03       	nop
 

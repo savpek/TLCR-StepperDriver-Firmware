@@ -2,7 +2,7 @@
 #include "utest/private/utest_template.h"
 
 // Required ...
-#include "str/public/str.h"
+#include "str/str.h"
 
 static uint8_t test_runned = 0;
 static uint8_t test_failed = 0;

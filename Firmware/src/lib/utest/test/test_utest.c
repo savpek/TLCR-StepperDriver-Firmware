@@ -1,22 +1,12 @@
-/* These tests are only for visual inspection.
- * Goal is keep utest framework as simple as possible,
- * theres some stuff needed to make. */
-#include "./utest/public/utest.h"
+/* These tests require visua inspection from output!
+ * Theres two categories: test which should pass and which should fail. */
+#include "./utest/utest.h"
 
-/*! @brief Set-up test group for: utest
- *	@param Group name */
 TEST_GROUP(utest);
-
-/*! @brief Group setup function..
- *	@param Group name */
 TEST_SETUP(utest) {
-
 }
 
-/*! @brief Group teardown function..
- *	@param Group name */
 TEST_TEAR_DOWN(utest) {
-
 }
 
 TEST(utest, all_asserts_should_fail) {
@@ -37,8 +27,6 @@ TEST(utest, all_asserts_should_pass) {
 	TEST_ASSERT_EQUAL_STRING("ab", "ab");
 }
 
-/*	@brief Set up all runnable tests from this module.
- *	@param group name.*/
 TEST_GROUP_RUNNER(utest) {
 	RUN_TEST_CASE(utest, all_asserts_should_pass);
 	RUN_TEST_CASE(utest, all_asserts_should_fail);

@@ -1,11 +1,3 @@
-/*
- * errorh.h
- *
- * Created: 20.11.2011 11:35:53
- *  Author: savpek
- */
-
-
 #ifndef ERRORH_H_
 #define ERRORH_H_
 

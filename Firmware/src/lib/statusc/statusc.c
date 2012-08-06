@@ -1,6 +1,6 @@
 #include "framework.h"
-#include "statusc/public/statusc.h"
-#include "str/public/str.h"
+#include "statusc/statusc.h"
+#include "str/str.h"
 
 static void print_line(char* string) {
 	for(uint8_t i = 0; string[i] != '\0'; i++)

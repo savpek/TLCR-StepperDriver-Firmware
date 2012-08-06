@@ -1,7 +1,7 @@
 #ifndef CHARS_STRINGS_H_
 #define CHARS_STRINGS_H_
 
-#include "statusc/public/statusc.h"
+#include "statusc/statusc.h"
 
 #define STR_NO_LIMIT ~0
 
