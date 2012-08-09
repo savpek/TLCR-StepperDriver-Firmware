@@ -3,6 +3,7 @@
 
 // Required ...
 #include "str/str.h"
+#include "utest/utest.h"
 
 static uint8_t test_runned = 0;
 static uint8_t test_failed = 0;
@@ -11,7 +12,7 @@ static uint8_t test_failed = 0;
  * Longest possible print is int32_t type string. */
 char string_buffer[STR_DEC_INT32_SIZE] = {0};
 
-static void utest_print(const char * string) {
+static void utest_print(char * string) {
 	for(int i = 0; string[i] != 0; i++) {
 		UTEST_OUTPUT_CHAR(string[i]);
 	}
@@ -36,10 +37,10 @@ void utest_main(void (*utest_fixture)( void)) {
 	utest_fixture();
 	utest_print_line("----");
 
-	utest_str_from_uint8(test_runned, string_buffer);
+	str_from_uint8(test_runned, string_buffer);
 	utest_print(string_buffer);
 	utest_print(", ");
-	utest_str_from_uint8(test_failed, string_buffer);
+	str_from_uint8(test_failed, string_buffer);
 	utest_print(string_buffer);
 	utest_print(" Failed.");
 	utest_print_eol();
@@ -64,62 +65,70 @@ void utest_runner(	utest_function * test_setup,
 }
 
 /* Failure output functions ->*/
-static void print_failure_msg_head() {
+static void print_failure_msg_head() 
+{
 	utest_print("\033[91m>>>  FAIL! Expected ");
 }
 
-static void print_failure_msg_middle() {
+static void print_failure_msg_middle() 
+{
 	utest_print(" but was ");
 }
 
-static void print_failure_msg_footer(char * location) {
+static void print_failure_msg_footer(char * location) 
+{
 	utest_print(" ");
 	utest_print(location);
 	utest_print_eol();
 	utest_print("\033[0m"); 
 }
 
-static void print_values_uint8(uint8_t value) {
+static void print_values_uint8(uint8_t value) 
+{
 	utest_print("[");
-	utest_str_from_uint8(value, string_buffer);
+	str_from_uint8(value, string_buffer);
 	utest_print(string_buffer);
 	utest_print(", ");
 
-	utest_str_from_uint8_hex(value, string_buffer);
+	str_from_uint8_hex(value, string_buffer);
 	utest_print(string_buffer);
 	utest_print("]");
 }
 
-static void print_values_uint32(uint32_t value) {
+static void print_values_uint32(uint32_t value) 
+{
 	utest_print("[");
-	utest_str_from_uint32(value, string_buffer);
+	str_from_uint32(value, string_buffer);
 	utest_print(string_buffer);
 	utest_print(", ");
 
-	utest_str_from_uint32_hex(value, string_buffer);
+	str_from_uint32_hex(value, string_buffer);
 	utest_print(string_buffer);
 	utest_print("]");
 }
 
-static void print_values_int32(int32_t value) {
+static void print_values_int32(int32_t value) 
+{
 	utest_print("[");
-	utest_str_from_int32(value, string_buffer);
+	str_from_int32(value, string_buffer);
 	utest_print(string_buffer);
 	utest_print(", ");
 
-	utest_str_from_uint32_hex((uint32_t)value, string_buffer);
+	str_from_uint32_hex((uint32_t)value, string_buffer);
 	utest_print(string_buffer);
 	utest_print("]");
 }
 
-static void print_values_string(char* value_string) {
+static void print_values_string(char* value_string) 
+{
 	utest_print("[");
 	utest_print(value_string);
 	utest_print("]");
 }
 
 /* Assert functions -> */
-void utest_assert(uint8_t condition, const char* location) {
+void utest_assert(uint8_t condition, const char* location) 
+{
 	if(condition == 0) {
 		print_failure_msg_head();
 		utest_print("[TRUE]");
@@ -130,7 +139,8 @@ void utest_assert(uint8_t condition, const char* location) {
 	}
 }
 
-void utest_assert_uint8(uint8_t expected, uint8_t actual, const char* location) {
+void utest_assert_uint8(uint8_t expected, uint8_t actual, const char* location) 
+{
 	if(expected != actual) {
 		print_failure_msg_head();
 		print_values_uint8(expected);
@@ -141,7 +151,8 @@ void utest_assert_uint8(uint8_t expected, uint8_t actual, const char* location) 
 	}
 }
 
-void utest_assert_uint32(uint32_t expected, uint32_t actual, const char* location) {
+void utest_assert_uint32(uint32_t expected, uint32_t actual, const char* location) 
+{
 	if(expected != actual) {
 		print_failure_msg_head();
 		print_values_uint32(expected);
@@ -152,7 +163,8 @@ void utest_assert_uint32(uint32_t expected, uint32_t actual, const char* locatio
 	}
 }
 
-void utest_assert_int32(int32_t expected, int32_t actual, const char* location) {
+void utest_assert_int32(int32_t expected, int32_t actual, const char* location) 
+{
 	if(expected != actual) {
 		print_failure_msg_head();
 		print_values_int32(expected);
@@ -163,8 +175,9 @@ void utest_assert_int32(int32_t expected, int32_t actual, const char* location) 
 	}
 }
 
-void utest_assert_string(char* expected, char* actual, const char* location) {
-	statusc_t result = utest_str_compare(expected, actual, STR_NO_LIMIT);
+void utest_assert_string(char* expected, char* actual, const char* location) 
+{
+	statusc_t result = str_compare(expected, actual, FROM_BEGIN, TO_END);
 	if( result == SC_FALSE)
 	{
 		print_failure_msg_head();

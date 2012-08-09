@@ -56,10 +56,10 @@ SUBDIRS :=  \
 ../src/lib/statusc/ \
 ../src/lib/str/ \
 ../src/lib/str/test/ \
+../src/config \
 ../src/lib/utest/ \
 ../src/lib/utest/private/ \
-../src/lib/utest/test/ \
-../src/config
+../src/lib/utest/test/
 
 
 # Add inputs and outputs from these tool invocations to the build variables 

@@ -4,9 +4,8 @@
 
 static void print_line(char* string) {
 	for(uint8_t i = 0; string[i] != '\0'; i++)
-		STATUSC_ASSERT_OUTPUT_CHAR(string[i]);
+		UTEST_OUTPUT_CHAR(string[i]);
 }
-
 
 void statusc_assert_body(uint8_t assert_value, char* file_name, uint32_t assert_line ) 
 {

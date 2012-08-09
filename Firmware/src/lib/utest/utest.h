@@ -3,11 +3,9 @@
 
 #include "framework.h"
 
-#ifndef UTEST_OUTPUT_CHAR
-# error DEFINE UTEST_OUTPUT_CHAR(a) FUNCTION!
-#endif
-
 #include "utest/private/utest_asserts.h"
 #include "utest/private/utest_template.h"
+
+extern void utest_main(void (*utest_fixture)(void));
 
 #endif /* UTEST_H_ */

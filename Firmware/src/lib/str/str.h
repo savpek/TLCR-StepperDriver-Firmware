@@ -3,7 +3,8 @@
 
 #include "statusc/statusc.h"
 
-#define STR_NO_LIMIT ~0
+#define TO_END ~0
+#define FROM_BEGIN 0
 
 /*! These helps you to make correctly sized buffers for strings. */
 #define STR_HEX_UINT8_SIZE	5	// 0xFF\0

@@ -25,7 +25,7 @@ TEST(str, test_str_compare) {
 	TEST_ASSERT( str_compare("abcdef", "xbcd", 1, 3) == SC_TRUE );
 	TEST_ASSERT( str_compare("abcdef", "xbcd", 2, 4) == SC_FALSE );
 }
-#if 0
+
 TEST(str, test_str_from_uint8_hex) {
 	volatile char str_buffer[30] = {0};
 
@@ -176,7 +176,6 @@ TEST(str, str_get_token_indexes__null_arguments) {
 	TEST_ASSERT( str_get_token_indexes(NULL, delimiter, token_number, &begin_idx, NULL)
 				 == SC_NULL_ARGUMENT);
 }
-#endif
 
 TEST(str, test_str_is_substring_of) {
     TEST_ASSERT( str_is_substring_of("abcd", "ab", 0) == SC_TRUE);
@@ -198,7 +197,6 @@ TEST(str, test_str_is_substring_of_with_ending) {
 }
 
 TEST_GROUP_RUNNER(str) {
-#if 0
 	RUN_TEST_CASE(str, str_get_token_indexes__basic_functionality);
 	RUN_TEST_CASE(str, str_get_token_indexes__token_out_of_range);
 	RUN_TEST_CASE(str, str_get_token_indexes__null_arguments);
@@ -209,7 +207,6 @@ TEST_GROUP_RUNNER(str) {
 	RUN_TEST_CASE(str, test_str_from_uint32);
 	RUN_TEST_CASE(str, test_str_from_uint8);
 	RUN_TEST_CASE(str, test_str_from_int32);
-#endif
     RUN_TEST_CASE(str, test_str_is_substring_of);
     RUN_TEST_CASE(str, test_str_is_substring_of_with_ending);
     
