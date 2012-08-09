@@ -54,8 +54,21 @@
 #include <compiler.h>
 #include <status_codes.h>
 
+// From module: FLASH Controller Double-Word
+#include <flashcdw.h>
+
+// From module: GPIO - General-Purpose Input/Output
+#include <gpio.h>
+
 // From module: Interrupt management - UC3 implementation
 #include <interrupt.h>
+
+// From module: PM Power Manager - UC3 L0 implementation
+#include <power_clocks_lib.h>
+#include <sleep.h>
+
+// From module: SCIF System Control Interface - UC3L implementation
+#include <scif_uc3l.h>
 
 // From module: USART - Universal Synchronous/Asynchronous Receiver/Transmitter
 #include <usart.h>
