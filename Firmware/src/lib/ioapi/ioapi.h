@@ -3,9 +3,9 @@
 
 #include "framework.h"
 
-extern void (*ioapi_output_high)( uint8_t pin_number);
-extern void (*ioapi_output_low)( uint8_t pin_number );
-extern statusc_t (*ioapi_input_value)( uint8_t pin_number );
+extern void ioapi_output_high( uint8_t pin_number);
+extern void ioapi_output_low( uint8_t pin_number );
+extern statusc_t ioapi_input_value( uint8_t pin_number );
 extern void ioapi_output_pwm( uint8_t pin_number, uint32_t pwm_percent );
 extern uint32_t ioapi_input_adc( uint8_t pin_number );
 
