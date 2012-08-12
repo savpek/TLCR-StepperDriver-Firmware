@@ -26,6 +26,12 @@ src\asf\avr32\drivers\usart\usart.c
 
 src\asf\avr32\utils\startup\trampoline_uc3.S
 
+src\lib\ioapi\ioapi.c
+
+src\lib\ioapi\mock\ioapi_mock.c
+
+src\lib\ioapi\test\test_ioapi.c
+
 src\lib\statusc\statusc.c
 
 src\lib\str\str.c

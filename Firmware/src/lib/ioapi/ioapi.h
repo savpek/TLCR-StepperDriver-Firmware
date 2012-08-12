@@ -9,10 +9,10 @@ extern statusc_t (*ioapi_input_value)( uint8_t pin_number );
 extern void ioapi_output_pwm( uint8_t pin_number, uint32_t pwm_percent );
 extern uint32_t ioapi_input_adc( uint8_t pin_number );
 
-extern statusc_t ioapi_is_it_output( uint8_t pin_number);
-extern statusc_t ioapi_is_it_input( uint8_t pin_number);
-extern statusc_t ioapi_is_it_pwm( uint8_t pin_number);
-extern statusc_t ioapi_is_it_adc( uint8_t pin_number);
+extern statusc_t ioapi_is_pin_output( uint8_t pin_number);
+extern statusc_t ioapi_is_pin_input( uint8_t pin_number);
+extern statusc_t ioapi_is_pin_pwm( uint8_t pin_number);
+extern statusc_t ioapi_is_pin_adc( uint8_t pin_number);
 
 typedef enum {
 	IOAPI_OUTPUT =		0x01,

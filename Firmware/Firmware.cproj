@@ -345,6 +345,21 @@
     <Compile Include="src\framework.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="src\lib\ioapi\ioapi.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\lib\ioapi\ioapi.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\lib\ioapi\mock\ioapi_mock.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\lib\ioapi\mock\ioapi_mock.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\lib\ioapi\test\test_ioapi.c">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="src\lib\statusc\statusc.c">
       <SubType>compile</SubType>
     </Compile>
@@ -402,6 +417,9 @@
     <Folder Include="src\asf\common\utils\" />
     <Folder Include="src\asf\common\utils\interrupt\" />
     <Folder Include="src\lib\" />
+    <Folder Include="src\lib\ioapi\" />
+    <Folder Include="src\lib\ioapi\mock\" />
+    <Folder Include="src\lib\ioapi\test\" />
     <Folder Include="src\lib\statusc\" />
     <Folder Include="src\lib\str\" />
     <Folder Include="src\lib\str\test\" />

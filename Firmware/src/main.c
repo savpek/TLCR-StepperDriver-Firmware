@@ -7,8 +7,9 @@
 #include "init_usart/init_usart.h"
 
 void test_runner() {
-	//RUN_TEST_GROUP(ioapi);
+	RUN_TEST_GROUP(ioapi);
 	RUN_TEST_GROUP(utest);
+	RUN_TEST_GROUP(str);
 }
 
 int main() {

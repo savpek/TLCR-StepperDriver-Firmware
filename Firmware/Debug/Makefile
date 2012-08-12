@@ -53,6 +53,9 @@ SUBDIRS :=  \
 ../src/asf/common/utils/ \
 ../src/asf/common/utils/interrupt/ \
 ../src/lib/ \
+../src/lib/ioapi/ \
+../src/lib/ioapi/mock/ \
+../src/lib/ioapi/test/ \
 ../src/lib/statusc/ \
 ../src/lib/str/ \
 ../src/lib/str/test/ \
@@ -74,6 +77,9 @@ C_SRCS +=  \
 ../src/asf/avr32/drivers/pm/power_clocks_lib.c \
 ../src/asf/avr32/drivers/scif/scif_uc3l.c \
 ../src/asf/avr32/drivers/usart/usart.c \
+../src/lib/ioapi/ioapi.c \
+../src/lib/ioapi/mock/ioapi_mock.c \
+../src/lib/ioapi/test/test_ioapi.c \
 ../src/lib/statusc/statusc.c \
 ../src/lib/str/str.c \
 ../src/lib/str/test/test_str.c \
@@ -103,6 +109,9 @@ src/asf/avr32/drivers/pm/power_clocks_lib.o \
 src/asf/avr32/drivers/scif/scif_uc3l.o \
 src/asf/avr32/drivers/usart/usart.o \
 src/asf/avr32/utils/startup/trampoline_uc3.o \
+src/lib/ioapi/ioapi.o \
+src/lib/ioapi/mock/ioapi_mock.o \
+src/lib/ioapi/test/test_ioapi.o \
 src/lib/statusc/statusc.o \
 src/lib/str/str.o \
 src/lib/str/test/test_str.o \
@@ -124,6 +133,9 @@ src/asf/avr32/drivers/pm/power_clocks_lib.o \
 src/asf/avr32/drivers/scif/scif_uc3l.o \
 src/asf/avr32/drivers/usart/usart.o \
 src/asf/avr32/utils/startup/trampoline_uc3.o \
+src/lib/ioapi/ioapi.o \
+src/lib/ioapi/mock/ioapi_mock.o \
+src/lib/ioapi/test/test_ioapi.o \
 src/lib/statusc/statusc.o \
 src/lib/str/str.o \
 src/lib/str/test/test_str.o \
@@ -143,6 +155,9 @@ src/asf/avr32/drivers/pm/pm_uc3l.d \
 src/asf/avr32/drivers/pm/power_clocks_lib.d \
 src/asf/avr32/drivers/scif/scif_uc3l.d \
 src/asf/avr32/drivers/usart/usart.d \
+src/lib/ioapi/ioapi.d \
+src/lib/ioapi/mock/ioapi_mock.d \
+src/lib/ioapi/test/test_ioapi.d \
 src/lib/statusc/statusc.d \
 src/lib/str/str.d \
 src/lib/str/test/test_str.d \
@@ -162,6 +177,9 @@ src/asf/avr32/drivers/pm/pm_uc3l.d \
 src/asf/avr32/drivers/pm/power_clocks_lib.d \
 src/asf/avr32/drivers/scif/scif_uc3l.d \
 src/asf/avr32/drivers/usart/usart.d \
+src/lib/ioapi/ioapi.d \
+src/lib/ioapi/mock/ioapi_mock.d \
+src/lib/ioapi/test/test_ioapi.d \
 src/lib/statusc/statusc.d \
 src/lib/str/str.d \
 src/lib/str/test/test_str.d \
@@ -179,6 +197,12 @@ ADDITIONAL_DEPENDENCIES:=
 OUTPUT_FILE_DEP:= ./makedep.mk
 
 # AVR32/GNU C Compiler
+
+
+
+
+
+
 
 
 
@@ -261,6 +285,24 @@ src/asf/avr32/drivers/scif/%.o: ../src/asf/avr32/drivers/scif/%.c
 	@echo Finished building: $<
 
 src/asf/avr32/drivers/usart/%.o: ../src/asf/avr32/drivers/usart/%.c
+	@echo Building file: $<
+	@echo Invoking: AVR32/GNU C Compiler : (AVR_32_bit_GNU_Toolchain_3.4.0_332) 4.4.3
+	$(QUOTE)C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr32-gcc.exe$(QUOTE) -I"../src/config" -I"../src/app" -I"../src/lib" -I"../src" -I"../src/asf/avr32/drivers/usart" -I"../src/asf/avr32/utils" -I"../src/asf/avr32/utils/preprocessor" -I"../src/asf/common/utils" -I"../src/asf/avr32/drivers/intc" -I"../src/asf/avr32/drivers/scif" -I"../src/asf/avr32/drivers/flashcdw" -I"../src/asf/avr32/drivers/pm" -I"../src/asf/avr32/drivers/gpio"  -O0 -ffunction-sections -masm-addr-pseudos -g3 -Wall -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"  -mpart=uc3l064   -o"$@" "$<" 
+	@echo Finished building: $<
+
+src/lib/ioapi/%.o: ../src/lib/ioapi/%.c
+	@echo Building file: $<
+	@echo Invoking: AVR32/GNU C Compiler : (AVR_32_bit_GNU_Toolchain_3.4.0_332) 4.4.3
+	$(QUOTE)C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr32-gcc.exe$(QUOTE) -I"../src/config" -I"../src/app" -I"../src/lib" -I"../src" -I"../src/asf/avr32/drivers/usart" -I"../src/asf/avr32/utils" -I"../src/asf/avr32/utils/preprocessor" -I"../src/asf/common/utils" -I"../src/asf/avr32/drivers/intc" -I"../src/asf/avr32/drivers/scif" -I"../src/asf/avr32/drivers/flashcdw" -I"../src/asf/avr32/drivers/pm" -I"../src/asf/avr32/drivers/gpio"  -O0 -ffunction-sections -masm-addr-pseudos -g3 -Wall -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"  -mpart=uc3l064   -o"$@" "$<" 
+	@echo Finished building: $<
+
+src/lib/ioapi/mock/%.o: ../src/lib/ioapi/mock/%.c
+	@echo Building file: $<
+	@echo Invoking: AVR32/GNU C Compiler : (AVR_32_bit_GNU_Toolchain_3.4.0_332) 4.4.3
+	$(QUOTE)C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr32-gcc.exe$(QUOTE) -I"../src/config" -I"../src/app" -I"../src/lib" -I"../src" -I"../src/asf/avr32/drivers/usart" -I"../src/asf/avr32/utils" -I"../src/asf/avr32/utils/preprocessor" -I"../src/asf/common/utils" -I"../src/asf/avr32/drivers/intc" -I"../src/asf/avr32/drivers/scif" -I"../src/asf/avr32/drivers/flashcdw" -I"../src/asf/avr32/drivers/pm" -I"../src/asf/avr32/drivers/gpio"  -O0 -ffunction-sections -masm-addr-pseudos -g3 -Wall -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"  -mpart=uc3l064   -o"$@" "$<" 
+	@echo Finished building: $<
+
+src/lib/ioapi/test/%.o: ../src/lib/ioapi/test/%.c
 	@echo Building file: $<
 	@echo Invoking: AVR32/GNU C Compiler : (AVR_32_bit_GNU_Toolchain_3.4.0_332) 4.4.3
 	$(QUOTE)C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr32-gcc.exe$(QUOTE) -I"../src/config" -I"../src/app" -I"../src/lib" -I"../src" -I"../src/asf/avr32/drivers/usart" -I"../src/asf/avr32/utils" -I"../src/asf/avr32/utils/preprocessor" -I"../src/asf/common/utils" -I"../src/asf/avr32/drivers/intc" -I"../src/asf/avr32/drivers/scif" -I"../src/asf/avr32/drivers/flashcdw" -I"../src/asf/avr32/drivers/pm" -I"../src/asf/avr32/drivers/gpio"  -O0 -ffunction-sections -masm-addr-pseudos -g3 -Wall -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"  -mpart=uc3l064   -o"$@" "$<" 

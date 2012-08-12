@@ -15,6 +15,13 @@ static uint8_t is_register_set(uint32_t register_value, uint8_t pin) {
 	return ((register_value & get_pin_bit_in_port(pin)) != 0 );
 }
 
+static statusc_t is_pin_in_gpio_mode(volatile avr32_gpio_port_t *gpio_port, uint8_t pin_number) 
+{
+	if(is_register_set(gpio_port->gper, pin_number))
+		return true;
+	return false;
+}
+
 uint32_t ioapi_get_pin_info( const uint8_t pin_number ) {
 	volatile avr32_gpio_port_t *gpio_port = &AVR32_GPIO.port[get_port_idx(pin_number)];
 	uint32_t return_flags = 0;
@@ -41,13 +48,13 @@ uint32_t ioapi_get_pin_info( const uint8_t pin_number ) {
 	}
 
 	if(is_register_set(gpio_port->puer, pin_number)) {
-		return_flags |= IOAPI_PULL_UP;
+		return_flags |= 0x03;
 	}
 
 	return return_flags;
 }
 
-inline void assert_if_not_output( uint8_t pin_number) 
+static inline void assert_if_not_output( uint8_t pin_number) 
 {
 	ASSERT( (ioapi_get_pin_info(pin_number) & IOAPI_GPIO_USED) != 0 );
 	ASSERT( (ioapi_get_pin_info(pin_number) & IOAPI_OUTPUT ) != 0);
@@ -75,7 +82,14 @@ statusc_t ioapi_input_value_body( uint8_t pin_number )
 }
 statusc_t (*ioapi_input_value)(uint8_t) = ioapi_input_value_body;
 
-statusc_t ioapi_is_it_output( uint8_t pin_number )
+statusc_t ioapi_is_pin_output( uint8_t pin_number )
 {
-	return SC_LOW;
+	volatile avr32_gpio_port_t *gpio_port = &AVR32_GPIO.port[get_port_idx(pin_number)];
+	
+	if(	is_pin_in_gpio_mode(gpio_port, pin_number) &&
+		is_register_set(gpio_port->oder, pin_number))
+	{
+		return true;
+	}
+	return false;
 }
