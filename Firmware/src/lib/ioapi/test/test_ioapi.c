@@ -60,6 +60,15 @@ TEST(ioapi, test_ioapi_is_pin_output)
 	TEST_ASSERT(!ioapi_is_pin_output(AVR32_PIN_PA19));
 }
 
+TEST(ioapi, test_ioapi_is_pin_input) 
+{
+	gpio_configure_pin(AVR32_PIN_PA19, GPIO_DIR_OUTPUT);
+	TEST_ASSERT(!ioapi_is_pin_input(AVR32_PIN_PA19));
+	
+	gpio_configure_pin(AVR32_PIN_PA19, GPIO_DIR_INPUT);
+	TEST_ASSERT(ioapi_is_pin_input(AVR32_PIN_PA19));
+}
+
 TEST_GROUP_RUNNER(ioapi) 
 {
 	RUN_TEST_CASE(ioapi, test_ioapi_get_pin_info);
@@ -67,4 +76,5 @@ TEST_GROUP_RUNNER(ioapi)
 	RUN_TEST_CASE(ioapi, test_ioapi_output_low);
 	RUN_TEST_CASE(ioapi, test_ioapi_input_value);
 	RUN_TEST_CASE(ioapi, test_ioapi_is_pin_output)
+	RUN_TEST_CASE(ioapi, test_ioapi_is_pin_input)
 }

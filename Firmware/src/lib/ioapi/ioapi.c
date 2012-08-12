@@ -89,7 +89,19 @@ statusc_t ioapi_is_pin_output( uint8_t pin_number )
 	if(	is_pin_in_gpio_mode(gpio_port, pin_number) &&
 		is_register_set(gpio_port->oder, pin_number))
 	{
-		return true;
+		return SC_TRUE;
 	}
-	return false;
+	return SC_FALSE;
+}
+
+statusc_t ioapi_is_pin_input( uint8_t pin_number)
+{
+	volatile avr32_gpio_port_t *gpio_port = &AVR32_GPIO.port[get_port_idx(pin_number)];
+	
+	if(	is_pin_in_gpio_mode(gpio_port, pin_number) &&
+		!is_register_set(gpio_port->oder, pin_number))
+	{
+		return SC_TRUE;
+	}
+	return SC_FALSE;
 }
