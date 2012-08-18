@@ -23,52 +23,55 @@
     <AsfVersion>3.1.3</AsfVersion>
     <AsfFrameworkConfig>
       <framework-data>
-        <options>
-          <option id="avr32.drivers.flashcdw" value="Add" config="" content-id="Atmel.ASF" />
-          <option id="avr32.drivers.pm" value="Add" config="" content-id="Atmel.ASF" />
-          <option id="avr32.drivers.scif" value="Add" config="" content-id="Atmel.ASF" />
-          <option id="avr32.drivers.usart" value="Add" config="" content-id="Atmel.ASF" />
-          <option id="avr32.drivers.gpio" value="Add" config="" content-id="Atmel.ASF" />
-        </options>
-        <configurations>
-          <configuration key="config.avr32.utils.trampoline" value="yes" default="yes" content-id="Atmel.ASF" />
-          <configuration key="config.avr32.utils.gccstartup" value="yes" default="yes" content-id="Atmel.ASF" />
-          <configuration key="config.utils.interrupt.intc" value="yes" default="yes" content-id="Atmel.ASF" />
-          <configuration key="config.avr32.drivers.intc.exception" value="yes" default="yes" content-id="Atmel.ASF" />
-        </configurations>
-        <files>
-          <file path="src/asf/avr32/drivers/usart/usart.c" framework="" version="" source="avr32\drivers\usart\usart.c" changed="False" content-id="Atmel.ASF" />
-          <file path="src/asf/avr32/drivers/usart/usart.h" framework="" version="" source="avr32\drivers\usart\usart.h" changed="False" content-id="Atmel.ASF" />
-          <file path="src/asf/avr32/utils/startup/startup_uc3.S" framework="" version="" source="avr32\utils\startup\startup_uc3.S" changed="False" content-id="Atmel.ASF" />
-          <file path="src/asf/avr32/utils/startup/trampoline_uc3.S" framework="" version="" source="avr32\utils\startup\trampoline_uc3.S" changed="False" content-id="Atmel.ASF" />
-          <file path="src/asf/avr32/utils/startup/trampoline_uc3.h" framework="" version="" source="avr32\utils\startup\trampoline_uc3.h" changed="False" content-id="Atmel.ASF" />
-          <file path="src/asf/avr32/utils/parts.h" framework="" version="" source="avr32\utils\parts.h" changed="False" content-id="Atmel.ASF" />
-          <file path="src/asf/avr32/utils/preprocessor/preprocessor.h" framework="" version="" source="avr32\utils\preprocessor\preprocessor.h" changed="False" content-id="Atmel.ASF" />
-          <file path="src/asf/avr32/utils/preprocessor/mrepeat.h" framework="" version="" source="avr32\utils\preprocessor\mrepeat.h" changed="False" content-id="Atmel.ASF" />
-          <file path="src/asf/avr32/utils/preprocessor/stringz.h" framework="" version="" source="avr32\utils\preprocessor\stringz.h" changed="False" content-id="Atmel.ASF" />
-          <file path="src/asf/avr32/utils/status_codes.h" framework="" version="" source="avr32\utils\status_codes.h" changed="False" content-id="Atmel.ASF" />
-          <file path="src/asf/avr32/utils/compiler.h" framework="" version="" source="avr32\utils\compiler.h" changed="False" content-id="Atmel.ASF" />
-          <file path="src/asf/avr32/utils/header_files/uc3d_defines_fix.h" framework="" version="" source="avr32\utils\header_files\uc3d_defines_fix.h" changed="False" content-id="Atmel.ASF" />
-          <file path="src/asf/avr32/utils/preprocessor/tpaste.h" framework="" version="" source="avr32\utils\preprocessor\tpaste.h" changed="False" content-id="Atmel.ASF" />
-          <file path="src/asf/common/utils/interrupt/interrupt_avr32.h" framework="" version="" source="common\utils\interrupt\interrupt_avr32.h" changed="False" content-id="Atmel.ASF" />
-          <file path="src/asf/common/utils/interrupt.h" framework="" version="" source="common\utils\interrupt.h" changed="False" content-id="Atmel.ASF" />
-          <file path="src/asf/avr32/drivers/intc/exception.S" framework="" version="" source="avr32\drivers\intc\exception.S" changed="False" content-id="Atmel.ASF" />
-          <file path="src/asf/avr32/drivers/intc/intc.c" framework="" version="" source="avr32\drivers\intc\intc.c" changed="False" content-id="Atmel.ASF" />
-          <file path="src/asf/avr32/drivers/intc/intc.h" framework="" version="" source="avr32\drivers\intc\intc.h" changed="False" content-id="Atmel.ASF" />
-          <file path="src/asf/avr32/drivers/scif/scif_uc3l.c" framework="" version="" source="avr32\drivers\scif\scif_uc3l.c" changed="False" content-id="Atmel.ASF" />
-          <file path="src/asf/avr32/drivers/scif/scif_uc3l.h" framework="" version="" source="avr32\drivers\scif\scif_uc3l.h" changed="False" content-id="Atmel.ASF" />
-          <file path="src/asf/avr32/drivers/flashcdw/flashcdw.c" framework="" version="" source="avr32\drivers\flashcdw\flashcdw.c" changed="False" content-id="Atmel.ASF" />
-          <file path="src/asf/avr32/drivers/flashcdw/flashcdw.h" framework="" version="" source="avr32\drivers\flashcdw\flashcdw.h" changed="False" content-id="Atmel.ASF" />
-          <file path="src/asf/avr32/drivers/pm/pm_uc3l.c" framework="" version="" source="avr32\drivers\pm\pm_uc3l.c" changed="False" content-id="Atmel.ASF" />
-          <file path="src/asf/avr32/drivers/pm/power_clocks_lib.c" framework="" version="" source="avr32\drivers\pm\power_clocks_lib.c" changed="False" content-id="Atmel.ASF" />
-          <file path="src/asf/avr32/drivers/pm/power_clocks_lib.h" framework="" version="" source="avr32\drivers\pm\power_clocks_lib.h" changed="False" content-id="Atmel.ASF" />
-          <file path="src/asf/avr32/drivers/pm/pm_uc3l.h" framework="" version="" source="avr32\drivers\pm\pm_uc3l.h" changed="False" content-id="Atmel.ASF" />
-          <file path="src/asf/avr32/drivers/pm/sleep.h" framework="" version="" source="avr32\drivers\pm\sleep.h" changed="False" content-id="Atmel.ASF" />
-          <file path="src/asf/avr32/drivers/gpio/gpio.c" framework="" version="" source="avr32\drivers\gpio\gpio.c" changed="False" content-id="Atmel.ASF" />
-          <file path="src/asf/avr32/drivers/gpio/gpio.h" framework="" version="" source="avr32\drivers\gpio\gpio.h" changed="False" content-id="Atmel.ASF" />
-        </files>
-        <documentation help="" />
-      </framework-data>
+  <options>
+    <option id="avr32.drivers.flashcdw" value="Add" config="" content-id="Atmel.ASF" />
+    <option id="avr32.drivers.gpio" value="Add" config="" content-id="Atmel.ASF" />
+    <option id="avr32.drivers.pm" value="Add" config="" content-id="Atmel.ASF" />
+    <option id="avr32.drivers.scif" value="Add" config="" content-id="Atmel.ASF" />
+    <option id="avr32.drivers.usart" value="Add" config="" content-id="Atmel.ASF" />
+    <option id="avr32.drivers.pwma" value="Add" config="" content-id="Atmel.ASF" />
+  </options>
+  <configurations>
+    <configuration key="config.avr32.utils.trampoline" value="yes" default="yes" content-id="Atmel.ASF" />
+    <configuration key="config.avr32.utils.gccstartup" value="yes" default="yes" content-id="Atmel.ASF" />
+    <configuration key="config.utils.interrupt.intc" value="yes" default="yes" content-id="Atmel.ASF" />
+    <configuration key="config.avr32.drivers.intc.exception" value="yes" default="yes" content-id="Atmel.ASF" />
+  </configurations>
+  <files>
+    <file path="src/asf/avr32/drivers/usart/usart.c" framework="" version="" source="avr32\drivers\usart\usart.c" changed="False" content-id="Atmel.ASF" />
+    <file path="src/asf/avr32/drivers/usart/usart.h" framework="" version="" source="avr32\drivers\usart\usart.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/asf/avr32/utils/startup/startup_uc3.S" framework="" version="" source="avr32\utils\startup\startup_uc3.S" changed="False" content-id="Atmel.ASF" />
+    <file path="src/asf/avr32/utils/startup/trampoline_uc3.S" framework="" version="" source="avr32\utils\startup\trampoline_uc3.S" changed="False" content-id="Atmel.ASF" />
+    <file path="src/asf/avr32/utils/startup/trampoline_uc3.h" framework="" version="" source="avr32\utils\startup\trampoline_uc3.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/asf/avr32/utils/parts.h" framework="" version="" source="avr32\utils\parts.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/asf/avr32/utils/preprocessor/preprocessor.h" framework="" version="" source="avr32\utils\preprocessor\preprocessor.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/asf/avr32/utils/preprocessor/mrepeat.h" framework="" version="" source="avr32\utils\preprocessor\mrepeat.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/asf/avr32/utils/preprocessor/stringz.h" framework="" version="" source="avr32\utils\preprocessor\stringz.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/asf/avr32/utils/status_codes.h" framework="" version="" source="avr32\utils\status_codes.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/asf/avr32/utils/compiler.h" framework="" version="" source="avr32\utils\compiler.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/asf/avr32/utils/header_files/uc3d_defines_fix.h" framework="" version="" source="avr32\utils\header_files\uc3d_defines_fix.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/asf/avr32/utils/preprocessor/tpaste.h" framework="" version="" source="avr32\utils\preprocessor\tpaste.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/asf/common/utils/interrupt/interrupt_avr32.h" framework="" version="" source="common\utils\interrupt\interrupt_avr32.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/asf/common/utils/interrupt.h" framework="" version="" source="common\utils\interrupt.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/asf/avr32/drivers/intc/exception.S" framework="" version="" source="avr32\drivers\intc\exception.S" changed="False" content-id="Atmel.ASF" />
+    <file path="src/asf/avr32/drivers/intc/intc.c" framework="" version="" source="avr32\drivers\intc\intc.c" changed="False" content-id="Atmel.ASF" />
+    <file path="src/asf/avr32/drivers/intc/intc.h" framework="" version="" source="avr32\drivers\intc\intc.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/asf/avr32/drivers/scif/scif_uc3l.c" framework="" version="" source="avr32\drivers\scif\scif_uc3l.c" changed="False" content-id="Atmel.ASF" />
+    <file path="src/asf/avr32/drivers/scif/scif_uc3l.h" framework="" version="" source="avr32\drivers\scif\scif_uc3l.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/asf/avr32/drivers/flashcdw/flashcdw.c" framework="" version="" source="avr32\drivers\flashcdw\flashcdw.c" changed="False" content-id="Atmel.ASF" />
+    <file path="src/asf/avr32/drivers/flashcdw/flashcdw.h" framework="" version="" source="avr32\drivers\flashcdw\flashcdw.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/asf/avr32/drivers/pm/pm_uc3l.c" framework="" version="" source="avr32\drivers\pm\pm_uc3l.c" changed="False" content-id="Atmel.ASF" />
+    <file path="src/asf/avr32/drivers/pm/power_clocks_lib.c" framework="" version="" source="avr32\drivers\pm\power_clocks_lib.c" changed="False" content-id="Atmel.ASF" />
+    <file path="src/asf/avr32/drivers/pm/power_clocks_lib.h" framework="" version="" source="avr32\drivers\pm\power_clocks_lib.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/asf/avr32/drivers/pm/pm_uc3l.h" framework="" version="" source="avr32\drivers\pm\pm_uc3l.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/asf/avr32/drivers/pm/sleep.h" framework="" version="" source="avr32\drivers\pm\sleep.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/asf/avr32/drivers/gpio/gpio.c" framework="" version="" source="avr32\drivers\gpio\gpio.c" changed="False" content-id="Atmel.ASF" />
+    <file path="src/asf/avr32/drivers/gpio/gpio.h" framework="" version="" source="avr32\drivers\gpio\gpio.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/asf/avr32/drivers/pwma/pwma.c" framework="" version="" source="avr32\drivers\pwma\pwma.c" changed="False" content-id="Atmel.ASF" />
+    <file path="src/asf/avr32/drivers/pwma/pwma.h" framework="" version="" source="avr32\drivers\pwma\pwma.h" changed="False" content-id="Atmel.ASF" />
+  </files>
+  <documentation help="" />
+</framework-data>
     </AsfFrameworkConfig>
     <avrtoolinterface>aWire</avrtoolinterface>
     <avrtool>com.atmel.avrdbg.tool.jtagicemk3</avrtool>
@@ -105,132 +108,138 @@
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <ToolchainSettings>
       <Avr32Gcc>
-        <avr32gcc.common.outputfiles.hex>True</avr32gcc.common.outputfiles.hex>
-        <avr32gcc.common.outputfiles.lss>True</avr32gcc.common.outputfiles.lss>
-        <avr32gcc.common.outputfiles.eep>True</avr32gcc.common.outputfiles.eep>
-        <avr32gcc.compiler.directories.IncludePaths>
-          <ListValues>
-            <Value>../src/config</Value>
-            <Value>../src/asf/avr32/drivers/usart</Value>
-            <Value>../src/asf/avr32/utils</Value>
-            <Value>../src/asf/avr32/utils/preprocessor</Value>
-            <Value>../src/asf/common/utils</Value>
-            <Value>../src/asf/avr32/drivers/intc</Value>
-            <Value>../src/asf/avr32/drivers/scif</Value>
-            <Value>../src/asf/avr32/drivers/flashcdw</Value>
-            <Value>../src/asf/avr32/drivers/pm</Value>
-            <Value>../src/asf/avr32/drivers/gpio</Value>
-          </ListValues>
-        </avr32gcc.compiler.directories.IncludePaths>
-        <avr32gcc.compiler.optimization.level>Optimize for size (-Os)</avr32gcc.compiler.optimization.level>
-        <avr32gcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</avr32gcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
-        <avr32gcc.compiler.optimization.UseAssemblerForPseudoInstructions>True</avr32gcc.compiler.optimization.UseAssemblerForPseudoInstructions>
-        <avr32gcc.compiler.warnings.AllWarnings>True</avr32gcc.compiler.warnings.AllWarnings>
-        <avr32gcc.linker.libraries.Libraries>
-          <ListValues>
-            <Value>m</Value>
-          </ListValues>
-        </avr32gcc.linker.libraries.Libraries>
-        <avr32gcc.linker.optimization.GarbageCollectUnusedSections>True</avr32gcc.linker.optimization.GarbageCollectUnusedSections>
-        <avr32gcc.linker.optimization.PutReadOnlyDataInWritableDataSection>True</avr32gcc.linker.optimization.PutReadOnlyDataInWritableDataSection>
-        <avr32gcc.linker.optimization.AllowDirectReferencesToDataSection>True</avr32gcc.linker.optimization.AllowDirectReferencesToDataSection>
-        <avr32gcc.assembler.general.IncludePaths>
-          <ListValues>
-            <Value>../src/config</Value>
-            <Value>../src/asf/avr32/drivers/usart</Value>
-            <Value>../src/asf/avr32/utils</Value>
-            <Value>../src/asf/avr32/utils/preprocessor</Value>
-            <Value>../src/asf/common/utils</Value>
-            <Value>../src/asf/avr32/drivers/intc</Value>
-            <Value>../src/asf/avr32/drivers/scif</Value>
-            <Value>../src/asf/avr32/drivers/flashcdw</Value>
-            <Value>../src/asf/avr32/drivers/pm</Value>
-            <Value>../src/asf/avr32/drivers/gpio</Value>
-          </ListValues>
-        </avr32gcc.assembler.general.IncludePaths>
-        <avr32gcc.preprocessingassembler.general.IncludePaths>
-          <ListValues>
-            <Value>../src/config</Value>
-            <Value>../src/asf/avr32/drivers/usart</Value>
-            <Value>../src/asf/avr32/utils</Value>
-            <Value>../src/asf/avr32/utils/preprocessor</Value>
-            <Value>../src/asf/common/utils</Value>
-            <Value>../src/asf/avr32/drivers/intc</Value>
-            <Value>../src/asf/avr32/drivers/scif</Value>
-            <Value>../src/asf/avr32/drivers/flashcdw</Value>
-            <Value>../src/asf/avr32/drivers/pm</Value>
-            <Value>../src/asf/avr32/drivers/gpio</Value>
-          </ListValues>
-        </avr32gcc.preprocessingassembler.general.IncludePaths>
-      </Avr32Gcc>
+  <avr32gcc.common.outputfiles.hex>True</avr32gcc.common.outputfiles.hex>
+  <avr32gcc.common.outputfiles.lss>True</avr32gcc.common.outputfiles.lss>
+  <avr32gcc.common.outputfiles.eep>True</avr32gcc.common.outputfiles.eep>
+  <avr32gcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>../src/config</Value>
+      <Value>../src/asf/avr32/drivers/usart</Value>
+      <Value>../src/asf/avr32/utils</Value>
+      <Value>../src/asf/avr32/utils/preprocessor</Value>
+      <Value>../src/asf/common/utils</Value>
+      <Value>../src/asf/avr32/drivers/intc</Value>
+      <Value>../src/asf/avr32/drivers/scif</Value>
+      <Value>../src/asf/avr32/drivers/flashcdw</Value>
+      <Value>../src/asf/avr32/drivers/pm</Value>
+      <Value>../src/asf/avr32/drivers/gpio</Value>
+      <Value>../src/asf/avr32/drivers/pwma</Value>
+    </ListValues>
+  </avr32gcc.compiler.directories.IncludePaths>
+  <avr32gcc.compiler.optimization.level>Optimize for size (-Os)</avr32gcc.compiler.optimization.level>
+  <avr32gcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</avr32gcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
+  <avr32gcc.compiler.optimization.UseAssemblerForPseudoInstructions>True</avr32gcc.compiler.optimization.UseAssemblerForPseudoInstructions>
+  <avr32gcc.compiler.warnings.AllWarnings>True</avr32gcc.compiler.warnings.AllWarnings>
+  <avr32gcc.linker.libraries.Libraries>
+    <ListValues>
+      <Value>m</Value>
+    </ListValues>
+  </avr32gcc.linker.libraries.Libraries>
+  <avr32gcc.linker.optimization.GarbageCollectUnusedSections>True</avr32gcc.linker.optimization.GarbageCollectUnusedSections>
+  <avr32gcc.linker.optimization.PutReadOnlyDataInWritableDataSection>True</avr32gcc.linker.optimization.PutReadOnlyDataInWritableDataSection>
+  <avr32gcc.linker.optimization.AllowDirectReferencesToDataSection>True</avr32gcc.linker.optimization.AllowDirectReferencesToDataSection>
+  <avr32gcc.assembler.general.IncludePaths>
+    <ListValues>
+      <Value>../src/config</Value>
+      <Value>../src/asf/avr32/drivers/usart</Value>
+      <Value>../src/asf/avr32/utils</Value>
+      <Value>../src/asf/avr32/utils/preprocessor</Value>
+      <Value>../src/asf/common/utils</Value>
+      <Value>../src/asf/avr32/drivers/intc</Value>
+      <Value>../src/asf/avr32/drivers/scif</Value>
+      <Value>../src/asf/avr32/drivers/flashcdw</Value>
+      <Value>../src/asf/avr32/drivers/pm</Value>
+      <Value>../src/asf/avr32/drivers/gpio</Value>
+      <Value>../src/asf/avr32/drivers/pwma</Value>
+    </ListValues>
+  </avr32gcc.assembler.general.IncludePaths>
+  <avr32gcc.preprocessingassembler.general.IncludePaths>
+    <ListValues>
+      <Value>../src/config</Value>
+      <Value>../src/asf/avr32/drivers/usart</Value>
+      <Value>../src/asf/avr32/utils</Value>
+      <Value>../src/asf/avr32/utils/preprocessor</Value>
+      <Value>../src/asf/common/utils</Value>
+      <Value>../src/asf/avr32/drivers/intc</Value>
+      <Value>../src/asf/avr32/drivers/scif</Value>
+      <Value>../src/asf/avr32/drivers/flashcdw</Value>
+      <Value>../src/asf/avr32/drivers/pm</Value>
+      <Value>../src/asf/avr32/drivers/gpio</Value>
+      <Value>../src/asf/avr32/drivers/pwma</Value>
+    </ListValues>
+  </avr32gcc.preprocessingassembler.general.IncludePaths>
+</Avr32Gcc>
     </ToolchainSettings>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <ToolchainSettings>
       <Avr32Gcc>
-        <avr32gcc.common.outputfiles.hex>True</avr32gcc.common.outputfiles.hex>
-        <avr32gcc.common.outputfiles.lss>True</avr32gcc.common.outputfiles.lss>
-        <avr32gcc.common.outputfiles.eep>True</avr32gcc.common.outputfiles.eep>
-        <avr32gcc.compiler.directories.IncludePaths>
-          <ListValues>
-            <Value>../src/config</Value>
-            <Value>../src/app</Value>
-            <Value>../src/lib</Value>
-            <Value>../src</Value>
-            <Value>../src/asf/avr32/drivers/usart</Value>
-            <Value>../src/asf/avr32/utils</Value>
-            <Value>../src/asf/avr32/utils/preprocessor</Value>
-            <Value>../src/asf/common/utils</Value>
-            <Value>../src/asf/avr32/drivers/intc</Value>
-            <Value>../src/asf/avr32/drivers/scif</Value>
-            <Value>../src/asf/avr32/drivers/flashcdw</Value>
-            <Value>../src/asf/avr32/drivers/pm</Value>
-            <Value>../src/asf/avr32/drivers/gpio</Value>
-          </ListValues>
-        </avr32gcc.compiler.directories.IncludePaths>
-        <avr32gcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</avr32gcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
-        <avr32gcc.compiler.optimization.UseAssemblerForPseudoInstructions>True</avr32gcc.compiler.optimization.UseAssemblerForPseudoInstructions>
-        <avr32gcc.compiler.optimization.DebugLevel>Maximum (-g3)</avr32gcc.compiler.optimization.DebugLevel>
-        <avr32gcc.compiler.warnings.AllWarnings>True</avr32gcc.compiler.warnings.AllWarnings>
-        <avr32gcc.linker.libraries.Libraries>
-          <ListValues>
-            <Value>m</Value>
-          </ListValues>
-        </avr32gcc.linker.libraries.Libraries>
-        <avr32gcc.linker.optimization.GarbageCollectUnusedSections>True</avr32gcc.linker.optimization.GarbageCollectUnusedSections>
-        <avr32gcc.linker.optimization.PutReadOnlyDataInWritableDataSection>True</avr32gcc.linker.optimization.PutReadOnlyDataInWritableDataSection>
-        <avr32gcc.linker.optimization.AllowDirectReferencesToDataSection>True</avr32gcc.linker.optimization.AllowDirectReferencesToDataSection>
-        <avr32gcc.assembler.general.IncludePaths>
-          <ListValues>
-            <Value>../src/config</Value>
-            <Value>../src/asf/avr32/drivers/usart</Value>
-            <Value>../src/asf/avr32/utils</Value>
-            <Value>../src/asf/avr32/utils/preprocessor</Value>
-            <Value>../src/asf/common/utils</Value>
-            <Value>../src/asf/avr32/drivers/intc</Value>
-            <Value>../src/asf/avr32/drivers/scif</Value>
-            <Value>../src/asf/avr32/drivers/flashcdw</Value>
-            <Value>../src/asf/avr32/drivers/pm</Value>
-            <Value>../src/asf/avr32/drivers/gpio</Value>
-          </ListValues>
-        </avr32gcc.assembler.general.IncludePaths>
-        <avr32gcc.assembler.debugging.DebugLevel>Default (-g)</avr32gcc.assembler.debugging.DebugLevel>
-        <avr32gcc.preprocessingassembler.general.IncludePaths>
-          <ListValues>
-            <Value>../src/config</Value>
-            <Value>../src/asf/avr32/drivers/usart</Value>
-            <Value>../src/asf/avr32/utils</Value>
-            <Value>../src/asf/avr32/utils/preprocessor</Value>
-            <Value>../src/asf/common/utils</Value>
-            <Value>../src/asf/avr32/drivers/intc</Value>
-            <Value>../src/asf/avr32/drivers/scif</Value>
-            <Value>../src/asf/avr32/drivers/flashcdw</Value>
-            <Value>../src/asf/avr32/drivers/pm</Value>
-            <Value>../src/asf/avr32/drivers/gpio</Value>
-          </ListValues>
-        </avr32gcc.preprocessingassembler.general.IncludePaths>
-        <avr32gcc.preprocessingassembler.debugging.DebugLevel>Default (-Wa,-g)</avr32gcc.preprocessingassembler.debugging.DebugLevel>
-      </Avr32Gcc>
+  <avr32gcc.common.outputfiles.hex>True</avr32gcc.common.outputfiles.hex>
+  <avr32gcc.common.outputfiles.lss>True</avr32gcc.common.outputfiles.lss>
+  <avr32gcc.common.outputfiles.eep>True</avr32gcc.common.outputfiles.eep>
+  <avr32gcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>../src/config</Value>
+      <Value>../src/app</Value>
+      <Value>../src/lib</Value>
+      <Value>../src</Value>
+      <Value>../src/asf/avr32/drivers/usart</Value>
+      <Value>../src/asf/avr32/utils</Value>
+      <Value>../src/asf/avr32/utils/preprocessor</Value>
+      <Value>../src/asf/common/utils</Value>
+      <Value>../src/asf/avr32/drivers/intc</Value>
+      <Value>../src/asf/avr32/drivers/scif</Value>
+      <Value>../src/asf/avr32/drivers/flashcdw</Value>
+      <Value>../src/asf/avr32/drivers/pm</Value>
+      <Value>../src/asf/avr32/drivers/gpio</Value>
+      <Value>../src/asf/avr32/drivers/pwma</Value>
+    </ListValues>
+  </avr32gcc.compiler.directories.IncludePaths>
+  <avr32gcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</avr32gcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
+  <avr32gcc.compiler.optimization.UseAssemblerForPseudoInstructions>True</avr32gcc.compiler.optimization.UseAssemblerForPseudoInstructions>
+  <avr32gcc.compiler.optimization.DebugLevel>Maximum (-g3)</avr32gcc.compiler.optimization.DebugLevel>
+  <avr32gcc.compiler.warnings.AllWarnings>True</avr32gcc.compiler.warnings.AllWarnings>
+  <avr32gcc.linker.libraries.Libraries>
+    <ListValues>
+      <Value>m</Value>
+    </ListValues>
+  </avr32gcc.linker.libraries.Libraries>
+  <avr32gcc.linker.optimization.GarbageCollectUnusedSections>True</avr32gcc.linker.optimization.GarbageCollectUnusedSections>
+  <avr32gcc.linker.optimization.PutReadOnlyDataInWritableDataSection>True</avr32gcc.linker.optimization.PutReadOnlyDataInWritableDataSection>
+  <avr32gcc.linker.optimization.AllowDirectReferencesToDataSection>True</avr32gcc.linker.optimization.AllowDirectReferencesToDataSection>
+  <avr32gcc.assembler.general.IncludePaths>
+    <ListValues>
+      <Value>../src/config</Value>
+      <Value>../src/asf/avr32/drivers/usart</Value>
+      <Value>../src/asf/avr32/utils</Value>
+      <Value>../src/asf/avr32/utils/preprocessor</Value>
+      <Value>../src/asf/common/utils</Value>
+      <Value>../src/asf/avr32/drivers/intc</Value>
+      <Value>../src/asf/avr32/drivers/scif</Value>
+      <Value>../src/asf/avr32/drivers/flashcdw</Value>
+      <Value>../src/asf/avr32/drivers/pm</Value>
+      <Value>../src/asf/avr32/drivers/gpio</Value>
+      <Value>../src/asf/avr32/drivers/pwma</Value>
+    </ListValues>
+  </avr32gcc.assembler.general.IncludePaths>
+  <avr32gcc.assembler.debugging.DebugLevel>Default (-g)</avr32gcc.assembler.debugging.DebugLevel>
+  <avr32gcc.preprocessingassembler.general.IncludePaths>
+    <ListValues>
+      <Value>../src/config</Value>
+      <Value>../src/asf/avr32/drivers/usart</Value>
+      <Value>../src/asf/avr32/utils</Value>
+      <Value>../src/asf/avr32/utils/preprocessor</Value>
+      <Value>../src/asf/common/utils</Value>
+      <Value>../src/asf/avr32/drivers/intc</Value>
+      <Value>../src/asf/avr32/drivers/scif</Value>
+      <Value>../src/asf/avr32/drivers/flashcdw</Value>
+      <Value>../src/asf/avr32/drivers/pm</Value>
+      <Value>../src/asf/avr32/drivers/gpio</Value>
+      <Value>../src/asf/avr32/drivers/pwma</Value>
+    </ListValues>
+  </avr32gcc.preprocessingassembler.general.IncludePaths>
+  <avr32gcc.preprocessingassembler.debugging.DebugLevel>Default (-Wa,-g)</avr32gcc.preprocessingassembler.debugging.DebugLevel>
+</Avr32Gcc>
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
@@ -291,6 +300,12 @@
     <None Include="src\asf\avr32\drivers\pm\sleep.h">
       <SubType>compile</SubType>
     </None>
+    <Compile Include="src\asf\avr32\drivers\pwma\pwma.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <None Include="src\asf\avr32\drivers\pwma\pwma.h">
+      <SubType>compile</SubType>
+    </None>
     <Compile Include="src\asf\avr32\drivers\scif\scif_uc3l.c">
       <SubType>compile</SubType>
     </Compile>
@@ -340,6 +355,12 @@
       <SubType>compile</SubType>
     </None>
     <Compile Include="src\config\conf_drivers.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\config\conf_gpio.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\config\conf_gpio.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\framework.h">
@@ -407,6 +428,7 @@
     <Folder Include="src\asf\avr32\drivers\gpio\" />
     <Folder Include="src\asf\avr32\drivers\intc\" />
     <Folder Include="src\asf\avr32\drivers\pm\" />
+    <Folder Include="src\asf\avr32\drivers\pwma\" />
     <Folder Include="src\asf\avr32\drivers\scif\" />
     <Folder Include="src\asf\avr32\drivers\usart\" />
     <Folder Include="src\asf\avr32\utils\" />

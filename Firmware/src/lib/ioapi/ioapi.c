@@ -65,3 +65,8 @@ statusc_t ioapi_is_pin_input( uint8_t pin_number)
 	}
 	return SC_FALSE;
 }
+
+void ioapi_output_pwm( uint8_t pin_number, uint32_t pwm_percent )
+{
+//	pwma_set_channels_value( &AVR32_PWMA, (1<<motor_params->a_neg_pwma_chan), 0);
+}

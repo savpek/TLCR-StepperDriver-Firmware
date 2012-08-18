@@ -67,6 +67,9 @@
 #include <power_clocks_lib.h>
 #include <sleep.h>
 
+// From module: PWMA - Pulse Width Modulation A
+#include <pwma.h>
+
 // From module: SCIF System Control Interface - UC3L implementation
 #include <scif_uc3l.h>
 

@@ -43,6 +43,7 @@ SUBDIRS :=  \
 ../src/asf/avr32/drivers/gpio/ \
 ../src/asf/avr32/drivers/intc/ \
 ../src/asf/avr32/drivers/pm/ \
+../src/asf/avr32/drivers/pwma/ \
 ../src/asf/avr32/drivers/scif/ \
 ../src/asf/avr32/drivers/usart/ \
 ../src/asf/avr32/utils/ \
@@ -75,8 +76,10 @@ C_SRCS +=  \
 ../src/asf/avr32/drivers/intc/intc.c \
 ../src/asf/avr32/drivers/pm/pm_uc3l.c \
 ../src/asf/avr32/drivers/pm/power_clocks_lib.c \
+../src/asf/avr32/drivers/pwma/pwma.c \
 ../src/asf/avr32/drivers/scif/scif_uc3l.c \
 ../src/asf/avr32/drivers/usart/usart.c \
+../src/config/conf_gpio.c \
 ../src/lib/ioapi/ioapi.c \
 ../src/lib/ioapi/mock/ioapi_mock.c \
 ../src/lib/ioapi/test/test_ioapi.c \
@@ -106,9 +109,11 @@ src/asf/avr32/drivers/intc/exception.o \
 src/asf/avr32/drivers/intc/intc.o \
 src/asf/avr32/drivers/pm/pm_uc3l.o \
 src/asf/avr32/drivers/pm/power_clocks_lib.o \
+src/asf/avr32/drivers/pwma/pwma.o \
 src/asf/avr32/drivers/scif/scif_uc3l.o \
 src/asf/avr32/drivers/usart/usart.o \
 src/asf/avr32/utils/startup/trampoline_uc3.o \
+src/config/conf_gpio.o \
 src/lib/ioapi/ioapi.o \
 src/lib/ioapi/mock/ioapi_mock.o \
 src/lib/ioapi/test/test_ioapi.o \
@@ -130,9 +135,11 @@ src/asf/avr32/drivers/intc/exception.o \
 src/asf/avr32/drivers/intc/intc.o \
 src/asf/avr32/drivers/pm/pm_uc3l.o \
 src/asf/avr32/drivers/pm/power_clocks_lib.o \
+src/asf/avr32/drivers/pwma/pwma.o \
 src/asf/avr32/drivers/scif/scif_uc3l.o \
 src/asf/avr32/drivers/usart/usart.o \
 src/asf/avr32/utils/startup/trampoline_uc3.o \
+src/config/conf_gpio.o \
 src/lib/ioapi/ioapi.o \
 src/lib/ioapi/mock/ioapi_mock.o \
 src/lib/ioapi/test/test_ioapi.o \
@@ -153,8 +160,10 @@ src/asf/avr32/drivers/gpio/gpio.d \
 src/asf/avr32/drivers/intc/intc.d \
 src/asf/avr32/drivers/pm/pm_uc3l.d \
 src/asf/avr32/drivers/pm/power_clocks_lib.d \
+src/asf/avr32/drivers/pwma/pwma.d \
 src/asf/avr32/drivers/scif/scif_uc3l.d \
 src/asf/avr32/drivers/usart/usart.d \
+src/config/conf_gpio.d \
 src/lib/ioapi/ioapi.d \
 src/lib/ioapi/mock/ioapi_mock.d \
 src/lib/ioapi/test/test_ioapi.d \
@@ -175,8 +184,10 @@ src/asf/avr32/drivers/gpio/gpio.d \
 src/asf/avr32/drivers/intc/intc.d \
 src/asf/avr32/drivers/pm/pm_uc3l.d \
 src/asf/avr32/drivers/pm/power_clocks_lib.d \
+src/asf/avr32/drivers/pwma/pwma.d \
 src/asf/avr32/drivers/scif/scif_uc3l.d \
 src/asf/avr32/drivers/usart/usart.d \
+src/config/conf_gpio.d \
 src/lib/ioapi/ioapi.d \
 src/lib/ioapi/mock/ioapi_mock.d \
 src/lib/ioapi/test/test_ioapi.d \
@@ -236,112 +247,128 @@ OUTPUT_FILE_DEP:= ./makedep.mk
 
 
 
+
+
+
+
 src/app/init_gpio/%.o: ../src/app/init_gpio/%.c
 	@echo Building file: $<
 	@echo Invoking: AVR32/GNU C Compiler : (AVR_32_bit_GNU_Toolchain_3.4.0_332) 4.4.3
-	$(QUOTE)C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr32-gcc.exe$(QUOTE) -I"../src/config" -I"../src/app" -I"../src/lib" -I"../src" -I"../src/asf/avr32/drivers/usart" -I"../src/asf/avr32/utils" -I"../src/asf/avr32/utils/preprocessor" -I"../src/asf/common/utils" -I"../src/asf/avr32/drivers/intc" -I"../src/asf/avr32/drivers/scif" -I"../src/asf/avr32/drivers/flashcdw" -I"../src/asf/avr32/drivers/pm" -I"../src/asf/avr32/drivers/gpio"  -O0 -ffunction-sections -masm-addr-pseudos -g3 -Wall -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"  -mpart=uc3l064   -o"$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr32-gcc.exe$(QUOTE) -I"../src/config" -I"../src/app" -I"../src/lib" -I"../src" -I"../src/asf/avr32/drivers/usart" -I"../src/asf/avr32/utils" -I"../src/asf/avr32/utils/preprocessor" -I"../src/asf/common/utils" -I"../src/asf/avr32/drivers/intc" -I"../src/asf/avr32/drivers/scif" -I"../src/asf/avr32/drivers/flashcdw" -I"../src/asf/avr32/drivers/pm" -I"../src/asf/avr32/drivers/gpio" -I"../src/asf/avr32/drivers/pwma"  -O0 -ffunction-sections -masm-addr-pseudos -g3 -Wall -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"  -mpart=uc3l064   -o"$@" "$<" 
 	@echo Finished building: $<
 
 src/app/init_mcu/%.o: ../src/app/init_mcu/%.c
 	@echo Building file: $<
 	@echo Invoking: AVR32/GNU C Compiler : (AVR_32_bit_GNU_Toolchain_3.4.0_332) 4.4.3
-	$(QUOTE)C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr32-gcc.exe$(QUOTE) -I"../src/config" -I"../src/app" -I"../src/lib" -I"../src" -I"../src/asf/avr32/drivers/usart" -I"../src/asf/avr32/utils" -I"../src/asf/avr32/utils/preprocessor" -I"../src/asf/common/utils" -I"../src/asf/avr32/drivers/intc" -I"../src/asf/avr32/drivers/scif" -I"../src/asf/avr32/drivers/flashcdw" -I"../src/asf/avr32/drivers/pm" -I"../src/asf/avr32/drivers/gpio"  -O0 -ffunction-sections -masm-addr-pseudos -g3 -Wall -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"  -mpart=uc3l064   -o"$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr32-gcc.exe$(QUOTE) -I"../src/config" -I"../src/app" -I"../src/lib" -I"../src" -I"../src/asf/avr32/drivers/usart" -I"../src/asf/avr32/utils" -I"../src/asf/avr32/utils/preprocessor" -I"../src/asf/common/utils" -I"../src/asf/avr32/drivers/intc" -I"../src/asf/avr32/drivers/scif" -I"../src/asf/avr32/drivers/flashcdw" -I"../src/asf/avr32/drivers/pm" -I"../src/asf/avr32/drivers/gpio" -I"../src/asf/avr32/drivers/pwma"  -O0 -ffunction-sections -masm-addr-pseudos -g3 -Wall -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"  -mpart=uc3l064   -o"$@" "$<" 
 	@echo Finished building: $<
 
 src/app/init_usart/%.o: ../src/app/init_usart/%.c
 	@echo Building file: $<
 	@echo Invoking: AVR32/GNU C Compiler : (AVR_32_bit_GNU_Toolchain_3.4.0_332) 4.4.3
-	$(QUOTE)C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr32-gcc.exe$(QUOTE) -I"../src/config" -I"../src/app" -I"../src/lib" -I"../src" -I"../src/asf/avr32/drivers/usart" -I"../src/asf/avr32/utils" -I"../src/asf/avr32/utils/preprocessor" -I"../src/asf/common/utils" -I"../src/asf/avr32/drivers/intc" -I"../src/asf/avr32/drivers/scif" -I"../src/asf/avr32/drivers/flashcdw" -I"../src/asf/avr32/drivers/pm" -I"../src/asf/avr32/drivers/gpio"  -O0 -ffunction-sections -masm-addr-pseudos -g3 -Wall -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"  -mpart=uc3l064   -o"$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr32-gcc.exe$(QUOTE) -I"../src/config" -I"../src/app" -I"../src/lib" -I"../src" -I"../src/asf/avr32/drivers/usart" -I"../src/asf/avr32/utils" -I"../src/asf/avr32/utils/preprocessor" -I"../src/asf/common/utils" -I"../src/asf/avr32/drivers/intc" -I"../src/asf/avr32/drivers/scif" -I"../src/asf/avr32/drivers/flashcdw" -I"../src/asf/avr32/drivers/pm" -I"../src/asf/avr32/drivers/gpio" -I"../src/asf/avr32/drivers/pwma"  -O0 -ffunction-sections -masm-addr-pseudos -g3 -Wall -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"  -mpart=uc3l064   -o"$@" "$<" 
 	@echo Finished building: $<
 
 src/asf/avr32/drivers/flashcdw/%.o: ../src/asf/avr32/drivers/flashcdw/%.c
 	@echo Building file: $<
 	@echo Invoking: AVR32/GNU C Compiler : (AVR_32_bit_GNU_Toolchain_3.4.0_332) 4.4.3
-	$(QUOTE)C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr32-gcc.exe$(QUOTE) -I"../src/config" -I"../src/app" -I"../src/lib" -I"../src" -I"../src/asf/avr32/drivers/usart" -I"../src/asf/avr32/utils" -I"../src/asf/avr32/utils/preprocessor" -I"../src/asf/common/utils" -I"../src/asf/avr32/drivers/intc" -I"../src/asf/avr32/drivers/scif" -I"../src/asf/avr32/drivers/flashcdw" -I"../src/asf/avr32/drivers/pm" -I"../src/asf/avr32/drivers/gpio"  -O0 -ffunction-sections -masm-addr-pseudos -g3 -Wall -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"  -mpart=uc3l064   -o"$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr32-gcc.exe$(QUOTE) -I"../src/config" -I"../src/app" -I"../src/lib" -I"../src" -I"../src/asf/avr32/drivers/usart" -I"../src/asf/avr32/utils" -I"../src/asf/avr32/utils/preprocessor" -I"../src/asf/common/utils" -I"../src/asf/avr32/drivers/intc" -I"../src/asf/avr32/drivers/scif" -I"../src/asf/avr32/drivers/flashcdw" -I"../src/asf/avr32/drivers/pm" -I"../src/asf/avr32/drivers/gpio" -I"../src/asf/avr32/drivers/pwma"  -O0 -ffunction-sections -masm-addr-pseudos -g3 -Wall -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"  -mpart=uc3l064   -o"$@" "$<" 
 	@echo Finished building: $<
 
 src/asf/avr32/drivers/gpio/%.o: ../src/asf/avr32/drivers/gpio/%.c
 	@echo Building file: $<
 	@echo Invoking: AVR32/GNU C Compiler : (AVR_32_bit_GNU_Toolchain_3.4.0_332) 4.4.3
-	$(QUOTE)C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr32-gcc.exe$(QUOTE) -I"../src/config" -I"../src/app" -I"../src/lib" -I"../src" -I"../src/asf/avr32/drivers/usart" -I"../src/asf/avr32/utils" -I"../src/asf/avr32/utils/preprocessor" -I"../src/asf/common/utils" -I"../src/asf/avr32/drivers/intc" -I"../src/asf/avr32/drivers/scif" -I"../src/asf/avr32/drivers/flashcdw" -I"../src/asf/avr32/drivers/pm" -I"../src/asf/avr32/drivers/gpio"  -O0 -ffunction-sections -masm-addr-pseudos -g3 -Wall -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"  -mpart=uc3l064   -o"$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr32-gcc.exe$(QUOTE) -I"../src/config" -I"../src/app" -I"../src/lib" -I"../src" -I"../src/asf/avr32/drivers/usart" -I"../src/asf/avr32/utils" -I"../src/asf/avr32/utils/preprocessor" -I"../src/asf/common/utils" -I"../src/asf/avr32/drivers/intc" -I"../src/asf/avr32/drivers/scif" -I"../src/asf/avr32/drivers/flashcdw" -I"../src/asf/avr32/drivers/pm" -I"../src/asf/avr32/drivers/gpio" -I"../src/asf/avr32/drivers/pwma"  -O0 -ffunction-sections -masm-addr-pseudos -g3 -Wall -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"  -mpart=uc3l064   -o"$@" "$<" 
 	@echo Finished building: $<
 
 src/asf/avr32/drivers/intc/%.o: ../src/asf/avr32/drivers/intc/%.c
 	@echo Building file: $<
 	@echo Invoking: AVR32/GNU C Compiler : (AVR_32_bit_GNU_Toolchain_3.4.0_332) 4.4.3
-	$(QUOTE)C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr32-gcc.exe$(QUOTE) -I"../src/config" -I"../src/app" -I"../src/lib" -I"../src" -I"../src/asf/avr32/drivers/usart" -I"../src/asf/avr32/utils" -I"../src/asf/avr32/utils/preprocessor" -I"../src/asf/common/utils" -I"../src/asf/avr32/drivers/intc" -I"../src/asf/avr32/drivers/scif" -I"../src/asf/avr32/drivers/flashcdw" -I"../src/asf/avr32/drivers/pm" -I"../src/asf/avr32/drivers/gpio"  -O0 -ffunction-sections -masm-addr-pseudos -g3 -Wall -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"  -mpart=uc3l064   -o"$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr32-gcc.exe$(QUOTE) -I"../src/config" -I"../src/app" -I"../src/lib" -I"../src" -I"../src/asf/avr32/drivers/usart" -I"../src/asf/avr32/utils" -I"../src/asf/avr32/utils/preprocessor" -I"../src/asf/common/utils" -I"../src/asf/avr32/drivers/intc" -I"../src/asf/avr32/drivers/scif" -I"../src/asf/avr32/drivers/flashcdw" -I"../src/asf/avr32/drivers/pm" -I"../src/asf/avr32/drivers/gpio" -I"../src/asf/avr32/drivers/pwma"  -O0 -ffunction-sections -masm-addr-pseudos -g3 -Wall -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"  -mpart=uc3l064   -o"$@" "$<" 
 	@echo Finished building: $<
 
 src/asf/avr32/drivers/pm/%.o: ../src/asf/avr32/drivers/pm/%.c
 	@echo Building file: $<
 	@echo Invoking: AVR32/GNU C Compiler : (AVR_32_bit_GNU_Toolchain_3.4.0_332) 4.4.3
-	$(QUOTE)C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr32-gcc.exe$(QUOTE) -I"../src/config" -I"../src/app" -I"../src/lib" -I"../src" -I"../src/asf/avr32/drivers/usart" -I"../src/asf/avr32/utils" -I"../src/asf/avr32/utils/preprocessor" -I"../src/asf/common/utils" -I"../src/asf/avr32/drivers/intc" -I"../src/asf/avr32/drivers/scif" -I"../src/asf/avr32/drivers/flashcdw" -I"../src/asf/avr32/drivers/pm" -I"../src/asf/avr32/drivers/gpio"  -O0 -ffunction-sections -masm-addr-pseudos -g3 -Wall -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"  -mpart=uc3l064   -o"$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr32-gcc.exe$(QUOTE) -I"../src/config" -I"../src/app" -I"../src/lib" -I"../src" -I"../src/asf/avr32/drivers/usart" -I"../src/asf/avr32/utils" -I"../src/asf/avr32/utils/preprocessor" -I"../src/asf/common/utils" -I"../src/asf/avr32/drivers/intc" -I"../src/asf/avr32/drivers/scif" -I"../src/asf/avr32/drivers/flashcdw" -I"../src/asf/avr32/drivers/pm" -I"../src/asf/avr32/drivers/gpio" -I"../src/asf/avr32/drivers/pwma"  -O0 -ffunction-sections -masm-addr-pseudos -g3 -Wall -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"  -mpart=uc3l064   -o"$@" "$<" 
+	@echo Finished building: $<
+
+src/asf/avr32/drivers/pwma/%.o: ../src/asf/avr32/drivers/pwma/%.c
+	@echo Building file: $<
+	@echo Invoking: AVR32/GNU C Compiler : (AVR_32_bit_GNU_Toolchain_3.4.0_332) 4.4.3
+	$(QUOTE)C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr32-gcc.exe$(QUOTE) -I"../src/config" -I"../src/app" -I"../src/lib" -I"../src" -I"../src/asf/avr32/drivers/usart" -I"../src/asf/avr32/utils" -I"../src/asf/avr32/utils/preprocessor" -I"../src/asf/common/utils" -I"../src/asf/avr32/drivers/intc" -I"../src/asf/avr32/drivers/scif" -I"../src/asf/avr32/drivers/flashcdw" -I"../src/asf/avr32/drivers/pm" -I"../src/asf/avr32/drivers/gpio" -I"../src/asf/avr32/drivers/pwma"  -O0 -ffunction-sections -masm-addr-pseudos -g3 -Wall -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"  -mpart=uc3l064   -o"$@" "$<" 
 	@echo Finished building: $<
 
 src/asf/avr32/drivers/scif/%.o: ../src/asf/avr32/drivers/scif/%.c
 	@echo Building file: $<
 	@echo Invoking: AVR32/GNU C Compiler : (AVR_32_bit_GNU_Toolchain_3.4.0_332) 4.4.3
-	$(QUOTE)C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr32-gcc.exe$(QUOTE) -I"../src/config" -I"../src/app" -I"../src/lib" -I"../src" -I"../src/asf/avr32/drivers/usart" -I"../src/asf/avr32/utils" -I"../src/asf/avr32/utils/preprocessor" -I"../src/asf/common/utils" -I"../src/asf/avr32/drivers/intc" -I"../src/asf/avr32/drivers/scif" -I"../src/asf/avr32/drivers/flashcdw" -I"../src/asf/avr32/drivers/pm" -I"../src/asf/avr32/drivers/gpio"  -O0 -ffunction-sections -masm-addr-pseudos -g3 -Wall -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"  -mpart=uc3l064   -o"$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr32-gcc.exe$(QUOTE) -I"../src/config" -I"../src/app" -I"../src/lib" -I"../src" -I"../src/asf/avr32/drivers/usart" -I"../src/asf/avr32/utils" -I"../src/asf/avr32/utils/preprocessor" -I"../src/asf/common/utils" -I"../src/asf/avr32/drivers/intc" -I"../src/asf/avr32/drivers/scif" -I"../src/asf/avr32/drivers/flashcdw" -I"../src/asf/avr32/drivers/pm" -I"../src/asf/avr32/drivers/gpio" -I"../src/asf/avr32/drivers/pwma"  -O0 -ffunction-sections -masm-addr-pseudos -g3 -Wall -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"  -mpart=uc3l064   -o"$@" "$<" 
 	@echo Finished building: $<
 
 src/asf/avr32/drivers/usart/%.o: ../src/asf/avr32/drivers/usart/%.c
 	@echo Building file: $<
 	@echo Invoking: AVR32/GNU C Compiler : (AVR_32_bit_GNU_Toolchain_3.4.0_332) 4.4.3
-	$(QUOTE)C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr32-gcc.exe$(QUOTE) -I"../src/config" -I"../src/app" -I"../src/lib" -I"../src" -I"../src/asf/avr32/drivers/usart" -I"../src/asf/avr32/utils" -I"../src/asf/avr32/utils/preprocessor" -I"../src/asf/common/utils" -I"../src/asf/avr32/drivers/intc" -I"../src/asf/avr32/drivers/scif" -I"../src/asf/avr32/drivers/flashcdw" -I"../src/asf/avr32/drivers/pm" -I"../src/asf/avr32/drivers/gpio"  -O0 -ffunction-sections -masm-addr-pseudos -g3 -Wall -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"  -mpart=uc3l064   -o"$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr32-gcc.exe$(QUOTE) -I"../src/config" -I"../src/app" -I"../src/lib" -I"../src" -I"../src/asf/avr32/drivers/usart" -I"../src/asf/avr32/utils" -I"../src/asf/avr32/utils/preprocessor" -I"../src/asf/common/utils" -I"../src/asf/avr32/drivers/intc" -I"../src/asf/avr32/drivers/scif" -I"../src/asf/avr32/drivers/flashcdw" -I"../src/asf/avr32/drivers/pm" -I"../src/asf/avr32/drivers/gpio" -I"../src/asf/avr32/drivers/pwma"  -O0 -ffunction-sections -masm-addr-pseudos -g3 -Wall -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"  -mpart=uc3l064   -o"$@" "$<" 
+	@echo Finished building: $<
+
+src/config/%.o: ../src/config/%.c
+	@echo Building file: $<
+	@echo Invoking: AVR32/GNU C Compiler : (AVR_32_bit_GNU_Toolchain_3.4.0_332) 4.4.3
+	$(QUOTE)C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr32-gcc.exe$(QUOTE) -I"../src/config" -I"../src/app" -I"../src/lib" -I"../src" -I"../src/asf/avr32/drivers/usart" -I"../src/asf/avr32/utils" -I"../src/asf/avr32/utils/preprocessor" -I"../src/asf/common/utils" -I"../src/asf/avr32/drivers/intc" -I"../src/asf/avr32/drivers/scif" -I"../src/asf/avr32/drivers/flashcdw" -I"../src/asf/avr32/drivers/pm" -I"../src/asf/avr32/drivers/gpio" -I"../src/asf/avr32/drivers/pwma"  -O0 -ffunction-sections -masm-addr-pseudos -g3 -Wall -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"  -mpart=uc3l064   -o"$@" "$<" 
 	@echo Finished building: $<
 
 src/lib/ioapi/%.o: ../src/lib/ioapi/%.c
 	@echo Building file: $<
 	@echo Invoking: AVR32/GNU C Compiler : (AVR_32_bit_GNU_Toolchain_3.4.0_332) 4.4.3
-	$(QUOTE)C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr32-gcc.exe$(QUOTE) -I"../src/config" -I"../src/app" -I"../src/lib" -I"../src" -I"../src/asf/avr32/drivers/usart" -I"../src/asf/avr32/utils" -I"../src/asf/avr32/utils/preprocessor" -I"../src/asf/common/utils" -I"../src/asf/avr32/drivers/intc" -I"../src/asf/avr32/drivers/scif" -I"../src/asf/avr32/drivers/flashcdw" -I"../src/asf/avr32/drivers/pm" -I"../src/asf/avr32/drivers/gpio"  -O0 -ffunction-sections -masm-addr-pseudos -g3 -Wall -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"  -mpart=uc3l064   -o"$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr32-gcc.exe$(QUOTE) -I"../src/config" -I"../src/app" -I"../src/lib" -I"../src" -I"../src/asf/avr32/drivers/usart" -I"../src/asf/avr32/utils" -I"../src/asf/avr32/utils/preprocessor" -I"../src/asf/common/utils" -I"../src/asf/avr32/drivers/intc" -I"../src/asf/avr32/drivers/scif" -I"../src/asf/avr32/drivers/flashcdw" -I"../src/asf/avr32/drivers/pm" -I"../src/asf/avr32/drivers/gpio" -I"../src/asf/avr32/drivers/pwma"  -O0 -ffunction-sections -masm-addr-pseudos -g3 -Wall -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"  -mpart=uc3l064   -o"$@" "$<" 
 	@echo Finished building: $<
 
 src/lib/ioapi/mock/%.o: ../src/lib/ioapi/mock/%.c
 	@echo Building file: $<
 	@echo Invoking: AVR32/GNU C Compiler : (AVR_32_bit_GNU_Toolchain_3.4.0_332) 4.4.3
-	$(QUOTE)C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr32-gcc.exe$(QUOTE) -I"../src/config" -I"../src/app" -I"../src/lib" -I"../src" -I"../src/asf/avr32/drivers/usart" -I"../src/asf/avr32/utils" -I"../src/asf/avr32/utils/preprocessor" -I"../src/asf/common/utils" -I"../src/asf/avr32/drivers/intc" -I"../src/asf/avr32/drivers/scif" -I"../src/asf/avr32/drivers/flashcdw" -I"../src/asf/avr32/drivers/pm" -I"../src/asf/avr32/drivers/gpio"  -O0 -ffunction-sections -masm-addr-pseudos -g3 -Wall -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"  -mpart=uc3l064   -o"$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr32-gcc.exe$(QUOTE) -I"../src/config" -I"../src/app" -I"../src/lib" -I"../src" -I"../src/asf/avr32/drivers/usart" -I"../src/asf/avr32/utils" -I"../src/asf/avr32/utils/preprocessor" -I"../src/asf/common/utils" -I"../src/asf/avr32/drivers/intc" -I"../src/asf/avr32/drivers/scif" -I"../src/asf/avr32/drivers/flashcdw" -I"../src/asf/avr32/drivers/pm" -I"../src/asf/avr32/drivers/gpio" -I"../src/asf/avr32/drivers/pwma"  -O0 -ffunction-sections -masm-addr-pseudos -g3 -Wall -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"  -mpart=uc3l064   -o"$@" "$<" 
 	@echo Finished building: $<
 
 src/lib/ioapi/test/%.o: ../src/lib/ioapi/test/%.c
 	@echo Building file: $<
 	@echo Invoking: AVR32/GNU C Compiler : (AVR_32_bit_GNU_Toolchain_3.4.0_332) 4.4.3
-	$(QUOTE)C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr32-gcc.exe$(QUOTE) -I"../src/config" -I"../src/app" -I"../src/lib" -I"../src" -I"../src/asf/avr32/drivers/usart" -I"../src/asf/avr32/utils" -I"../src/asf/avr32/utils/preprocessor" -I"../src/asf/common/utils" -I"../src/asf/avr32/drivers/intc" -I"../src/asf/avr32/drivers/scif" -I"../src/asf/avr32/drivers/flashcdw" -I"../src/asf/avr32/drivers/pm" -I"../src/asf/avr32/drivers/gpio"  -O0 -ffunction-sections -masm-addr-pseudos -g3 -Wall -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"  -mpart=uc3l064   -o"$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr32-gcc.exe$(QUOTE) -I"../src/config" -I"../src/app" -I"../src/lib" -I"../src" -I"../src/asf/avr32/drivers/usart" -I"../src/asf/avr32/utils" -I"../src/asf/avr32/utils/preprocessor" -I"../src/asf/common/utils" -I"../src/asf/avr32/drivers/intc" -I"../src/asf/avr32/drivers/scif" -I"../src/asf/avr32/drivers/flashcdw" -I"../src/asf/avr32/drivers/pm" -I"../src/asf/avr32/drivers/gpio" -I"../src/asf/avr32/drivers/pwma"  -O0 -ffunction-sections -masm-addr-pseudos -g3 -Wall -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"  -mpart=uc3l064   -o"$@" "$<" 
 	@echo Finished building: $<
 
 src/lib/statusc/%.o: ../src/lib/statusc/%.c
 	@echo Building file: $<
 	@echo Invoking: AVR32/GNU C Compiler : (AVR_32_bit_GNU_Toolchain_3.4.0_332) 4.4.3
-	$(QUOTE)C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr32-gcc.exe$(QUOTE) -I"../src/config" -I"../src/app" -I"../src/lib" -I"../src" -I"../src/asf/avr32/drivers/usart" -I"../src/asf/avr32/utils" -I"../src/asf/avr32/utils/preprocessor" -I"../src/asf/common/utils" -I"../src/asf/avr32/drivers/intc" -I"../src/asf/avr32/drivers/scif" -I"../src/asf/avr32/drivers/flashcdw" -I"../src/asf/avr32/drivers/pm" -I"../src/asf/avr32/drivers/gpio"  -O0 -ffunction-sections -masm-addr-pseudos -g3 -Wall -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"  -mpart=uc3l064   -o"$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr32-gcc.exe$(QUOTE) -I"../src/config" -I"../src/app" -I"../src/lib" -I"../src" -I"../src/asf/avr32/drivers/usart" -I"../src/asf/avr32/utils" -I"../src/asf/avr32/utils/preprocessor" -I"../src/asf/common/utils" -I"../src/asf/avr32/drivers/intc" -I"../src/asf/avr32/drivers/scif" -I"../src/asf/avr32/drivers/flashcdw" -I"../src/asf/avr32/drivers/pm" -I"../src/asf/avr32/drivers/gpio" -I"../src/asf/avr32/drivers/pwma"  -O0 -ffunction-sections -masm-addr-pseudos -g3 -Wall -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"  -mpart=uc3l064   -o"$@" "$<" 
 	@echo Finished building: $<
 
 src/lib/str/%.o: ../src/lib/str/%.c
 	@echo Building file: $<
 	@echo Invoking: AVR32/GNU C Compiler : (AVR_32_bit_GNU_Toolchain_3.4.0_332) 4.4.3
-	$(QUOTE)C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr32-gcc.exe$(QUOTE) -I"../src/config" -I"../src/app" -I"../src/lib" -I"../src" -I"../src/asf/avr32/drivers/usart" -I"../src/asf/avr32/utils" -I"../src/asf/avr32/utils/preprocessor" -I"../src/asf/common/utils" -I"../src/asf/avr32/drivers/intc" -I"../src/asf/avr32/drivers/scif" -I"../src/asf/avr32/drivers/flashcdw" -I"../src/asf/avr32/drivers/pm" -I"../src/asf/avr32/drivers/gpio"  -O0 -ffunction-sections -masm-addr-pseudos -g3 -Wall -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"  -mpart=uc3l064   -o"$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr32-gcc.exe$(QUOTE) -I"../src/config" -I"../src/app" -I"../src/lib" -I"../src" -I"../src/asf/avr32/drivers/usart" -I"../src/asf/avr32/utils" -I"../src/asf/avr32/utils/preprocessor" -I"../src/asf/common/utils" -I"../src/asf/avr32/drivers/intc" -I"../src/asf/avr32/drivers/scif" -I"../src/asf/avr32/drivers/flashcdw" -I"../src/asf/avr32/drivers/pm" -I"../src/asf/avr32/drivers/gpio" -I"../src/asf/avr32/drivers/pwma"  -O0 -ffunction-sections -masm-addr-pseudos -g3 -Wall -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"  -mpart=uc3l064   -o"$@" "$<" 
 	@echo Finished building: $<
 
 src/lib/str/test/%.o: ../src/lib/str/test/%.c
 	@echo Building file: $<
 	@echo Invoking: AVR32/GNU C Compiler : (AVR_32_bit_GNU_Toolchain_3.4.0_332) 4.4.3
-	$(QUOTE)C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr32-gcc.exe$(QUOTE) -I"../src/config" -I"../src/app" -I"../src/lib" -I"../src" -I"../src/asf/avr32/drivers/usart" -I"../src/asf/avr32/utils" -I"../src/asf/avr32/utils/preprocessor" -I"../src/asf/common/utils" -I"../src/asf/avr32/drivers/intc" -I"../src/asf/avr32/drivers/scif" -I"../src/asf/avr32/drivers/flashcdw" -I"../src/asf/avr32/drivers/pm" -I"../src/asf/avr32/drivers/gpio"  -O0 -ffunction-sections -masm-addr-pseudos -g3 -Wall -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"  -mpart=uc3l064   -o"$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr32-gcc.exe$(QUOTE) -I"../src/config" -I"../src/app" -I"../src/lib" -I"../src" -I"../src/asf/avr32/drivers/usart" -I"../src/asf/avr32/utils" -I"../src/asf/avr32/utils/preprocessor" -I"../src/asf/common/utils" -I"../src/asf/avr32/drivers/intc" -I"../src/asf/avr32/drivers/scif" -I"../src/asf/avr32/drivers/flashcdw" -I"../src/asf/avr32/drivers/pm" -I"../src/asf/avr32/drivers/gpio" -I"../src/asf/avr32/drivers/pwma"  -O0 -ffunction-sections -masm-addr-pseudos -g3 -Wall -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"  -mpart=uc3l064   -o"$@" "$<" 
 	@echo Finished building: $<
 
 src/lib/utest/test/%.o: ../src/lib/utest/test/%.c
 	@echo Building file: $<
 	@echo Invoking: AVR32/GNU C Compiler : (AVR_32_bit_GNU_Toolchain_3.4.0_332) 4.4.3
-	$(QUOTE)C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr32-gcc.exe$(QUOTE) -I"../src/config" -I"../src/app" -I"../src/lib" -I"../src" -I"../src/asf/avr32/drivers/usart" -I"../src/asf/avr32/utils" -I"../src/asf/avr32/utils/preprocessor" -I"../src/asf/common/utils" -I"../src/asf/avr32/drivers/intc" -I"../src/asf/avr32/drivers/scif" -I"../src/asf/avr32/drivers/flashcdw" -I"../src/asf/avr32/drivers/pm" -I"../src/asf/avr32/drivers/gpio"  -O0 -ffunction-sections -masm-addr-pseudos -g3 -Wall -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"  -mpart=uc3l064   -o"$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr32-gcc.exe$(QUOTE) -I"../src/config" -I"../src/app" -I"../src/lib" -I"../src" -I"../src/asf/avr32/drivers/usart" -I"../src/asf/avr32/utils" -I"../src/asf/avr32/utils/preprocessor" -I"../src/asf/common/utils" -I"../src/asf/avr32/drivers/intc" -I"../src/asf/avr32/drivers/scif" -I"../src/asf/avr32/drivers/flashcdw" -I"../src/asf/avr32/drivers/pm" -I"../src/asf/avr32/drivers/gpio" -I"../src/asf/avr32/drivers/pwma"  -O0 -ffunction-sections -masm-addr-pseudos -g3 -Wall -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"  -mpart=uc3l064   -o"$@" "$<" 
 	@echo Finished building: $<
 
 src/lib/utest/%.o: ../src/lib/utest/%.c
 	@echo Building file: $<
 	@echo Invoking: AVR32/GNU C Compiler : (AVR_32_bit_GNU_Toolchain_3.4.0_332) 4.4.3
-	$(QUOTE)C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr32-gcc.exe$(QUOTE) -I"../src/config" -I"../src/app" -I"../src/lib" -I"../src" -I"../src/asf/avr32/drivers/usart" -I"../src/asf/avr32/utils" -I"../src/asf/avr32/utils/preprocessor" -I"../src/asf/common/utils" -I"../src/asf/avr32/drivers/intc" -I"../src/asf/avr32/drivers/scif" -I"../src/asf/avr32/drivers/flashcdw" -I"../src/asf/avr32/drivers/pm" -I"../src/asf/avr32/drivers/gpio"  -O0 -ffunction-sections -masm-addr-pseudos -g3 -Wall -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"  -mpart=uc3l064   -o"$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr32-gcc.exe$(QUOTE) -I"../src/config" -I"../src/app" -I"../src/lib" -I"../src" -I"../src/asf/avr32/drivers/usart" -I"../src/asf/avr32/utils" -I"../src/asf/avr32/utils/preprocessor" -I"../src/asf/common/utils" -I"../src/asf/avr32/drivers/intc" -I"../src/asf/avr32/drivers/scif" -I"../src/asf/avr32/drivers/flashcdw" -I"../src/asf/avr32/drivers/pm" -I"../src/asf/avr32/drivers/gpio" -I"../src/asf/avr32/drivers/pwma"  -O0 -ffunction-sections -masm-addr-pseudos -g3 -Wall -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"  -mpart=uc3l064   -o"$@" "$<" 
 	@echo Finished building: $<
 
 src/%.o: ../src/%.c
 	@echo Building file: $<
 	@echo Invoking: AVR32/GNU C Compiler : (AVR_32_bit_GNU_Toolchain_3.4.0_332) 4.4.3
-	$(QUOTE)C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr32-gcc.exe$(QUOTE) -I"../src/config" -I"../src/app" -I"../src/lib" -I"../src" -I"../src/asf/avr32/drivers/usart" -I"../src/asf/avr32/utils" -I"../src/asf/avr32/utils/preprocessor" -I"../src/asf/common/utils" -I"../src/asf/avr32/drivers/intc" -I"../src/asf/avr32/drivers/scif" -I"../src/asf/avr32/drivers/flashcdw" -I"../src/asf/avr32/drivers/pm" -I"../src/asf/avr32/drivers/gpio"  -O0 -ffunction-sections -masm-addr-pseudos -g3 -Wall -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"  -mpart=uc3l064   -o"$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr32-gcc.exe$(QUOTE) -I"../src/config" -I"../src/app" -I"../src/lib" -I"../src" -I"../src/asf/avr32/drivers/usart" -I"../src/asf/avr32/utils" -I"../src/asf/avr32/utils/preprocessor" -I"../src/asf/common/utils" -I"../src/asf/avr32/drivers/intc" -I"../src/asf/avr32/drivers/scif" -I"../src/asf/avr32/drivers/flashcdw" -I"../src/asf/avr32/drivers/pm" -I"../src/asf/avr32/drivers/gpio" -I"../src/asf/avr32/drivers/pwma"  -O0 -ffunction-sections -masm-addr-pseudos -g3 -Wall -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"  -mpart=uc3l064   -o"$@" "$<" 
 	@echo Finished building: $<
 
 
@@ -351,37 +378,37 @@ src/%.o: ../src/%.c
 src/asf/avr32/drivers/intc/%.o: ../src/asf/avr32/drivers/intc/%.S
 	@echo Building file: $<
 	@echo Invoking: AVR32/GNU Preprocessing Assembler : (AVR_32_bit_GNU_Toolchain_3.4.0_332) 4.4.3
-	$(QUOTE)C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr32-gcc.exe$(QUOTE) -x assembler-with-cpp -c -I "../src/config" -I "../src/asf/avr32/drivers/usart" -I "../src/asf/avr32/utils" -I "../src/asf/avr32/utils/preprocessor" -I "../src/asf/common/utils" -I "../src/asf/avr32/drivers/intc" -I "../src/asf/avr32/drivers/scif" -I "../src/asf/avr32/drivers/flashcdw" -I "../src/asf/avr32/drivers/pm" -I "../src/asf/avr32/drivers/gpio"  -Wa,-g  -mpart=uc3l064   -o"$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr32-gcc.exe$(QUOTE) -x assembler-with-cpp -c -I "../src/config" -I "../src/asf/avr32/drivers/usart" -I "../src/asf/avr32/utils" -I "../src/asf/avr32/utils/preprocessor" -I "../src/asf/common/utils" -I "../src/asf/avr32/drivers/intc" -I "../src/asf/avr32/drivers/scif" -I "../src/asf/avr32/drivers/flashcdw" -I "../src/asf/avr32/drivers/pm" -I "../src/asf/avr32/drivers/gpio" -I "../src/asf/avr32/drivers/pwma"  -Wa,-g  -mpart=uc3l064   -o"$@" "$<" 
 	@echo Finished building: $<
 
 src/asf/avr32/drivers/intc/%.o: ../src/asf/avr32/drivers/intc/%.x
 	@echo Building file: $<
 	@echo Invoking: AVR32/GNU Preprocessing Assembler : (AVR_32_bit_GNU_Toolchain_3.4.0_332) 4.4.3
-	$(QUOTE)C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr32-gcc.exe$(QUOTE) -x assembler-with-cpp -c -I "../src/config" -I "../src/asf/avr32/drivers/usart" -I "../src/asf/avr32/utils" -I "../src/asf/avr32/utils/preprocessor" -I "../src/asf/common/utils" -I "../src/asf/avr32/drivers/intc" -I "../src/asf/avr32/drivers/scif" -I "../src/asf/avr32/drivers/flashcdw" -I "../src/asf/avr32/drivers/pm" -I "../src/asf/avr32/drivers/gpio"  -Wa,-g  -mpart=uc3l064   -o"$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr32-gcc.exe$(QUOTE) -x assembler-with-cpp -c -I "../src/config" -I "../src/asf/avr32/drivers/usart" -I "../src/asf/avr32/utils" -I "../src/asf/avr32/utils/preprocessor" -I "../src/asf/common/utils" -I "../src/asf/avr32/drivers/intc" -I "../src/asf/avr32/drivers/scif" -I "../src/asf/avr32/drivers/flashcdw" -I "../src/asf/avr32/drivers/pm" -I "../src/asf/avr32/drivers/gpio" -I "../src/asf/avr32/drivers/pwma"  -Wa,-g  -mpart=uc3l064   -o"$@" "$<" 
 	@echo Finished building: $<
 
 src/asf/avr32/drivers/intc/%.o: ../src/asf/avr32/drivers/intc/%.X
 	@echo Building file: $<
 	@echo Invoking: AVR32/GNU Preprocessing Assembler : (AVR_32_bit_GNU_Toolchain_3.4.0_332) 4.4.3
-	$(QUOTE)C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr32-gcc.exe$(QUOTE) -x assembler-with-cpp -c -I "../src/config" -I "../src/asf/avr32/drivers/usart" -I "../src/asf/avr32/utils" -I "../src/asf/avr32/utils/preprocessor" -I "../src/asf/common/utils" -I "../src/asf/avr32/drivers/intc" -I "../src/asf/avr32/drivers/scif" -I "../src/asf/avr32/drivers/flashcdw" -I "../src/asf/avr32/drivers/pm" -I "../src/asf/avr32/drivers/gpio"  -Wa,-g  -mpart=uc3l064   -o"$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr32-gcc.exe$(QUOTE) -x assembler-with-cpp -c -I "../src/config" -I "../src/asf/avr32/drivers/usart" -I "../src/asf/avr32/utils" -I "../src/asf/avr32/utils/preprocessor" -I "../src/asf/common/utils" -I "../src/asf/avr32/drivers/intc" -I "../src/asf/avr32/drivers/scif" -I "../src/asf/avr32/drivers/flashcdw" -I "../src/asf/avr32/drivers/pm" -I "../src/asf/avr32/drivers/gpio" -I "../src/asf/avr32/drivers/pwma"  -Wa,-g  -mpart=uc3l064   -o"$@" "$<" 
 	@echo Finished building: $<
 
 src/asf/avr32/utils/startup/%.o: ../src/asf/avr32/utils/startup/%.S
 	@echo Building file: $<
 	@echo Invoking: AVR32/GNU Preprocessing Assembler : (AVR_32_bit_GNU_Toolchain_3.4.0_332) 4.4.3
-	$(QUOTE)C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr32-gcc.exe$(QUOTE) -x assembler-with-cpp -c -I "../src/config" -I "../src/asf/avr32/drivers/usart" -I "../src/asf/avr32/utils" -I "../src/asf/avr32/utils/preprocessor" -I "../src/asf/common/utils" -I "../src/asf/avr32/drivers/intc" -I "../src/asf/avr32/drivers/scif" -I "../src/asf/avr32/drivers/flashcdw" -I "../src/asf/avr32/drivers/pm" -I "../src/asf/avr32/drivers/gpio"  -Wa,-g  -mpart=uc3l064   -o"$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr32-gcc.exe$(QUOTE) -x assembler-with-cpp -c -I "../src/config" -I "../src/asf/avr32/drivers/usart" -I "../src/asf/avr32/utils" -I "../src/asf/avr32/utils/preprocessor" -I "../src/asf/common/utils" -I "../src/asf/avr32/drivers/intc" -I "../src/asf/avr32/drivers/scif" -I "../src/asf/avr32/drivers/flashcdw" -I "../src/asf/avr32/drivers/pm" -I "../src/asf/avr32/drivers/gpio" -I "../src/asf/avr32/drivers/pwma"  -Wa,-g  -mpart=uc3l064   -o"$@" "$<" 
 	@echo Finished building: $<
 
 src/asf/avr32/utils/startup/%.o: ../src/asf/avr32/utils/startup/%.x
 	@echo Building file: $<
 	@echo Invoking: AVR32/GNU Preprocessing Assembler : (AVR_32_bit_GNU_Toolchain_3.4.0_332) 4.4.3
-	$(QUOTE)C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr32-gcc.exe$(QUOTE) -x assembler-with-cpp -c -I "../src/config" -I "../src/asf/avr32/drivers/usart" -I "../src/asf/avr32/utils" -I "../src/asf/avr32/utils/preprocessor" -I "../src/asf/common/utils" -I "../src/asf/avr32/drivers/intc" -I "../src/asf/avr32/drivers/scif" -I "../src/asf/avr32/drivers/flashcdw" -I "../src/asf/avr32/drivers/pm" -I "../src/asf/avr32/drivers/gpio"  -Wa,-g  -mpart=uc3l064   -o"$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr32-gcc.exe$(QUOTE) -x assembler-with-cpp -c -I "../src/config" -I "../src/asf/avr32/drivers/usart" -I "../src/asf/avr32/utils" -I "../src/asf/avr32/utils/preprocessor" -I "../src/asf/common/utils" -I "../src/asf/avr32/drivers/intc" -I "../src/asf/avr32/drivers/scif" -I "../src/asf/avr32/drivers/flashcdw" -I "../src/asf/avr32/drivers/pm" -I "../src/asf/avr32/drivers/gpio" -I "../src/asf/avr32/drivers/pwma"  -Wa,-g  -mpart=uc3l064   -o"$@" "$<" 
 	@echo Finished building: $<
 
 src/asf/avr32/utils/startup/%.o: ../src/asf/avr32/utils/startup/%.X
 	@echo Building file: $<
 	@echo Invoking: AVR32/GNU Preprocessing Assembler : (AVR_32_bit_GNU_Toolchain_3.4.0_332) 4.4.3
-	$(QUOTE)C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr32-gcc.exe$(QUOTE) -x assembler-with-cpp -c -I "../src/config" -I "../src/asf/avr32/drivers/usart" -I "../src/asf/avr32/utils" -I "../src/asf/avr32/utils/preprocessor" -I "../src/asf/common/utils" -I "../src/asf/avr32/drivers/intc" -I "../src/asf/avr32/drivers/scif" -I "../src/asf/avr32/drivers/flashcdw" -I "../src/asf/avr32/drivers/pm" -I "../src/asf/avr32/drivers/gpio"  -Wa,-g  -mpart=uc3l064   -o"$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr32-gcc.exe$(QUOTE) -x assembler-with-cpp -c -I "../src/config" -I "../src/asf/avr32/drivers/usart" -I "../src/asf/avr32/utils" -I "../src/asf/avr32/utils/preprocessor" -I "../src/asf/common/utils" -I "../src/asf/avr32/drivers/intc" -I "../src/asf/avr32/drivers/scif" -I "../src/asf/avr32/drivers/flashcdw" -I "../src/asf/avr32/drivers/pm" -I "../src/asf/avr32/drivers/gpio" -I "../src/asf/avr32/drivers/pwma"  -Wa,-g  -mpart=uc3l064   -o"$@" "$<" 
 	@echo Finished building: $<
 
 
