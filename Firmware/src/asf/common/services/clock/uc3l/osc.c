@@ -39,6 +39,7 @@
  *
  */
 #include <osc.h>
+#include "interrupt_avr32.h"
 
 #ifdef BOARD_OSC0_HZ
 void osc_priv_enable_osc0(void)

@@ -1,7 +1,7 @@
 #ifndef CONF_GPIO_H_
 #define CONF_GPIO_H_
 
-#define END_OF_ARRAY NULL
+#define END_OF_ARRAY ~0
 #define CHANNEL_NOT_DEFINED ~0
 
 typedef enum 
@@ -17,6 +17,7 @@ typedef struct
 	uint8_t function;
 	uint8_t channel;	// Set this if adc or pwm	// .
 	conf_gpio_modes mode;
+	statusc_t is_last;
 } conf_gpio_t;
 
 extern const conf_gpio_t conf_gpio_settings[];

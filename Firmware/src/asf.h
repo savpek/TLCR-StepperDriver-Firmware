@@ -50,6 +50,9 @@
  * running the ASF driver selector tool. Any changes will be discarded.
  */
 
+// From module: CPU Cycle Counter
+#include <cycle_counter.h>
+
 // From module: Compiler abstraction layer and code utilities
 #include <compiler.h>
 #include <status_codes.h>

@@ -32,6 +32,8 @@ src\asf\avr32\utils\startup\trampoline_uc3.S
 
 src\asf\common\services\clock\uc3l\dfll.c
 
+src\asf\common\services\clock\uc3l\osc.c
+
 src\asf\common\services\clock\uc3l\sysclk.c
 
 src\config\conf_gpio.c

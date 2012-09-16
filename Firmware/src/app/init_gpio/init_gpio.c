@@ -3,9 +3,7 @@
 #include "config/conf_gpio.h"
 
 static statusc_t is_last_config(uint8_t i) {
-	if(	conf_gpio_settings[i].channel != END_OF_ARRAY &&
-		conf_gpio_settings[i].function != END_OF_ARRAY &&
-		conf_gpio_settings[i].mode != END_OF_ARRAY)
+	if(	conf_gpio_settings[i].is_last == SC_TRUE)
 		{
 		return SC_TRUE;
 		}
@@ -19,7 +17,7 @@ static statusc_t is_last_config(uint8_t i) {
 #define MOTOR_PWMA_ENABLE_CLK_DIV 1
 #define MOTOR_PWMA_DIVISION_FACTOR 7
 
-#define PWMA_MAX_VALUE 256
+#define PWMA_MAX_VALUE 255
 void init_gpio( void) 
 {
 	for(int i = 0; !is_last_config(i); i++)
