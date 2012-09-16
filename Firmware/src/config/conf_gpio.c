@@ -1,10 +1,3 @@
-/*
- * conf_gpio.c
- *
- * Created: 13.8.2012 20:28:41
- *  Author: savpek
- */ 
-
 #include "framework.h"
 #include "config/conf_gpio.h"
 
@@ -21,6 +14,12 @@ const conf_gpio_t conf_gpio_settings[] =
 		AVR32_USART0_RXD_0_FUNCTION,		// FUNCTION
 		CHANNEL_NOT_DEFINED,				// CHANNEL
 		INIT_AS_GPIO						// MODE
+	},
+	{
+		AVR32_PWMA_28_PIN,					// PIN
+		AVR32_PWMA_28_FUNCTION,				// FUNCTION
+		28,									// CHANNEL
+		INIT_AS_PWM							// MODE
 	},
 	{
 		END_OF_ARRAY,

@@ -54,11 +54,17 @@
 #include <compiler.h>
 #include <status_codes.h>
 
+// From module: EIC - External Interrupt Controller
+#include <eic.h>
+
 // From module: FLASH Controller Double-Word
 #include <flashcdw.h>
 
 // From module: GPIO - General-Purpose Input/Output
 #include <gpio.h>
+
+// From module: INTC - Interrupt Controller
+#include <intc.h>
 
 // From module: Interrupt management - UC3 implementation
 #include <interrupt.h>
@@ -72,6 +78,9 @@
 
 // From module: SCIF System Control Interface - UC3L implementation
 #include <scif_uc3l.h>
+
+// From module: System Clock Control - UC3 L0 implementation
+#include <sysclk.h>
 
 // From module: USART - Universal Synchronous/Asynchronous Receiver/Transmitter
 #include <usart.h>

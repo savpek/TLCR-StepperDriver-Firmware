@@ -1,11 +1,3 @@
-/*
- * conf_gpio.h
- *
- * Created: 13.8.2012 20:28:53
- *  Author: savpek
- */ 
-
-
 #ifndef CONF_GPIO_H_
 #define CONF_GPIO_H_
 
@@ -32,5 +24,6 @@ extern const conf_gpio_t conf_gpio_settings[];
 // Define PIN Aliases here.
 #define PIN_USART_TXD		AVR32_PIN_PA00
 #define PIN_USART_RXD		AVR32_PIN_PA01
+#define PIN_PWM_TEST		AVR32_PIN_PB05
 
 #endif /* CONF_GPIO_H_ */

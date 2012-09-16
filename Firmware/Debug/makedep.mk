@@ -8,6 +8,8 @@ src\app\init_mcu\init_mcu.c
 
 src\app\init_usart\init_usart.c
 
+src\asf\avr32\drivers\eic\eic.c
+
 src\asf\avr32\drivers\flashcdw\flashcdw.c
 
 src\asf\avr32\drivers\gpio\gpio.c
@@ -27,6 +29,10 @@ src\asf\avr32\drivers\scif\scif_uc3l.c
 src\asf\avr32\drivers\usart\usart.c
 
 src\asf\avr32\utils\startup\trampoline_uc3.S
+
+src\asf\common\services\clock\uc3l\dfll.c
+
+src\asf\common\services\clock\uc3l\sysclk.c
 
 src\config\conf_gpio.c
 
