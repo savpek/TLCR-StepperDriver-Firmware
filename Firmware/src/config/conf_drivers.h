@@ -11,5 +11,6 @@
 
 // PWMA
 #define PWMA_MAX_VALUE 255
+#define PWMA_CLOCK_DIVIDER 1000
 
 #endif /* CONF_DRIVERS_H_ */

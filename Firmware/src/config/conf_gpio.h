@@ -15,7 +15,7 @@ typedef struct
 {
 	uint8_t pin;
 	uint8_t function;
-	uint8_t channel;	// Set this if adc or pwm	// .
+	uint8_t channel;	// Set this if adc or pwm	//
 	conf_gpio_modes mode;
 	statusc_t is_last;
 } conf_gpio_t;

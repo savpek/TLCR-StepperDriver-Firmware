@@ -498,7 +498,6 @@
   <ItemGroup>
     <Folder Include="src\" />
     <Folder Include="src\app\" />
-    <Folder Include="src\app\init_mcu\" />
     <Folder Include="src\app\init_usart" />
     <Folder Include="src\app\init_gpio" />
     <Folder Include="src\asf\" />

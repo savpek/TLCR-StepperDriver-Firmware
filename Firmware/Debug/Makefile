@@ -33,7 +33,6 @@ OUTPUT_FILE_DEP:=
 SUBDIRS :=  \
 ../src/ \
 ../src/app/ \
-../src/app/init_mcu/ \
 ../src/app/init_usart \
 ../src/app/init_gpio \
 ../src/asf/ \

@@ -1,14 +1,7 @@
 #include "framework.h"
+#include "asf.h"
 #include "config/conf_drivers.h"
 #include "config/conf_gpio.h"
-
-static statusc_t is_last_config(uint8_t i) {
-	if(	conf_gpio_settings[i].is_last == SC_TRUE)
-		{
-		return SC_TRUE;
-		}
-	return SC_FALSE;
-}
 
 static void init_clocks_for_pwma()
 {
@@ -23,7 +16,7 @@ void init_gpio( void)
 {
 	init_clocks_for_pwma();
 	
-	for(int i = 0; !is_last_config(i); i++)
+	for(int i = 0; !conf_gpio_settings[i].is_last; i++)
 	{
 		switch (conf_gpio_settings[i].mode)
 		{

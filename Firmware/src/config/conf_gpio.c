@@ -18,9 +18,9 @@ const conf_gpio_t conf_gpio_settings[] =
 		.is_last = SC_FALSE,
 	},
 	{
-		.pin = AVR32_PWMA_28_PIN,						
-		.function = AVR32_PWMA_28_FUNCTION,				
-		.channel = 28,							
+		.pin = AVR32_PWMA_22_PIN,						
+		.function = AVR32_PWMA_22_FUNCTION,		
+		.channel = 22,
 		.mode = INIT_AS_PWM,
 		.is_last = SC_FALSE,
 	},
