@@ -4,8 +4,6 @@
 
 src\app\init_gpio\init_gpio.c
 
-src\app\init_mcu\init_mcu.c
-
 src\app\init_usart\init_usart.c
 
 src\asf\avr32\drivers\eic\eic.c

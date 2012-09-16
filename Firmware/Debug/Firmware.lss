@@ -47,11 +47,11 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING
  21 .debug_loc    00003aa8  00000000  00000000  0003a35f  2**0
                   CONTENTS, READONLY, DEBUGGING
- 22 .debug_macinfo 00ac34bb  00000000  00000000  0003de07  2**0
+ 22 .debug_macinfo 00ac359f  00000000  00000000  0003de07  2**0
                   CONTENTS, READONLY, DEBUGGING
  23 .stack        00001000  00003000  00003000  00000400  2**0
                   ALLOC
- 24 .debug_ranges 00000b60  00000000  00000000  00b012c2  2**0
+ 24 .debug_ranges 00000b60  00000000  00000000  00b013a6  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .reset:
@@ -2971,7 +2971,7 @@ void sysclk_init(void)
 80001400 <conf_gpio_settings>:
 80001400:	00 00 ff 00 00 00 00 00 00 00 00 00 01 00 ff 00     ................
 	...
-80001418:	25 04 1c 00 00 00 00 02 00 00 00 00 ff ff ff 00     %...............
+80001418:	25 04 1c 00 00 00 00 02 00 00 00 00 00 00 00 00     %...............
 80001428:	00 00 00 00 00 00 00 01 2e 2e 2f 73 72 63 2f 6c     ........../src/l
 80001438:	69 62 2f 69 6f 61 70 69 2f 69 6f 61 70 69 2e 63     ib/ioapi/ioapi.c
 80001448:	00 00 00 00                                         ....
