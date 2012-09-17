@@ -18,8 +18,6 @@ int main() {
 	init_usart();
 
 	utest_main(&test_runner);
-	pwma_set_channels_value(&AVR32_PWMA, (1<<28), 100);
 	
-	usart_putchar(CONF_USART_POINTER, 'a');
 	while(1);
 }

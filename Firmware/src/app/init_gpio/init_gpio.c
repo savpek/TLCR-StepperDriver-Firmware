@@ -2,14 +2,6 @@
 #include "config/conf_drivers.h"
 #include "config/conf_gpio.h"
 
-static statusc_t is_last_config(uint8_t i) {
-	if(	conf_gpio_settings[i].is_last == SC_TRUE)
-		{
-		return SC_TRUE;
-		}
-	return SC_FALSE;
-}
-
 /*! Settings for PWMA module. 
  * If dision is enabled, PWM freq is
  * CPU_CLK/Division factor. Remember that actual frequency
@@ -18,7 +10,8 @@ static statusc_t is_last_config(uint8_t i) {
 #define MOTOR_PWMA_DIVISION_FACTOR 7
 
 #define PWMA_MAX_VALUE 255
-void init_gpio( void) 
+
+static void ini_pwma_clocks() 
 {
 	struct genclk_config gcfg;
 		
@@ -26,8 +19,13 @@ void init_gpio( void)
 	genclk_config_set_source(&gcfg, 5);
 	genclk_config_set_divider(&gcfg, 2);
 	genclk_enable(&gcfg, AVR32_PM_GCLK_GCLK3);
-		
-	for(int i = 0; !is_last_config(i); i++)
+}
+
+void init_gpio( void) 
+{
+	ini_pwma_clocks();
+	
+	for(int i = 0; !(conf_gpio_settings[i].is_last == SC_TRUE); i++)
 	{
 		switch (conf_gpio_settings[i].mode)
 		{
