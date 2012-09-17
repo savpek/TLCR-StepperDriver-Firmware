@@ -2,7 +2,6 @@
 
 #include "str/str.h"
 #include "utest/utest.h"
-#include "init_mcu/init_mcu.h"
 #include "init_gpio/init_gpio.h"
 #include "init_usart/init_usart.h"
 
@@ -14,7 +13,6 @@ void test_runner() {
 
 int main() {
 	sysclk_init();
-	//init_mcu();
 	
 	init_gpio();
 	init_usart();
