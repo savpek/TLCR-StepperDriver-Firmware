@@ -4,18 +4,18 @@
 const conf_gpio_t conf_gpio_settings[] =
 {
 	{
-		PIN_USART_TXD,						// PIN
-		AVR32_USART0_TXD_0_FUNCTION,		// FUNCTION
-		CHANNEL_NOT_DEFINED,				// CHANNEL	
-		INIT_AS_GPIO,						// MODE
-		SC_FALSE,
+		.pin = PIN_USART_TXD,						// PIN
+		.function = AVR32_USART0_TXD_0_FUNCTION,		// FUNCTION
+		.channel = CHANNEL_NOT_DEFINED,				// CHANNEL	
+		.mode = INIT_AS_GPIO,						// MODE
+		.is_last = SC_FALSE,
 	},
 	{
-		PIN_USART_RXD,						// PIN
-		AVR32_USART0_RXD_0_FUNCTION,		// FUNCTION
-		CHANNEL_NOT_DEFINED,				// CHANNEL
-		INIT_AS_GPIO,						// MODE
-		SC_FALSE,
+		.pin = PIN_USART_RXD,						// PIN
+		.function = AVR32_USART0_RXD_0_FUNCTION,		// FUNCTION
+		.channel = CHANNEL_NOT_DEFINED,				// CHANNEL
+		.mode = INIT_AS_GPIO,						// MODE
+		.is_last = SC_FALSE,
 	},
 	{
 		AVR32_PWMA_28_PIN,					// PIN

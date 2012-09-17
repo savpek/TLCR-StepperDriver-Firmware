@@ -353,7 +353,7 @@ static void ini_pwma_clocks()
 80000218:	30 3b       	mov	r11,3
 8000021a:	10 9c       	mov	r12,r8
 8000021c:	f0 1f 00 0c 	mcall	8000024c <ini_pwma_clocks+0x40>
-	genclk_config_set_source(&gcfg, 5);
+	genclk_config_set_source(&gcfg, GENCLK_SRC_CLK_CPU);
 80000220:	ee c8 00 04 	sub	r8,r7,4
 80000224:	30 5b       	mov	r11,5
 80000226:	10 9c       	mov	r12,r8
