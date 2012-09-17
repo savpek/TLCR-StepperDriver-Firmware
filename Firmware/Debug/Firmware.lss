@@ -49,11 +49,11 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING
  22 .debug_loc    00003aa8  00000000  00000000  00037cd4  2**0
                   CONTENTS, READONLY, DEBUGGING
- 23 .debug_macinfo 00ac34a8  00000000  00000000  0003b77c  2**0
+ 23 .debug_macinfo 00ac2c59  00000000  00000000  0003b77c  2**0
                   CONTENTS, READONLY, DEBUGGING
  24 .stack        00001000  00003000  00003000  00000400  2**0
                   ALLOC
- 25 .debug_ranges 00000b60  00000000  00000000  00afec24  2**0
+ 25 .debug_ranges 00000b60  00000000  00000000  00afe3d5  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .reset:
@@ -576,7 +576,7 @@ void init_usart( void) {
 800003d4:	76 28       	ld.w	r8,r11[0x8]
 800003d6:	95 28       	st.w	r10[0x8],r8
 
-	usart_init_rs232(CONF_USART_POINTER, &usart_settings, CONF_PBA_F);
+	usart_init_rs232(CONF_USART_POINTER, &usart_settings, CONFIG_F_CPU);
 800003d8:	ee c8 00 0c 	sub	r8,r7,12
 800003dc:	e0 6a 6c 00 	mov	r10,27648
 800003e0:	ea 1a 02 dc 	orh	r10,0x2dc

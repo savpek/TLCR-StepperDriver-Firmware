@@ -11,5 +11,5 @@ void init_usart( void) {
 		.channelmode = CONF_USART_CHANNELMODE,
 	};
 
-	usart_init_rs232(CONF_USART_POINTER, &usart_settings, CONF_PBA_F);
+	usart_init_rs232(CONF_USART_POINTER, &usart_settings, CONFIG_F_CPU);
 }

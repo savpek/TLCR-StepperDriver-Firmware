@@ -76,7 +76,8 @@
 //#define CONFIG_DFLL0_SOURCE         GENCLK_SRC_RC32K
 
 /* Fdfll = (Fclk * DFLL_mul) / DFLL_div */
-#define CONFIG_DFLL0_MUL            (417)
+#define CONFIG_F_CPU				48000000UL
+#define CONFIG_DFLL0_MUL            (417) // ~48Mhz = 115khz*417
 #define CONFIG_DFLL0_DIV            1
 
 #endif /* CONF_CLOCK_H_INCLUDED */

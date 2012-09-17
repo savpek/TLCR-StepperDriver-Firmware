@@ -601,7 +601,7 @@ Discarded input sections
  .debug_info    0x00000000      0x218 src/lib/ioapi/mock/ioapi_mock.o
  .debug_line    0x00000000      0x9ff src/lib/ioapi/mock/ioapi_mock.o
  .debug_macinfo
-                0x00000000    0xad47d src/lib/ioapi/mock/ioapi_mock.o
+                0x00000000    0xad388 src/lib/ioapi/mock/ioapi_mock.o
  .text.clear_spy_tracker
                 0x00000000       0x4c src/lib/ioapi/mock/ioapi_mock.o
  .text.spy_ioapi_reset_tracker
@@ -660,7 +660,7 @@ Discarded input sections
  .debug_info    0x00000000      0x528 src/lib/str/test/test_str.o
  .debug_line    0x00000000      0xc32 src/lib/str/test/test_str.o
  .debug_macinfo
-                0x00000000    0xad515 src/lib/str/test/test_str.o
+                0x00000000    0xad420 src/lib/str/test/test_str.o
  .text.TEST_str_SETUP
                 0x00000000        0xa src/lib/str/test/test_str.o
  .text.TEST_str_TEAR_DOWN
@@ -733,7 +733,7 @@ Discarded input sections
  .debug_info    0x00000000      0x145 src/lib/utest/test/test_utest.o
  .debug_line    0x00000000      0xa2e src/lib/utest/test/test_utest.o
  .debug_macinfo
-                0x00000000    0xad447 src/lib/utest/test/test_utest.o
+                0x00000000    0xad352 src/lib/utest/test/test_utest.o
  .text.TEST_utest_SETUP
                 0x00000000        0xa src/lib/utest/test/test_utest.o
  .text.TEST_utest_TEAR_DOWN
@@ -2110,40 +2110,40 @@ LOAD c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0
  .debug_loc     0x000036c1       0x63 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-sbrkr.o)
  .debug_loc     0x00003724      0x384 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-freer.o)
 
-.debug_macinfo  0x00000000   0xac34a8
+.debug_macinfo  0x00000000   0xac2c59
  *(.debug_macinfo)
  .debug_macinfo
-                0x00000000    0xad538 src/app/init_gpio/init_gpio.o
+                0x00000000    0xad443 src/app/init_gpio/init_gpio.o
  .debug_macinfo
-                0x000ad538    0xad460 src/app/init_usart/init_usart.o
+                0x000ad443    0xad36b src/app/init_usart/init_usart.o
  .debug_macinfo
-                0x0015a998    0xaa6eb src/asf/avr32/drivers/flashcdw/flashcdw.o
+                0x0015a7ae    0xaa6eb src/asf/avr32/drivers/flashcdw/flashcdw.o
  .debug_macinfo
-                0x00205083    0xaa824 src/asf/avr32/drivers/gpio/gpio.o
+                0x00204e99    0xaa824 src/asf/avr32/drivers/gpio/gpio.o
  .debug_macinfo
-                0x002af8a7    0xaa5a0 src/asf/avr32/drivers/pwma/pwma.o
+                0x002af6bd    0xaa5a0 src/asf/avr32/drivers/pwma/pwma.o
  .debug_macinfo
-                0x00359e47    0xaa9b7 src/asf/avr32/drivers/usart/usart.o
+                0x00359c5d    0xaa9b7 src/asf/avr32/drivers/usart/usart.o
  .debug_macinfo
-                0x004047fe    0xab1fc src/asf/common/services/clock/uc3l/dfll.o
+                0x00404614    0xab216 src/asf/common/services/clock/uc3l/dfll.o
  .debug_macinfo
-                0x004af9fa    0xaad68 src/asf/common/services/clock/uc3l/osc.o
+                0x004af82a    0xaad82 src/asf/common/services/clock/uc3l/osc.o
  .debug_macinfo
-                0x0055a762    0xabb1f src/asf/common/services/clock/uc3l/sysclk.o
+                0x0055a5ac    0xabb39 src/asf/common/services/clock/uc3l/sysclk.o
  .debug_macinfo
-                0x00606281    0xad4e2 src/config/conf_gpio.o
+                0x006060e5    0xad3ed src/config/conf_gpio.o
  .debug_macinfo
-                0x006b3763    0xad457 src/lib/ioapi/ioapi.o
+                0x006b34d2    0xad362 src/lib/ioapi/ioapi.o
  .debug_macinfo
-                0x00760bba    0xad471 src/lib/ioapi/test/test_ioapi.o
+                0x00760834    0xad37c src/lib/ioapi/test/test_ioapi.o
  .debug_macinfo
-                0x0080e02b    0xad515 src/lib/statusc/statusc.o
+                0x0080dbb0    0xad420 src/lib/statusc/statusc.o
  .debug_macinfo
-                0x008bb540    0xad515 src/lib/str/str.o
+                0x008bafd0    0xad420 src/lib/str/str.o
  .debug_macinfo
-                0x00968a55    0xad515 src/lib/utest/utest.o
+                0x009683f0    0xad420 src/lib/utest/utest.o
  .debug_macinfo
-                0x00a15f6a    0xad53e src/main.o
+                0x00a15810    0xad449 src/main.o
 
 .debug_weaknames
  *(.debug_weaknames)
