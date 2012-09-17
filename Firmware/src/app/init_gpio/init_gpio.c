@@ -20,6 +20,13 @@ static statusc_t is_last_config(uint8_t i) {
 #define PWMA_MAX_VALUE 255
 void init_gpio( void) 
 {
+	struct genclk_config gcfg;
+		
+	genclk_config_defaults(&gcfg, AVR32_PM_GCLK_GCLK3);
+	genclk_config_set_source(&gcfg, 5);
+	genclk_config_set_divider(&gcfg, 2);
+	genclk_enable(&gcfg, AVR32_PM_GCLK_GCLK3);
+		
 	for(int i = 0; !is_last_config(i); i++)
 	{
 		switch (conf_gpio_settings[i].mode)

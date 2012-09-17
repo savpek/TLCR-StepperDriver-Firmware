@@ -16,13 +16,6 @@ int main() {
 	sysclk_init();
 	//init_mcu();
 	
-	struct genclk_config gcfg;
-	
-	genclk_config_defaults(&gcfg, AVR32_PM_GCLK_GCLK3);
-	genclk_config_set_source(&gcfg, 5);
-	genclk_config_set_divider(&gcfg, 2);
-	genclk_enable(&gcfg, AVR32_PM_GCLK_GCLK3);
-	
 	init_gpio();
 	init_usart();
 

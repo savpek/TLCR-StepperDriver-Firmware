@@ -1255,247 +1255,247 @@ LOAD c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0
                 0x80000024                _stext
  .text          0x800000a8       0x64 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/ucr3/crtbegin.o
  .text          0x8000010c       0x24 src/app/init_gpio/init_gpio.o
+ .text.genclk_config_defaults
+                0x80000130       0x1e src/app/init_gpio/init_gpio.o
+ .text.genclk_config_set_source
+                0x8000014e       0x30 src/app/init_gpio/init_gpio.o
+ .text.genclk_config_set_divider
+                0x8000017e       0x60 src/app/init_gpio/init_gpio.o
+ .text.genclk_enable
+                0x800001de       0x2c src/app/init_gpio/init_gpio.o
+ *fill*         0x8000020a        0x2 d703d703
  .text.is_last_config
-                0x80000130       0x3c src/app/init_gpio/init_gpio.o
+                0x8000020c       0x3c src/app/init_gpio/init_gpio.o
  .text.init_gpio
-                0x8000016c      0x148 src/app/init_gpio/init_gpio.o
-                0x8000016c                init_gpio
- .text          0x800002b4        0xc src/app/init_usart/init_usart.o
+                0x80000248      0x188 src/app/init_gpio/init_gpio.o
+                0x80000248                init_gpio
+ .text          0x800003d0        0xc src/app/init_usart/init_usart.o
  .text.init_usart
-                0x800002c0       0x40 src/app/init_usart/init_usart.o
-                0x800002c0                init_usart
+                0x800003dc       0x40 src/app/init_usart/init_usart.o
+                0x800003dc                init_usart
  .text.flashcdw_set_wait_state
-                0x80000300       0x46 src/asf/avr32/drivers/flashcdw/flashcdw.o
-                0x80000300                flashcdw_set_wait_state
- *fill*         0x80000346        0x2 d703d703
+                0x8000041c       0x46 src/asf/avr32/drivers/flashcdw/flashcdw.o
+                0x8000041c                flashcdw_set_wait_state
+ *fill*         0x80000462        0x2 d703d703
  .text.flashcdw_set_flash_waitstate_and_readmode
-                0x80000348       0x6c src/asf/avr32/drivers/flashcdw/flashcdw.o
-                0x80000348                flashcdw_set_flash_waitstate_and_readmode
+                0x80000464       0x6c src/asf/avr32/drivers/flashcdw/flashcdw.o
+                0x80000464                flashcdw_set_flash_waitstate_and_readmode
  .text.flashcdw_is_ready
-                0x800003b4       0x18 src/asf/avr32/drivers/flashcdw/flashcdw.o
-                0x800003b4                flashcdw_is_ready
+                0x800004d0       0x18 src/asf/avr32/drivers/flashcdw/flashcdw.o
+                0x800004d0                flashcdw_is_ready
  .text.flashcdw_default_wait_until_ready
-                0x800003cc       0x1c src/asf/avr32/drivers/flashcdw/flashcdw.o
-                0x800003cc                flashcdw_default_wait_until_ready
+                0x800004e8       0x1c src/asf/avr32/drivers/flashcdw/flashcdw.o
+                0x800004e8                flashcdw_default_wait_until_ready
  .text.flashcdw_get_error_status
-                0x800003e8       0x16 src/asf/avr32/drivers/flashcdw/flashcdw.o
- *fill*         0x800003fe        0x2 d703d703
+                0x80000504       0x16 src/asf/avr32/drivers/flashcdw/flashcdw.o
+ *fill*         0x8000051a        0x2 d703d703
  .text.flashcdw_issue_command
-                0x80000400       0x88 src/asf/avr32/drivers/flashcdw/flashcdw.o
-                0x80000400                flashcdw_issue_command
- .text          0x80000488       0x20 src/asf/avr32/drivers/gpio/gpio.o
+                0x8000051c       0x88 src/asf/avr32/drivers/flashcdw/flashcdw.o
+                0x8000051c                flashcdw_issue_command
+ .text          0x800005a4       0x20 src/asf/avr32/drivers/gpio/gpio.o
  .text.gpio_enable_module_pin
-                0x800004a8      0x27c src/asf/avr32/drivers/gpio/gpio.o
-                0x800004a8                gpio_enable_module_pin
+                0x800005c4      0x27c src/asf/avr32/drivers/gpio/gpio.o
+                0x800005c4                gpio_enable_module_pin
  .text.gpio_configure_pin
-                0x80000724      0x1ae src/asf/avr32/drivers/gpio/gpio.o
-                0x80000724                gpio_configure_pin
+                0x80000840      0x1ae src/asf/avr32/drivers/gpio/gpio.o
+                0x80000840                gpio_configure_pin
  .text.gpio_set_pin_high
-                0x800008d2       0x3a src/asf/avr32/drivers/gpio/gpio.o
-                0x800008d2                gpio_set_pin_high
+                0x800009ee       0x3a src/asf/avr32/drivers/gpio/gpio.o
+                0x800009ee                gpio_set_pin_high
  .text.gpio_set_pin_low
-                0x8000090c       0x3a src/asf/avr32/drivers/gpio/gpio.o
-                0x8000090c                gpio_set_pin_low
- *fill*         0x80000946        0x2 d703d703
+                0x80000a28       0x3a src/asf/avr32/drivers/gpio/gpio.o
+                0x80000a28                gpio_set_pin_low
+ *fill*         0x80000a62        0x2 d703d703
  .text.pwma_config_and_enable
-                0x80000948       0x44 src/asf/avr32/drivers/pwma/pwma.o
-                0x80000948                pwma_config_and_enable
+                0x80000a64       0x44 src/asf/avr32/drivers/pwma/pwma.o
+                0x80000a64                pwma_config_and_enable
  .text.pwma_set_channels_value
-                0x8000098c       0x80 src/asf/avr32/drivers/pwma/pwma.o
-                0x8000098c                pwma_set_channels_value
+                0x80000aa8       0x80 src/asf/avr32/drivers/pwma/pwma.o
+                0x80000aa8                pwma_set_channels_value
  .text.cpu_irq_is_enabled_flags
-                0x80000a0c       0x20 src/asf/avr32/drivers/usart/usart.o
+                0x80000b28       0x20 src/asf/avr32/drivers/usart/usart.o
  .text.usart_set_async_baudrate
-                0x80000a2c       0xd2 src/asf/avr32/drivers/usart/usart.o
- *fill*         0x80000afe        0x2 d703d703
+                0x80000b48       0xd2 src/asf/avr32/drivers/usart/usart.o
+ *fill*         0x80000c1a        0x2 d703d703
  .text.usart_reset
-                0x80000b00       0x74 src/asf/avr32/drivers/usart/usart.o
-                0x80000b00                usart_reset
+                0x80000c1c       0x74 src/asf/avr32/drivers/usart/usart.o
+                0x80000c1c                usart_reset
  .text.usart_init_rs232
-                0x80000b74      0x170 src/asf/avr32/drivers/usart/usart.o
-                0x80000b74                usart_init_rs232
+                0x80000c90      0x170 src/asf/avr32/drivers/usart/usart.o
+                0x80000c90                usart_init_rs232
  .text.usart_write_char
-                0x80000ce4       0x44 src/asf/avr32/drivers/usart/usart.o
-                0x80000ce4                usart_write_char
+                0x80000e00       0x44 src/asf/avr32/drivers/usart/usart.o
+                0x80000e00                usart_write_char
  .text.usart_putchar
-                0x80000d28       0x54 src/asf/avr32/drivers/usart/usart.o
-                0x80000d28                usart_putchar
+                0x80000e44       0x54 src/asf/avr32/drivers/usart/usart.o
+                0x80000e44                usart_putchar
  .text.cpu_irq_save
-                0x80000d7c       0x1e src/asf/common/services/clock/uc3l/dfll.o
+                0x80000e98       0x1e src/asf/common/services/clock/uc3l/dfll.o
  .text.cpu_irq_restore
-                0x80000d9a       0x1a src/asf/common/services/clock/uc3l/dfll.o
+                0x80000eb6       0x1a src/asf/common/services/clock/uc3l/dfll.o
  .text.osc_enable
-                0x80000db4       0x34 src/asf/common/services/clock/uc3l/dfll.o
+                0x80000ed0       0x34 src/asf/common/services/clock/uc3l/dfll.o
  .text.osc_is_ready
-                0x80000de8       0x4c src/asf/common/services/clock/uc3l/dfll.o
+                0x80000f04       0x4c src/asf/common/services/clock/uc3l/dfll.o
  .text.osc_wait_ready
-                0x80000e34       0x2c src/asf/common/services/clock/uc3l/dfll.o
+                0x80000f50       0x2c src/asf/common/services/clock/uc3l/dfll.o
  .text.genclk_config_defaults
-                0x80000e60       0x1e src/asf/common/services/clock/uc3l/dfll.o
+                0x80000f7c       0x1e src/asf/common/services/clock/uc3l/dfll.o
  .text.genclk_config_set_source
-                0x80000e7e       0x30 src/asf/common/services/clock/uc3l/dfll.o
+                0x80000f9a       0x30 src/asf/common/services/clock/uc3l/dfll.o
  .text.genclk_config_set_divider
-                0x80000eae       0x60 src/asf/common/services/clock/uc3l/dfll.o
+                0x80000fca       0x60 src/asf/common/services/clock/uc3l/dfll.o
  .text.genclk_enable
-                0x80000f0e       0x2c src/asf/common/services/clock/uc3l/dfll.o
- *fill*         0x80000f3a        0x2 d703d703
+                0x8000102a       0x2c src/asf/common/services/clock/uc3l/dfll.o
+ *fill*         0x80001056        0x2 d703d703
  .text.dfll_config_init_closed_loop_mode
-                0x80000f3c       0x80 src/asf/common/services/clock/uc3l/dfll.o
+                0x80001058       0x80 src/asf/common/services/clock/uc3l/dfll.o
  .text.dfll_is_fine_locked
-                0x80000fbc       0x22 src/asf/common/services/clock/uc3l/dfll.o
- *fill*         0x80000fde        0x2 d703d703
+                0x800010d8       0x22 src/asf/common/services/clock/uc3l/dfll.o
+ *fill*         0x800010fa        0x2 d703d703
  .text.dfll_enable_source
-                0x80000fe0       0x6c src/asf/common/services/clock/uc3l/dfll.o
+                0x800010fc       0x6c src/asf/common/services/clock/uc3l/dfll.o
  .text.dfll_enable_closed_loop
-                0x8000104c      0x130 src/asf/common/services/clock/uc3l/dfll.o
-                0x8000104c                dfll_enable_closed_loop
+                0x80001168      0x130 src/asf/common/services/clock/uc3l/dfll.o
+                0x80001168                dfll_enable_closed_loop
  .text.dfll_enable_config_defaults
-                0x8000117c       0x74 src/asf/common/services/clock/uc3l/dfll.o
-                0x8000117c                dfll_enable_config_defaults
+                0x80001298       0x74 src/asf/common/services/clock/uc3l/dfll.o
+                0x80001298                dfll_enable_config_defaults
  .text.cpu_irq_save
-                0x800011f0       0x1e src/asf/common/services/clock/uc3l/osc.o
+                0x8000130c       0x1e src/asf/common/services/clock/uc3l/osc.o
  .text.cpu_irq_restore
-                0x8000120e       0x1a src/asf/common/services/clock/uc3l/osc.o
+                0x8000132a       0x1a src/asf/common/services/clock/uc3l/osc.o
  .text.osc_priv_enable_rc32k
-                0x80001228       0x40 src/asf/common/services/clock/uc3l/osc.o
-                0x80001228                osc_priv_enable_rc32k
+                0x80001344       0x40 src/asf/common/services/clock/uc3l/osc.o
+                0x80001344                osc_priv_enable_rc32k
  .text.osc_priv_enable_rc120m
-                0x80001268       0x40 src/asf/common/services/clock/uc3l/osc.o
-                0x80001268                osc_priv_enable_rc120m
+                0x80001384       0x40 src/asf/common/services/clock/uc3l/osc.o
+                0x80001384                osc_priv_enable_rc120m
  .text.cpu_irq_save
-                0x800012a8       0x1e src/asf/common/services/clock/uc3l/sysclk.o
+                0x800013c4       0x1e src/asf/common/services/clock/uc3l/sysclk.o
  .text.cpu_irq_restore
-                0x800012c6       0x1a src/asf/common/services/clock/uc3l/sysclk.o
+                0x800013e2       0x1a src/asf/common/services/clock/uc3l/sysclk.o
  .text.dfll_priv_get_source_hz
-                0x800012e0       0x3c src/asf/common/services/clock/uc3l/sysclk.o
+                0x800013fc       0x3c src/asf/common/services/clock/uc3l/sysclk.o
  .text.sysclk_get_main_hz
-                0x8000131c       0x20 src/asf/common/services/clock/uc3l/sysclk.o
+                0x80001438       0x20 src/asf/common/services/clock/uc3l/sysclk.o
  .text.sysclk_get_cpu_hz
-                0x8000133c       0x18 src/asf/common/services/clock/uc3l/sysclk.o
+                0x80001458       0x18 src/asf/common/services/clock/uc3l/sysclk.o
  .text.sysclk_set_source
-                0x80001354       0x44 src/asf/common/services/clock/uc3l/sysclk.o
-                0x80001354                sysclk_set_source
+                0x80001470       0x44 src/asf/common/services/clock/uc3l/sysclk.o
+                0x80001470                sysclk_set_source
  .text.sysclk_init
-                0x80001398       0x68 src/asf/common/services/clock/uc3l/sysclk.o
-                0x80001398                sysclk_init
- .text          0x80001400       0x30 src/config/conf_gpio.o
-                0x80001400                conf_gpio_settings
- .text          0x80001430       0x1c src/lib/ioapi/ioapi.o
+                0x800014b4       0x68 src/asf/common/services/clock/uc3l/sysclk.o
+                0x800014b4                sysclk_init
+ .text          0x8000151c       0x30 src/config/conf_gpio.o
+                0x8000151c                conf_gpio_settings
+ .text          0x8000154c       0x1c src/lib/ioapi/ioapi.o
  .text.get_port_idx
-                0x8000144c       0x1e src/lib/ioapi/ioapi.o
+                0x80001568       0x1e src/lib/ioapi/ioapi.o
  .text.get_pin_bit_in_port
-                0x8000146a       0x24 src/lib/ioapi/ioapi.o
- *fill*         0x8000148e        0x2 d703d703
+                0x80001586       0x24 src/lib/ioapi/ioapi.o
+ *fill*         0x800015aa        0x2 d703d703
  .text.is_register_set
-                0x80001490       0x34 src/lib/ioapi/ioapi.o
+                0x800015ac       0x34 src/lib/ioapi/ioapi.o
  .text.is_pin_in_gpio_mode
-                0x800014c4       0x3c src/lib/ioapi/ioapi.o
+                0x800015e0       0x3c src/lib/ioapi/ioapi.o
  .text.ioapi_output_high
-                0x80001500       0x48 src/lib/ioapi/ioapi.o
-                0x80001500                ioapi_output_high
+                0x8000161c       0x48 src/lib/ioapi/ioapi.o
+                0x8000161c                ioapi_output_high
  .text.ioapi_output_low
-                0x80001548       0x48 src/lib/ioapi/ioapi.o
-                0x80001548                ioapi_output_low
+                0x80001664       0x48 src/lib/ioapi/ioapi.o
+                0x80001664                ioapi_output_low
  .text.ioapi_is_pin_output
-                0x80001590       0x6c src/lib/ioapi/ioapi.o
-                0x80001590                ioapi_is_pin_output
+                0x800016ac       0x6c src/lib/ioapi/ioapi.o
+                0x800016ac                ioapi_is_pin_output
  .text.ioapi_is_pin_input
-                0x800015fc       0x6c src/lib/ioapi/ioapi.o
-                0x800015fc                ioapi_is_pin_input
- .text          0x80001668      0x134 src/lib/ioapi/test/test_ioapi.o
+                0x80001718       0x6c src/lib/ioapi/ioapi.o
+                0x80001718                ioapi_is_pin_input
+ .text          0x80001784      0x134 src/lib/ioapi/test/test_ioapi.o
  .text.TEST_ioapi_SETUP
-                0x8000179c        0xa src/lib/ioapi/test/test_ioapi.o
-                0x8000179c                TEST_ioapi_SETUP
+                0x800018b8        0xa src/lib/ioapi/test/test_ioapi.o
+                0x800018b8                TEST_ioapi_SETUP
  .text.TEST_ioapi_TEAR_DOWN
-                0x800017a6        0xa src/lib/ioapi/test/test_ioapi.o
-                0x800017a6                TEST_ioapi_TEAR_DOWN
+                0x800018c2        0xa src/lib/ioapi/test/test_ioapi.o
+                0x800018c2                TEST_ioapi_TEAR_DOWN
  .text.TEST_ioapi_test_ioapi_output_high_run
-                0x800017b0       0x30 src/lib/ioapi/test/test_ioapi.o
-                0x800017b0                TEST_ioapi_test_ioapi_output_high_run
+                0x800018cc       0x30 src/lib/ioapi/test/test_ioapi.o
+                0x800018cc                TEST_ioapi_test_ioapi_output_high_run
  .text.TEST_ioapi_test_ioapi_output_high_
-                0x800017e0       0x40 src/lib/ioapi/test/test_ioapi.o
-                0x800017e0                TEST_ioapi_test_ioapi_output_high_
+                0x800018fc       0x40 src/lib/ioapi/test/test_ioapi.o
+                0x800018fc                TEST_ioapi_test_ioapi_output_high_
  .text.TEST_ioapi_test_ioapi_output_low_run
-                0x80001820       0x30 src/lib/ioapi/test/test_ioapi.o
-                0x80001820                TEST_ioapi_test_ioapi_output_low_run
+                0x8000193c       0x30 src/lib/ioapi/test/test_ioapi.o
+                0x8000193c                TEST_ioapi_test_ioapi_output_low_run
  .text.TEST_ioapi_test_ioapi_output_low_
-                0x80001850       0x40 src/lib/ioapi/test/test_ioapi.o
-                0x80001850                TEST_ioapi_test_ioapi_output_low_
+                0x8000196c       0x40 src/lib/ioapi/test/test_ioapi.o
+                0x8000196c                TEST_ioapi_test_ioapi_output_low_
  .text.TEST_ioapi_test_ioapi_input_value_run
-                0x80001890       0x30 src/lib/ioapi/test/test_ioapi.o
-                0x80001890                TEST_ioapi_test_ioapi_input_value_run
+                0x800019ac       0x30 src/lib/ioapi/test/test_ioapi.o
+                0x800019ac                TEST_ioapi_test_ioapi_input_value_run
  .text.TEST_ioapi_test_ioapi_input_value_
-                0x800018c0       0x34 src/lib/ioapi/test/test_ioapi.o
-                0x800018c0                TEST_ioapi_test_ioapi_input_value_
+                0x800019dc       0x34 src/lib/ioapi/test/test_ioapi.o
+                0x800019dc                TEST_ioapi_test_ioapi_input_value_
  .text.TEST_ioapi_test_ioapi_is_pin_output_run
-                0x800018f4       0x30 src/lib/ioapi/test/test_ioapi.o
-                0x800018f4                TEST_ioapi_test_ioapi_is_pin_output_run
+                0x80001a10       0x30 src/lib/ioapi/test/test_ioapi.o
+                0x80001a10                TEST_ioapi_test_ioapi_is_pin_output_run
  .text.TEST_ioapi_test_ioapi_is_pin_output_
-                0x80001924       0x54 src/lib/ioapi/test/test_ioapi.o
-                0x80001924                TEST_ioapi_test_ioapi_is_pin_output_
+                0x80001a40       0x54 src/lib/ioapi/test/test_ioapi.o
+                0x80001a40                TEST_ioapi_test_ioapi_is_pin_output_
  .text.TEST_ioapi_test_ioapi_is_pin_input_run
-                0x80001978       0x30 src/lib/ioapi/test/test_ioapi.o
-                0x80001978                TEST_ioapi_test_ioapi_is_pin_input_run
+                0x80001a94       0x30 src/lib/ioapi/test/test_ioapi.o
+                0x80001a94                TEST_ioapi_test_ioapi_is_pin_input_run
  .text.TEST_ioapi_test_ioapi_is_pin_input_
-                0x800019a8       0x54 src/lib/ioapi/test/test_ioapi.o
-                0x800019a8                TEST_ioapi_test_ioapi_is_pin_input_
+                0x80001ac4       0x54 src/lib/ioapi/test/test_ioapi.o
+                0x80001ac4                TEST_ioapi_test_ioapi_is_pin_input_
  .text.TEST_ioapi_GROUP_RUNNER
-                0x800019fc       0x14 src/lib/ioapi/test/test_ioapi.o
-                0x800019fc                TEST_ioapi_GROUP_RUNNER
+                0x80001b18       0x14 src/lib/ioapi/test/test_ioapi.o
+                0x80001b18                TEST_ioapi_GROUP_RUNNER
  .text.TEST_ioapi_GROUP_RUNNER_runAll
-                0x80001a10       0x34 src/lib/ioapi/test/test_ioapi.o
-                0x80001a10                TEST_ioapi_GROUP_RUNNER_runAll
- .text          0x80001a44       0x3c src/lib/statusc/statusc.o
+                0x80001b2c       0x34 src/lib/ioapi/test/test_ioapi.o
+                0x80001b2c                TEST_ioapi_GROUP_RUNNER_runAll
+ .text          0x80001b60       0x3c src/lib/statusc/statusc.o
  .text.print_line
-                0x80001a80       0x54 src/lib/statusc/statusc.o
+                0x80001b9c       0x54 src/lib/statusc/statusc.o
  .text.statusc_assert_body
-                0x80001ad4       0x70 src/lib/statusc/statusc.o
-                0x80001ad4                statusc_assert_body
+                0x80001bf0       0x70 src/lib/statusc/statusc.o
+                0x80001bf0                statusc_assert_body
  .text.return_string_from_uint
-                0x80001b44       0xda src/lib/str/str.o
- *fill*         0x80001c1e        0x2 d703d703
+                0x80001c60       0xda src/lib/str/str.o
+ *fill*         0x80001d3a        0x2 d703d703
  .text.str_from_uint8
-                0x80001c20       0x30 src/lib/str/str.o
-                0x80001c20                str_from_uint8
+                0x80001d3c       0x30 src/lib/str/str.o
+                0x80001d3c                str_from_uint8
  .text.str_from_uint32
-                0x80001c50       0x30 src/lib/str/str.o
-                0x80001c50                str_from_uint32
- .text          0x80001c80       0x78 src/lib/utest/utest.o
+                0x80001d6c       0x30 src/lib/str/str.o
+                0x80001d6c                str_from_uint32
+ .text          0x80001d9c       0x78 src/lib/utest/utest.o
  .text.utest_print
-                0x80001cf8       0x54 src/lib/utest/utest.o
+                0x80001e14       0x54 src/lib/utest/utest.o
  .text.utest_print_line
-                0x80001d4c       0x38 src/lib/utest/utest.o
+                0x80001e68       0x38 src/lib/utest/utest.o
  .text.utest_print_eol
-                0x80001d84       0x18 src/lib/utest/utest.o
+                0x80001ea0       0x18 src/lib/utest/utest.o
  .text.utest_main
-                0x80001d9c       0x94 src/lib/utest/utest.o
-                0x80001d9c                utest_main
+                0x80001eb8       0x94 src/lib/utest/utest.o
+                0x80001eb8                utest_main
  .text.utest_runner
-                0x80001e30       0x6c src/lib/utest/utest.o
-                0x80001e30                utest_runner
+                0x80001f4c       0x6c src/lib/utest/utest.o
+                0x80001f4c                utest_runner
  .text.print_failure_msg_head
-                0x80001e9c       0x18 src/lib/utest/utest.o
+                0x80001fb8       0x18 src/lib/utest/utest.o
  .text.print_failure_msg_middle
-                0x80001eb4       0x18 src/lib/utest/utest.o
+                0x80001fd0       0x18 src/lib/utest/utest.o
  .text.print_failure_msg_footer
-                0x80001ecc       0x3c src/lib/utest/utest.o
+                0x80001fe8       0x3c src/lib/utest/utest.o
  .text.utest_assert
-                0x80001f08       0x68 src/lib/utest/utest.o
-                0x80001f08                utest_assert
- .text.genclk_config_defaults
-                0x80001f70       0x1e src/main.o
- .text.genclk_config_set_source
-                0x80001f8e       0x30 src/main.o
- .text.genclk_config_set_divider
-                0x80001fbe       0x60 src/main.o
- .text.genclk_enable
-                0x8000201e       0x2c src/main.o
- *fill*         0x8000204a        0x2 d703d703
+                0x80002024       0x68 src/lib/utest/utest.o
+                0x80002024                utest_assert
  .text.test_runner
-                0x8000204c       0x14 src/main.o
-                0x8000204c                test_runner
- .text.main     0x80002060       0x94 src/main.o
-                0x80002060                main
+                0x8000208c       0x14 src/main.o
+                0x8000208c                test_runner
+ .text.main     0x800020a0       0x54 src/main.o
+                0x800020a0                main
  .text.atexit   0x800020f4       0x14 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-atexit.o)
                 0x800020f4                atexit
  .text.exit     0x80002108       0x28 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-exit.o)
@@ -1785,35 +1785,35 @@ LOAD c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0
 .debug_aranges  0x00000000      0xc08
  *(.debug_aranges)
  .debug_aranges
-                0x00000000       0x28 src/app/init_gpio/init_gpio.o
+                0x00000000       0x48 src/app/init_gpio/init_gpio.o
  .debug_aranges
-                0x00000028       0x20 src/app/init_usart/init_usart.o
+                0x00000048       0x20 src/app/init_usart/init_usart.o
  .debug_aranges
-                0x00000048      0x260 src/asf/avr32/drivers/flashcdw/flashcdw.o
+                0x00000068      0x260 src/asf/avr32/drivers/flashcdw/flashcdw.o
  .debug_aranges
-                0x000002a8      0x110 src/asf/avr32/drivers/gpio/gpio.o
+                0x000002c8      0x110 src/asf/avr32/drivers/gpio/gpio.o
  .debug_aranges
-                0x000003b8       0x38 src/asf/avr32/drivers/pwma/pwma.o
+                0x000003d8       0x38 src/asf/avr32/drivers/pwma/pwma.o
  .debug_aranges
-                0x000003f0      0x108 src/asf/avr32/drivers/usart/usart.o
+                0x00000410      0x108 src/asf/avr32/drivers/usart/usart.o
  .debug_aranges
-                0x000004f8       0xa8 src/asf/common/services/clock/uc3l/dfll.o
+                0x00000518       0xa8 src/asf/common/services/clock/uc3l/dfll.o
  .debug_aranges
-                0x000005a0       0x48 src/asf/common/services/clock/uc3l/osc.o
+                0x000005c0       0x48 src/asf/common/services/clock/uc3l/osc.o
  .debug_aranges
-                0x000005e8       0x88 src/asf/common/services/clock/uc3l/sysclk.o
+                0x00000608       0x88 src/asf/common/services/clock/uc3l/sysclk.o
  .debug_aranges
-                0x00000670       0x68 src/lib/ioapi/ioapi.o
+                0x00000690       0x68 src/lib/ioapi/ioapi.o
  .debug_aranges
-                0x000006d8       0x88 src/lib/ioapi/test/test_ioapi.o
+                0x000006f8       0x88 src/lib/ioapi/test/test_ioapi.o
  .debug_aranges
-                0x00000760       0x28 src/lib/statusc/statusc.o
+                0x00000780       0x28 src/lib/statusc/statusc.o
  .debug_aranges
-                0x00000788       0x98 src/lib/str/str.o
+                0x000007a8       0x98 src/lib/str/str.o
  .debug_aranges
-                0x00000820       0xa0 src/lib/utest/utest.o
+                0x00000840       0xa0 src/lib/utest/utest.o
  .debug_aranges
-                0x000008c0       0x48 src/main.o
+                0x000008e0       0x28 src/main.o
  .debug_aranges
                 0x00000908       0x20 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-atexit.o)
  .debug_aranges
@@ -1905,90 +1905,90 @@ LOAD c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0
  .debug_pubnames
                 0x00001b8f       0x31 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-freer.o)
 
-.debug_info     0x00000000    0x1ea6d
+.debug_info     0x00000000    0x1ea6c
  *(.debug_info .gnu.linkonce.wi.*)
- .debug_info    0x00000000      0x79e src/app/init_gpio/init_gpio.o
- .debug_info    0x0000079e     0x215b src/app/init_usart/init_usart.o
- .debug_info    0x000028f9     0x1df2 src/asf/avr32/drivers/flashcdw/flashcdw.o
- .debug_info    0x000046eb      0xf06 src/asf/avr32/drivers/gpio/gpio.o
- .debug_info    0x000055f1      0x732 src/asf/avr32/drivers/pwma/pwma.o
- .debug_info    0x00005d23     0x2c07 src/asf/avr32/drivers/usart/usart.o
- .debug_info    0x0000892a     0x1e5d src/asf/common/services/clock/uc3l/dfll.o
- .debug_info    0x0000a787     0x19c6 src/asf/common/services/clock/uc3l/osc.o
- .debug_info    0x0000c14d      0xf10 src/asf/common/services/clock/uc3l/sysclk.o
- .debug_info    0x0000d05d      0x21b src/config/conf_gpio.o
- .debug_info    0x0000d278      0x9d3 src/lib/ioapi/ioapi.o
- .debug_info    0x0000dc4b      0x1bd src/lib/ioapi/test/test_ioapi.o
- .debug_info    0x0000de08     0x2195 src/lib/statusc/statusc.o
- .debug_info    0x0000ff9d      0x6b8 src/lib/str/str.o
- .debug_info    0x00010655     0x2580 src/lib/utest/utest.o
- .debug_info    0x00012bd5     0x3fc0 src/main.o
- .debug_info    0x00016b95       0xc5 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-atexit.o)
- .debug_info    0x00016c5a      0x8b7 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-exit.o)
- .debug_info    0x00017511      0x960 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-impure.o)
- .debug_info    0x00017e71      0x93a c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-syscalls.o)
- .debug_info    0x000187ab      0x92c c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-__atexit.o)
- .debug_info    0x000190d7      0x931 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-__call_atexit.o)
- .debug_info    0x00019a08      0x8a6 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-errno.o)
- .debug_info    0x0001a2ae      0xc2a c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-findfp.o)
- .debug_info    0x0001aed8      0x8ea c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-malloc.o)
- .debug_info    0x0001b7c2      0xc4e c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-mallocr.o)
- .debug_info    0x0001c410      0x8cf c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-mlock.o)
- .debug_info    0x0001ccdf      0x973 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-reent.o)
- .debug_info    0x0001d652      0x8de c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-sbrkr.o)
- .debug_info    0x0001df30      0xb3d c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-freer.o)
+ .debug_info    0x00000000     0x2132 src/app/init_gpio/init_gpio.o
+ .debug_info    0x00002132     0x215b src/app/init_usart/init_usart.o
+ .debug_info    0x0000428d     0x1df2 src/asf/avr32/drivers/flashcdw/flashcdw.o
+ .debug_info    0x0000607f      0xf06 src/asf/avr32/drivers/gpio/gpio.o
+ .debug_info    0x00006f85      0x732 src/asf/avr32/drivers/pwma/pwma.o
+ .debug_info    0x000076b7     0x2c07 src/asf/avr32/drivers/usart/usart.o
+ .debug_info    0x0000a2be     0x1e5d src/asf/common/services/clock/uc3l/dfll.o
+ .debug_info    0x0000c11b     0x19c6 src/asf/common/services/clock/uc3l/osc.o
+ .debug_info    0x0000dae1      0xf10 src/asf/common/services/clock/uc3l/sysclk.o
+ .debug_info    0x0000e9f1      0x21b src/config/conf_gpio.o
+ .debug_info    0x0000ec0c      0x9d3 src/lib/ioapi/ioapi.o
+ .debug_info    0x0000f5df      0x1bd src/lib/ioapi/test/test_ioapi.o
+ .debug_info    0x0000f79c     0x2195 src/lib/statusc/statusc.o
+ .debug_info    0x00011931      0x6b8 src/lib/str/str.o
+ .debug_info    0x00011fe9     0x2580 src/lib/utest/utest.o
+ .debug_info    0x00014569     0x262b src/main.o
+ .debug_info    0x00016b94       0xc5 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-atexit.o)
+ .debug_info    0x00016c59      0x8b7 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-exit.o)
+ .debug_info    0x00017510      0x960 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-impure.o)
+ .debug_info    0x00017e70      0x93a c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-syscalls.o)
+ .debug_info    0x000187aa      0x92c c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-__atexit.o)
+ .debug_info    0x000190d6      0x931 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-__call_atexit.o)
+ .debug_info    0x00019a07      0x8a6 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-errno.o)
+ .debug_info    0x0001a2ad      0xc2a c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-findfp.o)
+ .debug_info    0x0001aed7      0x8ea c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-malloc.o)
+ .debug_info    0x0001b7c1      0xc4e c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-mallocr.o)
+ .debug_info    0x0001c40f      0x8cf c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-mlock.o)
+ .debug_info    0x0001ccde      0x973 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-reent.o)
+ .debug_info    0x0001d651      0x8de c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-sbrkr.o)
+ .debug_info    0x0001df2f      0xb3d c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-freer.o)
 
-.debug_abbrev   0x00000000     0x2fcf
+.debug_abbrev   0x00000000     0x2fa1
  *(.debug_abbrev)
- .debug_abbrev  0x00000000      0x185 src/app/init_gpio/init_gpio.o
- .debug_abbrev  0x00000185      0x12e src/app/init_usart/init_usart.o
- .debug_abbrev  0x000002b3      0x285 src/asf/avr32/drivers/flashcdw/flashcdw.o
- .debug_abbrev  0x00000538      0x241 src/asf/avr32/drivers/gpio/gpio.o
- .debug_abbrev  0x00000779      0x13e src/asf/avr32/drivers/pwma/pwma.o
- .debug_abbrev  0x000008b7      0x27d src/asf/avr32/drivers/usart/usart.o
- .debug_abbrev  0x00000b34      0x23a src/asf/common/services/clock/uc3l/dfll.o
- .debug_abbrev  0x00000d6e      0x176 src/asf/common/services/clock/uc3l/osc.o
- .debug_abbrev  0x00000ee4      0x1d5 src/asf/common/services/clock/uc3l/sysclk.o
- .debug_abbrev  0x000010b9       0xad src/config/conf_gpio.o
- .debug_abbrev  0x00001166      0x1dc src/lib/ioapi/ioapi.o
- .debug_abbrev  0x00001342       0x5b src/lib/ioapi/test/test_ioapi.o
- .debug_abbrev  0x0000139d      0x167 src/lib/statusc/statusc.o
- .debug_abbrev  0x00001504      0x10c src/lib/str/str.o
- .debug_abbrev  0x00001610      0x1b4 src/lib/utest/utest.o
- .debug_abbrev  0x000017c4      0x1ce src/main.o
- .debug_abbrev  0x00001992       0x81 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-atexit.o)
- .debug_abbrev  0x00001a13      0x15f c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-exit.o)
- .debug_abbrev  0x00001b72      0x160 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-impure.o)
- .debug_abbrev  0x00001cd2      0x19a c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-syscalls.o)
- .debug_abbrev  0x00001e6c      0x1b5 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-__atexit.o)
- .debug_abbrev  0x00002021      0x1bc c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-__call_atexit.o)
- .debug_abbrev  0x000021dd      0x150 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-errno.o)
- .debug_abbrev  0x0000232d      0x28c c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-findfp.o)
- .debug_abbrev  0x000025b9      0x178 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-malloc.o)
- .debug_abbrev  0x00002731      0x205 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-mallocr.o)
- .debug_abbrev  0x00002936      0x15b c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-mlock.o)
- .debug_abbrev  0x00002a91      0x1e6 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-reent.o)
- .debug_abbrev  0x00002c77      0x17f c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-sbrkr.o)
- .debug_abbrev  0x00002df6      0x1d9 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-freer.o)
+ .debug_abbrev  0x00000000      0x20f src/app/init_gpio/init_gpio.o
+ .debug_abbrev  0x0000020f      0x12e src/app/init_usart/init_usart.o
+ .debug_abbrev  0x0000033d      0x285 src/asf/avr32/drivers/flashcdw/flashcdw.o
+ .debug_abbrev  0x000005c2      0x241 src/asf/avr32/drivers/gpio/gpio.o
+ .debug_abbrev  0x00000803      0x13e src/asf/avr32/drivers/pwma/pwma.o
+ .debug_abbrev  0x00000941      0x27d src/asf/avr32/drivers/usart/usart.o
+ .debug_abbrev  0x00000bbe      0x23a src/asf/common/services/clock/uc3l/dfll.o
+ .debug_abbrev  0x00000df8      0x176 src/asf/common/services/clock/uc3l/osc.o
+ .debug_abbrev  0x00000f6e      0x1d5 src/asf/common/services/clock/uc3l/sysclk.o
+ .debug_abbrev  0x00001143       0xad src/config/conf_gpio.o
+ .debug_abbrev  0x000011f0      0x1dc src/lib/ioapi/ioapi.o
+ .debug_abbrev  0x000013cc       0x5b src/lib/ioapi/test/test_ioapi.o
+ .debug_abbrev  0x00001427      0x167 src/lib/statusc/statusc.o
+ .debug_abbrev  0x0000158e      0x10c src/lib/str/str.o
+ .debug_abbrev  0x0000169a      0x1b4 src/lib/utest/utest.o
+ .debug_abbrev  0x0000184e      0x116 src/main.o
+ .debug_abbrev  0x00001964       0x81 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-atexit.o)
+ .debug_abbrev  0x000019e5      0x15f c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-exit.o)
+ .debug_abbrev  0x00001b44      0x160 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-impure.o)
+ .debug_abbrev  0x00001ca4      0x19a c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-syscalls.o)
+ .debug_abbrev  0x00001e3e      0x1b5 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-__atexit.o)
+ .debug_abbrev  0x00001ff3      0x1bc c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-__call_atexit.o)
+ .debug_abbrev  0x000021af      0x150 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-errno.o)
+ .debug_abbrev  0x000022ff      0x28c c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-findfp.o)
+ .debug_abbrev  0x0000258b      0x178 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-malloc.o)
+ .debug_abbrev  0x00002703      0x205 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-mallocr.o)
+ .debug_abbrev  0x00002908      0x15b c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-mlock.o)
+ .debug_abbrev  0x00002a63      0x1e6 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-reent.o)
+ .debug_abbrev  0x00002c49      0x17f c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-sbrkr.o)
+ .debug_abbrev  0x00002dc8      0x1d9 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-freer.o)
 
 .debug_line     0x00000000     0xc2a1
  *(.debug_line)
- .debug_line    0x00000000      0x9cd src/app/init_gpio/init_gpio.o
- .debug_line    0x000009cd      0x9a8 src/app/init_usart/init_usart.o
- .debug_line    0x00001375      0xd16 src/asf/avr32/drivers/flashcdw/flashcdw.o
- .debug_line    0x0000208b      0x9a6 src/asf/avr32/drivers/gpio/gpio.o
- .debug_line    0x00002a31      0x6f2 src/asf/avr32/drivers/pwma/pwma.o
- .debug_line    0x00003123      0xa53 src/asf/avr32/drivers/usart/usart.o
- .debug_line    0x00003b76      0x8cc src/asf/common/services/clock/uc3l/dfll.o
- .debug_line    0x00004442      0x761 src/asf/common/services/clock/uc3l/osc.o
- .debug_line    0x00004ba3      0x8a8 src/asf/common/services/clock/uc3l/sysclk.o
- .debug_line    0x0000544b      0x97e src/config/conf_gpio.o
- .debug_line    0x00005dc9      0xa61 src/lib/ioapi/ioapi.o
- .debug_line    0x0000682a      0xa9c src/lib/ioapi/test/test_ioapi.o
- .debug_line    0x000072c6      0x9b0 src/lib/statusc/statusc.o
- .debug_line    0x00007c76      0xb25 src/lib/str/str.o
- .debug_line    0x0000879b      0xb06 src/lib/utest/utest.o
- .debug_line    0x000092a1      0xa6f src/main.o
+ .debug_line    0x00000000      0xa29 src/app/init_gpio/init_gpio.o
+ .debug_line    0x00000a29      0x9a8 src/app/init_usart/init_usart.o
+ .debug_line    0x000013d1      0xd16 src/asf/avr32/drivers/flashcdw/flashcdw.o
+ .debug_line    0x000020e7      0x9a6 src/asf/avr32/drivers/gpio/gpio.o
+ .debug_line    0x00002a8d      0x6f2 src/asf/avr32/drivers/pwma/pwma.o
+ .debug_line    0x0000317f      0xa53 src/asf/avr32/drivers/usart/usart.o
+ .debug_line    0x00003bd2      0x8cc src/asf/common/services/clock/uc3l/dfll.o
+ .debug_line    0x0000449e      0x761 src/asf/common/services/clock/uc3l/osc.o
+ .debug_line    0x00004bff      0x8a8 src/asf/common/services/clock/uc3l/sysclk.o
+ .debug_line    0x000054a7      0x97e src/config/conf_gpio.o
+ .debug_line    0x00005e25      0xa61 src/lib/ioapi/ioapi.o
+ .debug_line    0x00006886      0xa9c src/lib/ioapi/test/test_ioapi.o
+ .debug_line    0x00007322      0x9b0 src/lib/statusc/statusc.o
+ .debug_line    0x00007cd2      0xb25 src/lib/str/str.o
+ .debug_line    0x000087f7      0xb06 src/lib/utest/utest.o
+ .debug_line    0x000092fd      0xa13 src/main.o
  .debug_line    0x00009d10       0xfc c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-atexit.o)
  .debug_line    0x00009e0c      0x1f5 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-exit.o)
  .debug_line    0x0000a001      0x166 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-impure.o)
@@ -2007,21 +2007,21 @@ LOAD c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0
 .debug_frame    0x00000000     0x229c
  *(.debug_frame)
  .debug_frame   0x00000000       0x4c c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/ucr3/crtbegin.o
- .debug_frame   0x0000004c       0x50 src/app/init_gpio/init_gpio.o
- .debug_frame   0x0000009c       0x2c src/app/init_usart/init_usart.o
- .debug_frame   0x000000c8      0x860 src/asf/avr32/drivers/flashcdw/flashcdw.o
- .debug_frame   0x00000928      0x374 src/asf/avr32/drivers/gpio/gpio.o
- .debug_frame   0x00000c9c       0x90 src/asf/avr32/drivers/pwma/pwma.o
- .debug_frame   0x00000d2c      0x358 src/asf/avr32/drivers/usart/usart.o
- .debug_frame   0x00001084      0x208 src/asf/common/services/clock/uc3l/dfll.o
- .debug_frame   0x0000128c       0xb8 src/asf/common/services/clock/uc3l/osc.o
- .debug_frame   0x00001344      0x198 src/asf/common/services/clock/uc3l/sysclk.o
- .debug_frame   0x000014dc      0x128 src/lib/ioapi/ioapi.o
- .debug_frame   0x00001604      0x198 src/lib/ioapi/test/test_ioapi.o
- .debug_frame   0x0000179c       0x48 src/lib/statusc/statusc.o
- .debug_frame   0x000017e4      0x1d0 src/lib/str/str.o
- .debug_frame   0x000019b4      0x1ec src/lib/utest/utest.o
- .debug_frame   0x00001ba0       0xb8 src/main.o
+ .debug_frame   0x0000004c       0xc0 src/app/init_gpio/init_gpio.o
+ .debug_frame   0x0000010c       0x2c src/app/init_usart/init_usart.o
+ .debug_frame   0x00000138      0x860 src/asf/avr32/drivers/flashcdw/flashcdw.o
+ .debug_frame   0x00000998      0x374 src/asf/avr32/drivers/gpio/gpio.o
+ .debug_frame   0x00000d0c       0x90 src/asf/avr32/drivers/pwma/pwma.o
+ .debug_frame   0x00000d9c      0x358 src/asf/avr32/drivers/usart/usart.o
+ .debug_frame   0x000010f4      0x208 src/asf/common/services/clock/uc3l/dfll.o
+ .debug_frame   0x000012fc       0xb8 src/asf/common/services/clock/uc3l/osc.o
+ .debug_frame   0x000013b4      0x198 src/asf/common/services/clock/uc3l/sysclk.o
+ .debug_frame   0x0000154c      0x128 src/lib/ioapi/ioapi.o
+ .debug_frame   0x00001674      0x198 src/lib/ioapi/test/test_ioapi.o
+ .debug_frame   0x0000180c       0x48 src/lib/statusc/statusc.o
+ .debug_frame   0x00001854      0x1d0 src/lib/str/str.o
+ .debug_frame   0x00001a24      0x1ec src/lib/utest/utest.o
+ .debug_frame   0x00001c10       0x48 src/main.o
  .debug_frame   0x00001c58       0x28 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-atexit.o)
  .debug_frame   0x00001c80       0x34 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-exit.o)
  .debug_frame   0x00001cb4      0x220 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-syscalls.o)
@@ -2039,38 +2039,38 @@ LOAD c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0
 
 .debug_str      0x00000000     0x46bf
  *(.debug_str)
- .debug_str     0x00000000      0x45e src/app/init_gpio/init_gpio.o
-                                0x4c8 (size before relaxing)
- .debug_str     0x0000045e      0x591 src/app/init_usart/init_usart.o
+ .debug_str     0x00000000      0xd24 src/app/init_gpio/init_gpio.o
+                                0xdba (size before relaxing)
+ .debug_str     0x00000d24      0x591 src/app/init_usart/init_usart.o
                                 0x6c6 (size before relaxing)
- .debug_str     0x000009ef      0xcaa src/asf/avr32/drivers/flashcdw/flashcdw.o
+ .debug_str     0x000012b5      0xca1 src/asf/avr32/drivers/flashcdw/flashcdw.o
                                 0xe73 (size before relaxing)
- .debug_str     0x00001699      0x546 src/asf/avr32/drivers/gpio/gpio.o
+ .debug_str     0x00001f56      0x53f src/asf/avr32/drivers/gpio/gpio.o
                                 0x6b3 (size before relaxing)
- .debug_str     0x00001bdf       0xe1 src/asf/avr32/drivers/pwma/pwma.o
+ .debug_str     0x00002495       0xe1 src/asf/avr32/drivers/pwma/pwma.o
                                 0x389 (size before relaxing)
- .debug_str     0x00001cc0      0x3d6 src/asf/avr32/drivers/usart/usart.o
+ .debug_str     0x00002576      0x3d6 src/asf/avr32/drivers/usart/usart.o
                                 0xa89 (size before relaxing)
- .debug_str     0x00002096      0xab5 src/asf/common/services/clock/uc3l/dfll.o
+ .debug_str     0x0000294c      0x204 src/asf/common/services/clock/uc3l/dfll.o
                                 0xc2e (size before relaxing)
- .debug_str     0x00002b4b       0x88 src/asf/common/services/clock/uc3l/osc.o
+ .debug_str     0x00002b50       0x88 src/asf/common/services/clock/uc3l/osc.o
                                 0x974 (size before relaxing)
- .debug_str     0x00002bd3      0x447 src/asf/common/services/clock/uc3l/sysclk.o
+ .debug_str     0x00002bd8      0x447 src/asf/common/services/clock/uc3l/sysclk.o
                                 0x697 (size before relaxing)
- .debug_str     0x0000301a       0x1a src/config/conf_gpio.o
+ .debug_str     0x0000301f       0x1a src/config/conf_gpio.o
                                 0x300 (size before relaxing)
- .debug_str     0x00003034       0xf1 src/lib/ioapi/ioapi.o
+ .debug_str     0x00003039       0xf1 src/lib/ioapi/ioapi.o
                                 0x5d5 (size before relaxing)
- .debug_str     0x00003125      0x202 src/lib/ioapi/test/test_ioapi.o
+ .debug_str     0x0000312a      0x202 src/lib/ioapi/test/test_ioapi.o
                                 0x2f6 (size before relaxing)
- .debug_str     0x00003327       0x5f src/lib/statusc/statusc.o
+ .debug_str     0x0000332c       0x5f src/lib/statusc/statusc.o
                                 0x6c7 (size before relaxing)
- .debug_str     0x00003386      0x2ac src/lib/str/str.o
+ .debug_str     0x0000338b      0x2ac src/lib/str/str.o
                                 0x562 (size before relaxing)
- .debug_str     0x00003632      0x1f4 src/lib/utest/utest.o
+ .debug_str     0x00003637      0x1f4 src/lib/utest/utest.o
                                 0x9e3 (size before relaxing)
- .debug_str     0x00003826       0x13 src/main.o
-                               0x10e1 (size before relaxing)
+ .debug_str     0x0000382b        0xe src/main.o
+                                0x7f4 (size before relaxing)
  .debug_str     0x00003839       0x88 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-atexit.o)
                                 0x124 (size before relaxing)
  .debug_str     0x000038c1      0x388 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-exit.o)
@@ -2102,21 +2102,21 @@ LOAD c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0
 
 .debug_loc      0x00000000     0x3aa8
  *(.debug_loc)
- .debug_loc     0x00000000       0x56 src/app/init_gpio/init_gpio.o
- .debug_loc     0x00000056       0x2b src/app/init_usart/init_usart.o
- .debug_loc     0x00000081      0xc43 src/asf/avr32/drivers/flashcdw/flashcdw.o
- .debug_loc     0x00000cc4      0x535 src/asf/avr32/drivers/gpio/gpio.o
- .debug_loc     0x000011f9       0xac src/asf/avr32/drivers/pwma/pwma.o
- .debug_loc     0x000012a5      0x50a src/asf/avr32/drivers/usart/usart.o
- .debug_loc     0x000017af      0x306 src/asf/common/services/clock/uc3l/dfll.o
- .debug_loc     0x00001ab5      0x102 src/asf/common/services/clock/uc3l/osc.o
- .debug_loc     0x00001bb7      0x25a src/asf/common/services/clock/uc3l/sysclk.o
- .debug_loc     0x00001e11      0x1ae src/lib/ioapi/ioapi.o
- .debug_loc     0x00001fbf      0x25a src/lib/ioapi/test/test_ioapi.o
- .debug_loc     0x00002219       0x56 src/lib/statusc/statusc.o
- .debug_loc     0x0000226f      0x2b0 src/lib/str/str.o
- .debug_loc     0x0000251f      0x2db src/lib/utest/utest.o
- .debug_loc     0x000027fa      0x102 src/main.o
+ .debug_loc     0x00000000      0x102 src/app/init_gpio/init_gpio.o
+ .debug_loc     0x00000102       0x2b src/app/init_usart/init_usart.o
+ .debug_loc     0x0000012d      0xc43 src/asf/avr32/drivers/flashcdw/flashcdw.o
+ .debug_loc     0x00000d70      0x535 src/asf/avr32/drivers/gpio/gpio.o
+ .debug_loc     0x000012a5       0xac src/asf/avr32/drivers/pwma/pwma.o
+ .debug_loc     0x00001351      0x50a src/asf/avr32/drivers/usart/usart.o
+ .debug_loc     0x0000185b      0x306 src/asf/common/services/clock/uc3l/dfll.o
+ .debug_loc     0x00001b61      0x102 src/asf/common/services/clock/uc3l/osc.o
+ .debug_loc     0x00001c63      0x25a src/asf/common/services/clock/uc3l/sysclk.o
+ .debug_loc     0x00001ebd      0x1ae src/lib/ioapi/ioapi.o
+ .debug_loc     0x0000206b      0x25a src/lib/ioapi/test/test_ioapi.o
+ .debug_loc     0x000022c5       0x56 src/lib/statusc/statusc.o
+ .debug_loc     0x0000231b      0x2b0 src/lib/str/str.o
+ .debug_loc     0x000025cb      0x2db src/lib/utest/utest.o
+ .debug_loc     0x000028a6       0x56 src/main.o
  .debug_loc     0x000028fc       0x32 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-atexit.o)
  .debug_loc     0x0000292e       0x3d c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-exit.o)
  .debug_loc     0x0000296b      0x268 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-syscalls.o)
@@ -2200,21 +2200,21 @@ LOAD c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0
 OUTPUT(Firmware.elf elf32-avr32)
 
 .debug_ranges   0x00000000      0xb60
- .debug_ranges  0x00000000       0x20 src/app/init_gpio/init_gpio.o
- .debug_ranges  0x00000020       0x18 src/app/init_usart/init_usart.o
- .debug_ranges  0x00000038      0x258 src/asf/avr32/drivers/flashcdw/flashcdw.o
- .debug_ranges  0x00000290      0x108 src/asf/avr32/drivers/gpio/gpio.o
- .debug_ranges  0x00000398       0x30 src/asf/avr32/drivers/pwma/pwma.o
- .debug_ranges  0x000003c8      0x100 src/asf/avr32/drivers/usart/usart.o
- .debug_ranges  0x000004c8       0xa0 src/asf/common/services/clock/uc3l/dfll.o
- .debug_ranges  0x00000568       0x40 src/asf/common/services/clock/uc3l/osc.o
- .debug_ranges  0x000005a8       0x80 src/asf/common/services/clock/uc3l/sysclk.o
- .debug_ranges  0x00000628       0x60 src/lib/ioapi/ioapi.o
- .debug_ranges  0x00000688       0x80 src/lib/ioapi/test/test_ioapi.o
- .debug_ranges  0x00000708       0x20 src/lib/statusc/statusc.o
- .debug_ranges  0x00000728       0x90 src/lib/str/str.o
- .debug_ranges  0x000007b8       0x98 src/lib/utest/utest.o
- .debug_ranges  0x00000850       0x40 src/main.o
+ .debug_ranges  0x00000000       0x40 src/app/init_gpio/init_gpio.o
+ .debug_ranges  0x00000040       0x18 src/app/init_usart/init_usart.o
+ .debug_ranges  0x00000058      0x258 src/asf/avr32/drivers/flashcdw/flashcdw.o
+ .debug_ranges  0x000002b0      0x108 src/asf/avr32/drivers/gpio/gpio.o
+ .debug_ranges  0x000003b8       0x30 src/asf/avr32/drivers/pwma/pwma.o
+ .debug_ranges  0x000003e8      0x100 src/asf/avr32/drivers/usart/usart.o
+ .debug_ranges  0x000004e8       0xa0 src/asf/common/services/clock/uc3l/dfll.o
+ .debug_ranges  0x00000588       0x40 src/asf/common/services/clock/uc3l/osc.o
+ .debug_ranges  0x000005c8       0x80 src/asf/common/services/clock/uc3l/sysclk.o
+ .debug_ranges  0x00000648       0x60 src/lib/ioapi/ioapi.o
+ .debug_ranges  0x000006a8       0x80 src/lib/ioapi/test/test_ioapi.o
+ .debug_ranges  0x00000728       0x20 src/lib/statusc/statusc.o
+ .debug_ranges  0x00000748       0x90 src/lib/str/str.o
+ .debug_ranges  0x000007d8       0x98 src/lib/utest/utest.o
+ .debug_ranges  0x00000870       0x20 src/main.o
  .debug_ranges  0x00000890       0x18 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-atexit.o)
  .debug_ranges  0x000008a8       0x18 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-exit.o)
  .debug_ranges  0x000008c0       0xf0 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr32/4.4.3/../../../../avr32/lib/ucr3\libc.a(lib_a-syscalls.o)
